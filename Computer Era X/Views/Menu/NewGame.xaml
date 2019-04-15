@@ -4,9 +4,36 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Computer_Era_X.Views.Menu"
+             xmlns:res="clr-namespace:Computer_Era_X.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Label Content="ТЕКСТ"/>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Computer Era X;component/Assets/Backgrounds/computer-girl.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Margin="0,4,0,0" Background="#CCFFE6D5">
+            <TextBlock Text="{x:Static res:Resources.NewGame}" Margin="10,10,10,20" Foreground="#FF2B0000" TextAlignment="Center" FontSize="24" FontFamily="Times New Roman"/>
+            <DockPanel Margin="10,0,10,5">
+                <Label Content="{x:Static res:Resources.PlayerName}" ContentStringFormat="{}{0}: " Foreground="#FF2B0000" FontSize="16"/>
+                <TextBox x:Name="PlayerName" Padding="5,0,0,0" Background="#FFFFE6D5" Foreground="#FF2B0000" BorderBrush="#FF2B0000" VerticalContentAlignment="Center" FontSize="16"/>
+            </DockPanel>
+            <DockPanel Margin="10,5,10,5">
+                <Label Content="Возраст (от 18 до 80): " VerticalContentAlignment="Center" Foreground="#FF2B0000" FontSize="16"/>
+                <TextBox  Padding="5,0,0,0" VerticalContentAlignment="Center" Background="#FFFFE6D5" Foreground="#FF2B0000" BorderBrush="#FF2B0000" FontSize="16"/>
+            </DockPanel>
+            <DockPanel Margin="10,5,10,5">
+                <Label Content="Сценарий: " VerticalContentAlignment="Center" Foreground="#FF2B0000" FontSize="16"/>
+                <ComboBox Name="ScenariosList" FontSize="16" Background="#FFFFE6D5" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <Label Content="{Binding Name}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </DockPanel>
+            <DockPanel Margin="10,5,10,10">
+                <Button Name="StartNewGame" Content="Начать" MinHeight="30" Background="#FFFFE6D5" Foreground="#FF2B0000" BorderBrush="#FF2B0000"/>
+            </DockPanel>
+        </StackPanel>
     </Grid>
 </UserControl>

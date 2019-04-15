@@ -75,11 +75,14 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DataTypes\Interfaces\IScenario.cs" />
+    <Compile Include="Models\GameEnvironment.cs" />
     <Compile Include="Properties\Resources.ru-RU.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.ru-RU.resx</DependentUpon>
     </Compile>
+    <Compile Include="Scenarios\MainScenario.cs" />
     <Compile Include="ViewModels\GameVM.cs" />
     <Compile Include="Views\Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
@@ -125,8 +128,6 @@
   <ItemGroup>
     <Folder Include="Converters\" />
     <Folder Include="DataTypes\Enums\" />
-    <Folder Include="DataTypes\Interfaces\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Views\Game.xaml">

@@ -7,12 +7,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
-        <Style TargetType="MenuItem" x:Key="MenuItem">
-            <Setter Property="Background" Value="#CCFFFFFF"/>
-            <Setter Property="Foreground" Value="Black"/>
-            <Setter Property="FontSize" Value="24"/>
-            <Setter Property="Template" Value="{DynamicResource GameMenuItem}"/>
-        </Style>
         <Style TargetType="Button" x:Key="MenuButton">
             <Setter Property="Background" Value="#FFFFE6D5"/>
             <Setter Property="Foreground" Value="#FF2B0000"/>
@@ -23,7 +17,7 @@
     </UserControl.Resources>
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="/Computer Era X;component/Assets/Backgrounds/computer-girl.png"/>
+            <ImageBrush ImageSource="/Computer Era X;component/Assets/Backgrounds/computer-girl.png" Stretch="UniformToFill"/>
         </Grid.Background>
         <StackPanel Name="GameMenu" HorizontalAlignment="Center" VerticalAlignment="Center" Width="300" Margin="0,4,0,0" Visibility="Visible">
             <Button Content="{x:Static res:Resources.ContinueGame}" Style="{StaticResource MenuButton}" Margin="0, 0, 0, 5" IsEnabled="False"/>
