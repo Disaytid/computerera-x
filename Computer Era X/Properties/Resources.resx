@@ -315,4 +315,10 @@
   <data name="Installation" xml:space="preserve">
     <value>Installation</value>
   </data>
+  <data name="ScenarioSettings" xml:space="preserve">
+    <value>Scenario settings</value>
+  </data>
+  <data name="NoScenarioSelected" xml:space="preserve">
+    <value>No scenario selected</value>
+  </data>
 </root>

@@ -1,18 +1,25 @@
 ﻿using Computer_Era_X.DataTypes.Interfaces;
 using Computer_Era_X.Models;
 using System;
+using System.Collections.Generic;
+using System.Windows;
 
 namespace Computer_Era_X.Scenarios
 {
-    class Main : IScenario
+    public class Main : IScenario
     {
         public string Name { get; set; } = Properties.Resources.MainScenario;
+        public List<Setting> Settings { get; set; } = new List<Setting>();
 
-        private object main;
-        GameEnvironment GameEnvironment;
-        public void Start(object sender, GameEnvironment gameEnvironment)
+        public Main()
         {
-            main = sender;
+            Settings.Add(new Setting("Денег", DataTypes.Enums.TypeSettingsData.Integer, "100"));
+            Settings.Add(new Setting("Текст", DataTypes.Enums.TypeSettingsData.String, "Ла ла ла"));
+        }
+
+        GameEnvironment GameEnvironment;
+        public void Start(GameEnvironment gameEnvironment)
+        {
             GameEnvironment = gameEnvironment;
 
             //GameEnvironment.Money.PlayerCurrency[0].TopUp(Properties.Resources.MainScenarioPaymentName, Properties.Resources.MainScenarioPaymentInitiator, GameEnvironment.GameEvents.GameTimer.DateAndTime, 10000);

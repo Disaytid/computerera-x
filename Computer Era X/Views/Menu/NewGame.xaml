@@ -18,12 +18,8 @@
                 <TextBox x:Name="PlayerName" Padding="5,0,0,0" Background="#FFFFE6D5" Foreground="#FF2B0000" BorderBrush="#FF2B0000" VerticalContentAlignment="Center" FontSize="16"/>
             </DockPanel>
             <DockPanel Margin="10,5,10,5">
-                <Label Content="Возраст (от 18 до 80): " VerticalContentAlignment="Center" Foreground="#FF2B0000" FontSize="16"/>
-                <TextBox  Padding="5,0,0,0" VerticalContentAlignment="Center" Background="#FFFFE6D5" Foreground="#FF2B0000" BorderBrush="#FF2B0000" FontSize="16"/>
-            </DockPanel>
-            <DockPanel Margin="10,5,10,5">
                 <Label Content="Сценарий: " VerticalContentAlignment="Center" Foreground="#FF2B0000" FontSize="16"/>
-                <ComboBox Name="ScenariosList" FontSize="16" Background="#FFFFE6D5" >
+                <ComboBox Name="ScenariosList" SelectedItem="{Binding SelectedScenario}" ItemsSource="{Binding Scenarios}" FontSize="16" Background="#FFFFE6D5" >
                     <ComboBox.ItemTemplate>
                         <DataTemplate>
                             <Label Content="{Binding Name}"/>
@@ -31,8 +27,12 @@
                     </ComboBox.ItemTemplate>
                 </ComboBox>
             </DockPanel>
+            <Expander Name="ScenarioSettings" Header="{x:Static res:Resources.ScenarioSettings}" Margin="10,5,10,5">
+                <ScrollViewer Content="{Binding ScenarioSettings}">
+                </ScrollViewer>
+            </Expander>
             <DockPanel Margin="10,5,10,10">
-                <Button Name="StartNewGame" Content="Начать" MinHeight="30" Background="#FFFFE6D5" Foreground="#FF2B0000" BorderBrush="#FF2B0000"/>
+                <Button Name="StartNewGame" Content="Начать" MinHeight="30" Background="#FFFFE6D5" Foreground="#FF2B0000" BorderBrush="#FF2B0000" Command="{Binding StartGame}"/>
             </DockPanel>
         </StackPanel>
     </Grid>

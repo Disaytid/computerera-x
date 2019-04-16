@@ -484,6 +484,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на No scenario selected.
+        /// </summary>
+        public static string NoScenarioSelected {
+            get {
+                return ResourceManager.GetString("NoScenarioSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Of.
         /// </summary>
         public static string Of {
@@ -597,6 +606,15 @@ namespace Computer_Era_X.Properties {
         public static string SaveAssembly {
             get {
                 return ResourceManager.GetString("SaveAssembly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Scenario settings.
+        /// </summary>
+        public static string ScenarioSettings {
+            get {
+                return ResourceManager.GetString("ScenarioSettings", resourceCulture);
             }
         }
         

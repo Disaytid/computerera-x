@@ -306,4 +306,10 @@
   <data name="Installation" xml:space="preserve">
     <value>Установка</value>
   </data>
+  <data name="ScenarioSettings" xml:space="preserve">
+    <value>Настройки сценария</value>
+  </data>
+  <data name="NoScenarioSelected" xml:space="preserve">
+    <value>Не выбран сценарий</value>
+  </data>
 </root>
