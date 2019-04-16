@@ -321,4 +321,16 @@
   <data name="NoScenarioSelected" xml:space="preserve">
     <value>No scenario selected</value>
   </data>
+  <data name="Scenario" xml:space="preserve">
+    <value>Scenario</value>
+  </data>
+  <data name="NoPlayerNameEntered" xml:space="preserve">
+    <value>No player name entered</value>
+  </data>
+  <data name="InvalidScenarioConfigurationValue" xml:space="preserve">
+    <value>Invalid scenario configuration value</value>
+  </data>
+  <data name="NoValueSelectedInScenarioSettings" xml:space="preserve">
+    <value>No value selected in scenario settings</value>
+  </data>
 </root>

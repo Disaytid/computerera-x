@@ -95,12 +95,53 @@ namespace Computer_Era_X.ViewModels
         private void StartNewGame()
         {
             if (SelectedScenario == null) { Views.MessageBox.Show(Properties.Resources.NewGame, Properties.Resources.NoScenarioSelected, MessageBoxType.Warning); return; }
+            if (string.IsNullOrEmpty(PlayerName)) { Views.MessageBox.Show(Properties.Resources.NewGame, Properties.Resources.NoPlayerNameEntered, MessageBoxType.Warning); return; }
+            StackPanel stackPanel = (ScenarioSettings as StackPanel);
+            for (int i = 0; stackPanel.Children.Count > i; i++)
+            {
+                switch (stackPanel.Children[i])
+                {
+                    case Label _:
+                        continue;
+                    case CheckBox _:
+                        CheckBox checkBox = (stackPanel.Children[i] as CheckBox);
+                        SelectedScenario.Settings[(int)checkBox.Tag].Value = checkBox.IsChecked.Value.ToString();
+                        break;
+                    case TextBox _:
+                        TextBox textBox = (stackPanel.Children[i] as TextBox);
+                        Setting setting = SelectedScenario.Settings[(int)textBox.Tag];
+                        switch (setting.Type)
+                        {
+                            case TypeSettingsData.Integer:
+                                if (!int.TryParse(textBox.Text, out _))
+                                { Views.MessageBox.Show(Properties.Resources.NewGame, Properties.Resources.InvalidScenarioConfigurationValue + ": " + textBox.Text, MessageBoxType.Warning); }
+                                setting.Value = textBox.Text;
+                                break;
+                            case TypeSettingsData.Double:
+                                if (!double.TryParse(textBox.Text, out _))
+                                { Views.MessageBox.Show(Properties.Resources.NewGame, Properties.Resources.InvalidScenarioConfigurationValue + ": " + textBox.Text, MessageBoxType.Warning); }
+                                setting.Value = textBox.Text;
+                                break;
+                            case TypeSettingsData.String:
+                                setting.Value = textBox.Text;
+                                break;
+                        }
+                        break;
+                    case ComboBox _:
+                        ComboBox comboBox = (stackPanel.Children[i] as ComboBox);
+                        if (comboBox.SelectedItem == null)
+                        { Views.MessageBox.Show(Properties.Resources.NewGame, Properties.Resources.NoValueSelectedInScenarioSettings, MessageBoxType.Warning); }
+                        SelectedScenario.Settings[(int)comboBox.Tag].Value = comboBox.SelectedItem.ToString();
+                        break;
+                }
+            }
         }
 
         private Visibility _mainMenuVisibility = Visibility.Visible;
         private Visibility _newGameVisibility = Visibility.Collapsed;
         private IScenario _selectedScenario;
         private object _scenarioSettings;
+        private string _playerName;
 
         public Visibility MainMenuVisibility
         {
@@ -125,6 +166,11 @@ namespace Computer_Era_X.ViewModels
         {
             get { return _scenarioSettings; }
             set { SetProperty(ref _scenarioSettings, value); }
+        }
+        public string PlayerName
+        {
+            get { return _playerName; }
+            set { SetProperty(ref _playerName, value); }
         }
         public DelegateCommand NewGame { get; }
         public DelegateCommand Exit { get; }

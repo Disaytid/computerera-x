@@ -11,14 +11,14 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Computer Era X;component/Assets/Backgrounds/computer-girl.png" Stretch="UniformToFill"/>
         </Grid.Background>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" Margin="0,4,0,0" Background="#CCFFE6D5">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="400" MaxHeight="400" Margin="0,4,0,0" Background="#CCFFE6D5">
             <TextBlock Text="{x:Static res:Resources.NewGame}" Margin="10,10,10,20" Foreground="#FF2B0000" TextAlignment="Center" FontSize="24" FontFamily="Times New Roman"/>
             <DockPanel Margin="10,0,10,5">
                 <Label Content="{x:Static res:Resources.PlayerName}" ContentStringFormat="{}{0}: " Foreground="#FF2B0000" FontSize="16"/>
-                <TextBox x:Name="PlayerName" Padding="5,0,0,0" Background="#FFFFE6D5" Foreground="#FF2B0000" BorderBrush="#FF2B0000" VerticalContentAlignment="Center" FontSize="16"/>
+                <TextBox Text="{Binding PlayerName}" Padding="5,0,0,0" Background="#FFFFE6D5" Foreground="#FF2B0000" BorderBrush="#FF2B0000" VerticalContentAlignment="Center" FontSize="16"/>
             </DockPanel>
             <DockPanel Margin="10,5,10,5">
-                <Label Content="Сценарий: " VerticalContentAlignment="Center" Foreground="#FF2B0000" FontSize="16"/>
+                <Label Content="{x:Static res:Resources.Scenario}" ContentStringFormat="{}{0}: " VerticalContentAlignment="Center" Foreground="#FF2B0000" FontSize="16"/>
                 <ComboBox Name="ScenariosList" SelectedItem="{Binding SelectedScenario}" ItemsSource="{Binding Scenarios}" FontSize="16" Background="#FFFFE6D5" >
                     <ComboBox.ItemTemplate>
                         <DataTemplate>

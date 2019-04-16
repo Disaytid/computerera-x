@@ -312,4 +312,16 @@
   <data name="NoScenarioSelected" xml:space="preserve">
     <value>Не выбран сценарий</value>
   </data>
+  <data name="Scenario" xml:space="preserve">
+    <value>Сценарий</value>
+  </data>
+  <data name="NoPlayerNameEntered" xml:space="preserve">
+    <value>Не введено имя игрока</value>
+  </data>
+  <data name="InvalidScenarioConfigurationValue" xml:space="preserve">
+    <value>Неверное значение настройки сценария</value>
+  </data>
+  <data name="NoValueSelectedInScenarioSettings" xml:space="preserve">
+    <value>Не выбрано значение в настройках сценария</value>
+  </data>
 </root>

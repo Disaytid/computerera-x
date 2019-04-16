@@ -349,6 +349,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Invalid scenario configuration value.
+        /// </summary>
+        public static string InvalidScenarioConfigurationValue {
+            get {
+                return ResourceManager.GetString("InvalidScenarioConfigurationValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Keyboard.
         /// </summary>
         public static string Keyboard {
@@ -484,11 +493,29 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на No player name entered.
+        /// </summary>
+        public static string NoPlayerNameEntered {
+            get {
+                return ResourceManager.GetString("NoPlayerNameEntered", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на No scenario selected.
         /// </summary>
         public static string NoScenarioSelected {
             get {
                 return ResourceManager.GetString("NoScenarioSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на No value selected in scenario settings.
+        /// </summary>
+        public static string NoValueSelectedInScenarioSettings {
+            get {
+                return ResourceManager.GetString("NoValueSelectedInScenarioSettings", resourceCulture);
             }
         }
         
@@ -606,6 +633,15 @@ namespace Computer_Era_X.Properties {
         public static string SaveAssembly {
             get {
                 return ResourceManager.GetString("SaveAssembly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Scenario.
+        /// </summary>
+        public static string Scenario {
+            get {
+                return ResourceManager.GetString("Scenario", resourceCulture);
             }
         }
         

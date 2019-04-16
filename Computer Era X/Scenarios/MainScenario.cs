@@ -1,8 +1,6 @@
 ﻿using Computer_Era_X.DataTypes.Interfaces;
 using Computer_Era_X.Models;
-using System;
 using System.Collections.Generic;
-using System.Windows;
 
 namespace Computer_Era_X.Scenarios
 {
@@ -14,7 +12,6 @@ namespace Computer_Era_X.Scenarios
         public Main()
         {
             Settings.Add(new Setting("Денег", DataTypes.Enums.TypeSettingsData.Integer, "100"));
-            Settings.Add(new Setting("Текст", DataTypes.Enums.TypeSettingsData.String, "Ла ла ла"));
         }
 
         GameEnvironment GameEnvironment;
