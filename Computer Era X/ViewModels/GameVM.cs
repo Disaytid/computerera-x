@@ -11,13 +11,13 @@ using System.Windows.Controls;
 
 namespace Computer_Era_X.ViewModels
 {
-    public class GameVm : BindableBase
+    public class GameVM : BindableBase
     {
         public IScenario[] Scenarios => (from t in Assembly.GetExecutingAssembly().GetTypes()
                                          where t.GetInterfaces().Contains(typeof(IScenario))
                                                   && t.GetConstructor(Type.EmptyTypes) != null
                                          select Activator.CreateInstance(t) as IScenario).ToArray();
-        public GameVm()
+        public GameVM()
         {
             NewGame = new DelegateCommand(CreateNewGame);
             Exit = new DelegateCommand(ExitApp);

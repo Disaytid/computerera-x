@@ -4,12 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:res="clr-namespace:Computer_Era_X.Properties"
-             xmlns:viewModels="clr-namespace:Computer_Era_X.ViewModels"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.DataContext>
-        <viewModels:GameVm/>
-    </UserControl.DataContext>
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Computer Era X;component/Assets/Backgrounds/computer-girl.png" Stretch="UniformToFill"/>

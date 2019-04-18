@@ -9,6 +9,6 @@ namespace Computer_Era_X.Models
         public ApplicationContext() : base("DefaultConnection") {}
 
         [SuppressMessage("ReSharper", "InconsistentNaming")]
-        public DbSet<CPU> CPUs { get; set; }
+        public DbSet<Item> Items { get; set; }
     }
 }

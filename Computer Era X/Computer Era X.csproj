@@ -117,7 +117,7 @@
     <Compile Include="DataTypes\Enums\EScenarios.cs" />
     <Compile Include="DataTypes\Interfaces\IScenario.cs" />
     <Compile Include="DataTypes\Objects\Computer\CPU.cs" />
-    <Compile Include="DataTypes\Objects\Items.cs" />
+    <Compile Include="Models\ItemsModel.cs" />
     <Compile Include="Models\ApplicationContext.cs" />
     <Compile Include="Models\GameEnvironment.cs" />
     <Compile Include="Properties\Resources.ru-RU.Designer.cs">
@@ -162,7 +162,9 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.ru-RU.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="ComputerEra.db3" />
+    <None Include="ComputerEra.db3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

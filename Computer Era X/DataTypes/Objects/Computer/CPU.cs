@@ -1,5 +1,6 @@
 ﻿using System;
 using Computer_Era_X.DataTypes.Enums;
+using Computer_Era_X.Models;
 
 namespace Computer_Era_X.DataTypes.Objects.Computer
 {
@@ -16,7 +17,6 @@ namespace Computer_Era_X.DataTypes.Objects.Computer
     public class CPU : Item<CPUProperties>
     {
         public CPU(int uid, string name, string type, int price, DateTime manDate, CPUProperties properties) : base(uid, name, type, price, manDate, properties) { }
-
         public override string Info()
         {
             var info = Computer_Era_X.Properties.Resources.Name + ": " + Name + Environment.NewLine;

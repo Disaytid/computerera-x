@@ -3,13 +3,14 @@ using Computer_Era_X.DataTypes.Dictionaries;
 using System;
 using System.Windows.Media;
 using Newtonsoft.Json;
+using Computer_Era_X.DataTypes.Objects.Computer;
+using System.Collections.ObjectModel;
 
-namespace Computer_Era_X.DataTypes.Objects
+namespace Computer_Era_X.Models
 {
     public class BaseItem
     {
         public int ID { get; set; }
-        public ImageSource Image { get; set; }
         public string Name { get; set; }
         public string Type { get; set; }
         public int Price { get; set; }
@@ -30,8 +31,13 @@ namespace Computer_Era_X.DataTypes.Objects
 
         public override string ToString() => Name;
     }
+    public class Item : BaseItem
+    {
+        public string Properties { get; set; }
+    }
     public abstract class Item<TP> : BaseItem
     {
+        public ImageSource Image { get; set; }
         public TP Properties { get; set; }
         protected Item(int id, string name, string type, int price, DateTime manDate, TP properties)
         {
@@ -42,14 +48,14 @@ namespace Computer_Era_X.DataTypes.Objects
             ManufacturingDate = manDate;
             Properties = properties;
         }
-        protected Item(int id, string name, string type, int price, DateTime manDate, string properties)
+        protected Item(Item item)
         {
-            ID = id;
-            Name = name;
-            Type = type;
-            Price = price;
-            ManufacturingDate = manDate;
-            Properties = JsonConvert.DeserializeObject<TP>(properties);
+            ID = item.ID;
+            Name = item.Name;
+            Type = item.Type;
+            Price = item.Price;
+            ManufacturingDate = item.ManufacturingDate;
+            Properties = JsonConvert.DeserializeObject<TP>(item.Properties);
         }
         public string GetManufacturingYear()
         {
