@@ -13,7 +13,6 @@
             <Setter Property="BorderBrush" Value="#FF2B0000"/>
             <Setter Property="MinHeight" Value="30"/>
         </Style>
-        <Color x:Key="Blue">Black</Color>
     </UserControl.Resources>
     <Grid>
         <Grid.Background>

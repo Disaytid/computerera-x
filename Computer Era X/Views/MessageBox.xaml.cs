@@ -6,7 +6,7 @@ using System.Windows.Media.Imaging;
 
 namespace Computer_Era_X.Views
 {
-    public partial class MessageBox : Window
+    public partial class MessageBox
     {
         public MessageBox()
         {
@@ -89,8 +89,6 @@ namespace Computer_Era_X.Views
                     _messageBox.TextInput.Visibility = Visibility.Visible;
                     _messageBox.ButtonOk.Focus();
                     break;
-                default:
-                    break;
             }
         }
 
@@ -117,11 +115,11 @@ namespace Computer_Era_X.Views
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (sender == ButtonOk)
+            if (Equals(sender, ButtonOk))
                 _result = MessageBoxResult.OK;
-            else if (sender == ButtonYes)
+            else if (Equals(sender, ButtonYes))
                 _result = MessageBoxResult.Yes;
-            else if (sender == ButtonNo)
+            else if (Equals(sender, ButtonNo))
                 _result = MessageBoxResult.No;
             else
                 _result = MessageBoxResult.None;
@@ -130,14 +128,14 @@ namespace Computer_Era_X.Views
         }
         private void SetImage(string imageName)
         {
-            string uri = string.Format("/Assets/Icons/{0}", imageName);
+            string uri = $"/Assets/Icons/{imageName}";
             var uriSource = new Uri(uri, UriKind.Relative);
             Icon.Source = new BitmapImage(uriSource);
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            this.DragMove();
+            DragMove();
         }
     }
 }

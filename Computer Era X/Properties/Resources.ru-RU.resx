@@ -270,7 +270,7 @@
   <data name="AssemblingAdded" xml:space="preserve">
     <value>Сборка добавлена</value>
   </data>
-  <data name="AssemblingСhanged" xml:space="preserve">
+  <data name="AssemblingChanged" xml:space="preserve">
     <value>Сборка изменена</value>
   </data>
   <data name="AssemblyMessage1" xml:space="preserve">
@@ -323,5 +323,32 @@
   </data>
   <data name="NoValueSelectedInScenarioSettings" xml:space="preserve">
     <value>Не выбрано значение в настройках сценария</value>
+  </data>
+  <data name="OperatingSystem" xml:space="preserve">
+    <value>Операционная система</value>
+  </data>
+  <data name="Program" xml:space="preserve">
+    <value>Программа</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ок</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="CPUFrequency" xml:space="preserve">
+    <value>Частота процессора</value>
+  </data>
+  <data name="HeatDissipation" xml:space="preserve">
+    <value>Тепловыделение</value>
+  </data>
+  <data name="MaximumWorkingTemperature" xml:space="preserve">
+    <value>Максимальная рабочая температура</value>
+  </data>
+  <data name="NumberOfCores" xml:space="preserve">
+    <value>Количество ядер</value>
+  </data>
+  <data name="Socket" xml:space="preserve">
+    <value>Сокет</value>
   </data>
 </root>

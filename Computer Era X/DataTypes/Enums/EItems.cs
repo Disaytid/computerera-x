@@ -1,0 +1,41 @@
+﻿namespace Computer_Era_X.DataTypes.Enums
+{
+    public enum ItemTypes
+    {
+        Case,
+        Motherboard,
+        RAM,
+        PSU,
+        CPU,
+        CPUCooler,
+        HDD,
+        Monitor,
+        VideoCard,
+        OpticalDrive,
+        Mouse,
+        Keyboard,
+        OpticalDisc,
+        OS,
+        Program,
+    }
+    public enum Sockets
+    {
+        AM4,
+        LGA1151,
+        LGA775,
+        LGA1150,
+        LGA1155,
+        LGA1156,
+        AM2,
+        AM2Plus,
+        AM3,
+        AM3Plus,
+        FM1,
+        FM2,
+        FM2Plus,
+        LGA1366,
+        Socket754,
+        Socket939,
+        Socket940,
+    }
+}

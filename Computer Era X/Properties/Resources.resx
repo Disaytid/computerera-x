@@ -333,4 +333,22 @@
   <data name="NoValueSelectedInScenarioSettings" xml:space="preserve">
     <value>No value selected in scenario settings</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="CPUFrequency" xml:space="preserve">
+    <value>CPU frequency</value>
+  </data>
+  <data name="HeatDissipation" xml:space="preserve">
+    <value>Heat dissipation</value>
+  </data>
+  <data name="MaximumWorkingTemperature" xml:space="preserve">
+    <value>Maximum working temperature</value>
+  </data>
+  <data name="NumberOfCores" xml:space="preserve">
+    <value>Number of cores</value>
+  </data>
+  <data name="Socket" xml:space="preserve">
+    <value>Socket</value>
+  </data>
 </root>

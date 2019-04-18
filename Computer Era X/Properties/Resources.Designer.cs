@@ -214,6 +214,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на CPU frequency.
+        /// </summary>
+        public static string CPUFrequency {
+            get {
+                return ResourceManager.GetString("CPUFrequency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Day.
         /// </summary>
         public static string Day {
@@ -322,6 +331,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Heat dissipation.
+        /// </summary>
+        public static string HeatDissipation {
+            get {
+                return ResourceManager.GetString("HeatDissipation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Hour.
         /// </summary>
         public static string Hour {
@@ -421,6 +439,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Maximum working temperature.
+        /// </summary>
+        public static string MaximumWorkingTemperature {
+            get {
+                return ResourceManager.GetString("MaximumWorkingTemperature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Minute.
         /// </summary>
         public static string Minute {
@@ -475,6 +502,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Name.
+        /// </summary>
+        public static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на New Game.
         /// </summary>
         public static string NewGame {
@@ -516,6 +552,15 @@ namespace Computer_Era_X.Properties {
         public static string NoValueSelectedInScenarioSettings {
             get {
                 return ResourceManager.GetString("NoValueSelectedInScenarioSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of cores.
+        /// </summary>
+        public static string NumberOfCores {
+            get {
+                return ResourceManager.GetString("NumberOfCores", resourceCulture);
             }
         }
         
@@ -669,6 +714,15 @@ namespace Computer_Era_X.Properties {
         public static string Shop {
             get {
                 return ResourceManager.GetString("Shop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Socket.
+        /// </summary>
+        public static string Socket {
+            get {
+                return ResourceManager.GetString("Socket", resourceCulture);
             }
         }
         

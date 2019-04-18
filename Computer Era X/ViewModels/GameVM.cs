@@ -1,9 +1,9 @@
 ﻿using Computer_Era_X.DataTypes.Interfaces;
 using Computer_Era_X.DataTypes.Enums;
-using Computer_Era_X.Views;
 using Prism.Commands;
 using Prism.Mvvm;
 using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Windows;
@@ -11,13 +11,13 @@ using System.Windows.Controls;
 
 namespace Computer_Era_X.ViewModels
 {
-    public class GameVM : BindableBase
+    public class GameVm : BindableBase
     {
         public IScenario[] Scenarios => (from t in Assembly.GetExecutingAssembly().GetTypes()
                                          where t.GetInterfaces().Contains(typeof(IScenario))
                                                   && t.GetConstructor(Type.EmptyTypes) != null
                                          select Activator.CreateInstance(t) as IScenario).ToArray();
-        public GameVM()
+        public GameVm()
         {
             NewGame = new DelegateCommand(CreateNewGame);
             Exit = new DelegateCommand(ExitApp);
@@ -31,8 +31,7 @@ namespace Computer_Era_X.ViewModels
         }
         private void ScenarioSelection()
         {
-            if (_selectedScenario == null) { return; }
-            if (_selectedScenario.Settings == null || _selectedScenario.Settings.Count == 0) { return; }
+            if (_selectedScenario?.Settings == null || _selectedScenario.Settings.Count == 0) { return; }
             StackPanel stackPanel = new StackPanel();
             for (int i = 0; _selectedScenario.Settings.Count > i; i++)
             {
@@ -84,8 +83,6 @@ namespace Computer_Era_X.ViewModels
                             stackPanel.Children.Add(comboBox);
                             break;
                         }
-                    default:
-                        break;
                 }
             }
             ScenarioSettings = stackPanel;
@@ -97,6 +94,7 @@ namespace Computer_Era_X.ViewModels
             if (SelectedScenario == null) { Views.MessageBox.Show(Properties.Resources.NewGame, Properties.Resources.NoScenarioSelected, MessageBoxType.Warning); return; }
             if (string.IsNullOrEmpty(PlayerName)) { Views.MessageBox.Show(Properties.Resources.NewGame, Properties.Resources.NoPlayerNameEntered, MessageBoxType.Warning); return; }
             StackPanel stackPanel = (ScenarioSettings as StackPanel);
+            if (stackPanel == null) { return; } 
             for (int i = 0; stackPanel.Children.Count > i; i++)
             {
                 switch (stackPanel.Children[i])
@@ -104,12 +102,13 @@ namespace Computer_Era_X.ViewModels
                     case Label _:
                         continue;
                     case CheckBox _:
-                        CheckBox checkBox = (stackPanel.Children[i] as CheckBox);
+                        var checkBox = ((CheckBox) stackPanel.Children[i]);
+                        Debug.Assert(checkBox.IsChecked != null, "checkBox.IsChecked != null");
                         SelectedScenario.Settings[(int)checkBox.Tag].Value = checkBox.IsChecked.Value.ToString();
                         break;
                     case TextBox _:
-                        TextBox textBox = (stackPanel.Children[i] as TextBox);
-                        Setting setting = SelectedScenario.Settings[(int)textBox.Tag];
+                        var textBox = ((TextBox) stackPanel.Children[i]);
+                        var setting = SelectedScenario.Settings[(int)textBox.Tag];
                         switch (setting.Type)
                         {
                             case TypeSettingsData.Integer:
@@ -125,13 +124,21 @@ namespace Computer_Era_X.ViewModels
                             case TypeSettingsData.String:
                                 setting.Value = textBox.Text;
                                 break;
+                            case TypeSettingsData.Bool:
+                                break;
+                            case TypeSettingsData.List:
+                                break;
+                            default:
+                                throw new ArgumentOutOfRangeException();
                         }
                         break;
                     case ComboBox _:
-                        ComboBox comboBox = (stackPanel.Children[i] as ComboBox);
+                        var comboBox = ((ComboBox) stackPanel.Children[i]);
                         if (comboBox.SelectedItem == null)
                         { Views.MessageBox.Show(Properties.Resources.NewGame, Properties.Resources.NoValueSelectedInScenarioSettings, MessageBoxType.Warning); }
-                        SelectedScenario.Settings[(int)comboBox.Tag].Value = comboBox.SelectedItem.ToString();
+
+                        if (comboBox.SelectedItem != null)
+                            SelectedScenario.Settings[(int) comboBox.Tag].Value = comboBox.SelectedItem.ToString();
                         break;
                 }
             }
@@ -145,13 +152,13 @@ namespace Computer_Era_X.ViewModels
 
         public Visibility MainMenuVisibility
         {
-            get { return _mainMenuVisibility; }
-            set { SetProperty(ref _mainMenuVisibility, value); }
+            get => _mainMenuVisibility;
+            set => SetProperty(ref _mainMenuVisibility, value);
         }  
         public Visibility NewGameVisibility
         {
-            get { return _newGameVisibility; }
-            set { SetProperty(ref _newGameVisibility, value); }
+            get => _newGameVisibility;
+            set => SetProperty(ref _newGameVisibility, value);
         }
         public IScenario SelectedScenario
         {
@@ -164,13 +171,13 @@ namespace Computer_Era_X.ViewModels
         }
         public object ScenarioSettings
         {
-            get { return _scenarioSettings; }
-            set { SetProperty(ref _scenarioSettings, value); }
+            get => _scenarioSettings;
+            set => SetProperty(ref _scenarioSettings, value);
         }
         public string PlayerName
         {
-            get { return _playerName; }
-            set { SetProperty(ref _playerName, value); }
+            get => _playerName;
+            set => SetProperty(ref _playerName, value);
         }
         public DelegateCommand NewGame { get; }
         public DelegateCommand Exit { get; }
