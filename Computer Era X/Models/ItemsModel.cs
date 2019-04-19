@@ -3,8 +3,6 @@ using Computer_Era_X.DataTypes.Dictionaries;
 using System;
 using System.Windows.Media;
 using Newtonsoft.Json;
-using Computer_Era_X.DataTypes.Objects.Computer;
-using System.Collections.ObjectModel;
 
 namespace Computer_Era_X.Models
 {

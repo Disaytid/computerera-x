@@ -2,5 +2,6 @@
 {
     public class GameEnvironment
     {
+        public GameEvents Events = new GameEvents();
     }
 }

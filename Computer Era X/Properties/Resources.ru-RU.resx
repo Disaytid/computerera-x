@@ -351,4 +351,40 @@
   <data name="Socket" xml:space="preserve">
     <value>Сокет</value>
   </data>
+  <data name="DeleteAllNotifications" xml:space="preserve">
+    <value>Удалить все уведомления</value>
+  </data>
+  <data name="InstallationOfComponents" xml:space="preserve">
+    <value>Установка комплектующих</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Карта</value>
+  </data>
+  <data name="NormalSpeed" xml:space="preserve">
+    <value>Нормальная скорость</value>
+  </data>
+  <data name="Pantry" xml:space="preserve">
+    <value>Кладовка</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Пауза</value>
+  </data>
+  <data name="Player" xml:space="preserve">
+    <value>Игрок</value>
+  </data>
+  <data name="Purse" xml:space="preserve">
+    <value>Кошелек</value>
+  </data>
+  <data name="Shutdown" xml:space="preserve">
+    <value>Выключение</value>
+  </data>
+  <data name="StartNewGame" xml:space="preserve">
+    <value>Начать новую игру</value>
+  </data>
+  <data name="TestingAndRunning" xml:space="preserve">
+    <value>Тестирование и запуск</value>
+  </data>
+  <data name="YouDoNotHaveComputer" xml:space="preserve">
+    <value>У вас нет компьютера</value>
+  </data>
 </root>

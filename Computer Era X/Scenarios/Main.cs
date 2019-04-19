@@ -17,7 +17,7 @@ namespace Computer_Era_X.Scenarios
 
             //_gameEnvironment.Money.PlayerCurrency[0].TopUp(Properties.Resources.MainScenarioPaymentName, Properties.Resources.MainScenarioPaymentInitiator, _gameEnvironment.GameEvents.GameTimer.DateAndTime, 10000);
 
-            //_gameEnvironment.GameEvents.GameTimer.Timer.Start();
+            _gameEnvironment.Events.Timer.DTimer.Start();
         }
         public void GameOver(string cause)
         {

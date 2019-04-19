@@ -351,4 +351,40 @@
   <data name="Socket" xml:space="preserve">
     <value>Socket</value>
   </data>
+  <data name="DeleteAllNotifications" xml:space="preserve">
+    <value>Delete all notifications</value>
+  </data>
+  <data name="InstallationOfComponents" xml:space="preserve">
+    <value>Installation of components</value>
+  </data>
+  <data name="Map" xml:space="preserve">
+    <value>Map</value>
+  </data>
+  <data name="NormalSpeed" xml:space="preserve">
+    <value>Normal speed</value>
+  </data>
+  <data name="Pantry" xml:space="preserve">
+    <value>Pantry</value>
+  </data>
+  <data name="Pause" xml:space="preserve">
+    <value>Pause</value>
+  </data>
+  <data name="Player" xml:space="preserve">
+    <value>Player</value>
+  </data>
+  <data name="Purse" xml:space="preserve">
+    <value>Purse</value>
+  </data>
+  <data name="Shutdown" xml:space="preserve">
+    <value>Shutdown</value>
+  </data>
+  <data name="StartNewGame" xml:space="preserve">
+    <value>Start a new game</value>
+  </data>
+  <data name="TestingAndRunning" xml:space="preserve">
+    <value>Testing and running</value>
+  </data>
+  <data name="YouDoNotHaveComputer" xml:space="preserve">
+    <value>You do not have a computer</value>
+  </data>
 </root>

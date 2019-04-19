@@ -232,6 +232,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Delete all notifications.
+        /// </summary>
+        public static string DeleteAllNotifications {
+            get {
+                return ResourceManager.GetString("DeleteAllNotifications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на No central processing unit.
         /// </summary>
         public static string ErrorСodeNoCPU {
@@ -367,6 +376,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Installation of components.
+        /// </summary>
+        public static string InstallationOfComponents {
+            get {
+                return ResourceManager.GetString("InstallationOfComponents", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Invalid scenario configuration value.
         /// </summary>
         public static string InvalidScenarioConfigurationValue {
@@ -435,6 +453,15 @@ namespace Computer_Era_X.Properties {
         public static string MainScenarioPaymentName {
             get {
                 return ResourceManager.GetString("MainScenarioPaymentName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Map.
+        /// </summary>
+        public static string Map {
+            get {
+                return ResourceManager.GetString("Map", resourceCulture);
             }
         }
         
@@ -538,6 +565,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Normal speed.
+        /// </summary>
+        public static string NormalSpeed {
+            get {
+                return ResourceManager.GetString("NormalSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на No scenario selected.
         /// </summary>
         public static string NoScenarioSelected {
@@ -610,11 +646,38 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Pantry.
+        /// </summary>
+        public static string Pantry {
+            get {
+                return ResourceManager.GetString("Pantry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Partition.
         /// </summary>
         public static string Partition {
             get {
                 return ResourceManager.GetString("Partition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Pause.
+        /// </summary>
+        public static string Pause {
+            get {
+                return ResourceManager.GetString("Pause", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Player.
+        /// </summary>
+        public static string Player {
+            get {
+                return ResourceManager.GetString("Player", resourceCulture);
             }
         }
         
@@ -651,6 +714,15 @@ namespace Computer_Era_X.Properties {
         public static string PullOut {
             get {
                 return ResourceManager.GetString("PullOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Purse.
+        /// </summary>
+        public static string Purse {
+            get {
+                return ResourceManager.GetString("Purse", resourceCulture);
             }
         }
         
@@ -718,11 +790,38 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Shutdown.
+        /// </summary>
+        public static string Shutdown {
+            get {
+                return ResourceManager.GetString("Shutdown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Socket.
         /// </summary>
         public static string Socket {
             get {
                 return ResourceManager.GetString("Socket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Start a new game.
+        /// </summary>
+        public static string StartNewGame {
+            get {
+                return ResourceManager.GetString("StartNewGame", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Testing and running.
+        /// </summary>
+        public static string TestingAndRunning {
+            get {
+                return ResourceManager.GetString("TestingAndRunning", resourceCulture);
             }
         }
         
@@ -759,6 +858,15 @@ namespace Computer_Era_X.Properties {
         public static string Yes {
             get {
                 return ResourceManager.GetString("Yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You do not have a computer.
+        /// </summary>
+        public static string YouDoNotHaveComputer {
+            get {
+                return ResourceManager.GetString("YouDoNotHaveComputer", resourceCulture);
             }
         }
     }

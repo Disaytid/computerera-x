@@ -1,6 +1,5 @@
 ﻿using System.Data.Entity;
 using System.Diagnostics.CodeAnalysis;
-using Computer_Era_X.DataTypes.Objects.Computer;
 
 namespace Computer_Era_X.Models
 {

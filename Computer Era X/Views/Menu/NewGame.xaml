@@ -31,7 +31,7 @@
                 </ScrollViewer>
             </Expander>
             <DockPanel Margin="10,5,10,10">
-                <Button Name="StartNewGame" Content="Начать" MinHeight="30" Background="#FFFFE6D5" Foreground="#FF2B0000" BorderBrush="#FF2B0000" Command="{Binding StartGame}"/>
+                <Button Name="StartNewGame" Content="{x:Static res:Resources.StartNewGame}" MinHeight="30" Background="#FFFFE6D5" Foreground="#FF2B0000" BorderBrush="#FF2B0000" Command="{Binding StartGame}"/>
             </DockPanel>
         </StackPanel>
     </Grid>
