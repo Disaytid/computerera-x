@@ -23,7 +23,7 @@
                 <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
             <DockPanel Grid.Row="0">
-                <Image x:Name="Icon" VerticalAlignment="Top" MaxHeight="64" Margin="0, 10, 0, 0"/>
+                <Image Name="MessageBoxIcon" VerticalAlignment="Top" MaxHeight="64" Margin="0, 10, 0, 0"/>
                 <TextBlock x:Name="Text" TextWrapping="Wrap" Padding="10" FontSize="14"/>
             </DockPanel>
             <TextBox Name="TextInput"  Grid.Row="1" Visibility="Collapsed"/>

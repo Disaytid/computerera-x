@@ -109,7 +109,7 @@ namespace Computer_Era_X.Views
                     _messageBox.SetImage("error.png");
                     break;
                 default:
-                    _messageBox.Icon.Visibility = Visibility.Collapsed;
+                    _messageBox.MessageBoxIcon.Visibility = Visibility.Collapsed;
                     break;
             }
         }
@@ -128,9 +128,9 @@ namespace Computer_Era_X.Views
         }
         private void SetImage(string imageName)
         {
-            string uri = $"/Assets/Icons/{imageName}";
+            var uri = $"/Assets/Icons/{imageName}";
             var uriSource = new Uri(uri, UriKind.Relative);
-            Icon.Source = new BitmapImage(uriSource);
+            MessageBoxIcon.Source = new BitmapImage(uriSource);
         }
 
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
