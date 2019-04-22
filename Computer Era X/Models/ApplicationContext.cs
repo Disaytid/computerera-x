@@ -1,5 +1,6 @@
 ﻿using System.Data.Entity;
 using System.Diagnostics.CodeAnalysis;
+using Computer_Era_X.DataTypes.Objects;
 
 namespace Computer_Era_X.Models
 {
@@ -9,5 +10,6 @@ namespace Computer_Era_X.Models
 
         [SuppressMessage("ReSharper", "InconsistentNaming")]
         public DbSet<Item> Items { get; set; }
+        public DbSet<BaseCurrency> BaseCurrencies { get; set; }
     }
 }

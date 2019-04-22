@@ -1,9 +1,6 @@
-﻿using System.Windows.Controls;
-using System.Windows;
-
-namespace Computer_Era_X.Views.Forms
+﻿namespace Computer_Era_X.Views
 {
-    public partial class Form : UserControl
+    public partial class Form
     {
         private string _title;
 
@@ -16,6 +13,7 @@ namespace Computer_Era_X.Views.Forms
                 FormTitle.Text = Title;
             }
         }
+
         public Form()
         {
             InitializeComponent();

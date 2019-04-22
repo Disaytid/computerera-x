@@ -3,6 +3,7 @@ using Computer_Era_X.DataTypes.Enums;
 using Prism.Commands;
 using Prism.Mvvm;
 using System;
+using System.Data.Entity;
 using System.Linq;
 using System.Reflection;
 using System.Windows;
@@ -11,13 +12,13 @@ using Computer_Era_X.Models;
 
 namespace Computer_Era_X.ViewModels
 {
-    public class GameVM : BindableBase
+    public partial class GameVM : BindableBase
     {
         public IScenario[] Scenarios => (from t in Assembly.GetExecutingAssembly().GetTypes()
                                          where t.GetInterfaces().Contains(typeof(IScenario))
                                                   && t.GetConstructor(Type.EmptyTypes) != null
                                          select Activator.CreateInstance(t) as IScenario).ToArray();
-        public GameEnvironment GameEnvironment { get; } = new GameEnvironment();
+        public static GameEnvironment GameEnvironment { get; set; } = new GameEnvironment();
         public GameVM()
         {
             GameEnvironment.Events.Timer.PropertyChanged += (s, e) => { RaisePropertyChanged(e.PropertyName); };
@@ -31,13 +32,14 @@ namespace Computer_Era_X.ViewModels
             StartGame = new DelegateCommand(StartNewGame);
             #endregion
 
-            #region Desktop
-            Pause = new DelegateCommand(GamePause);
-            Play = new DelegateCommand(GamePlay);
-            FastPlay = new DelegateCommand(GameFastPlay);
-            VeryFastPlay = new DelegateCommand(GameVeryFastPlay);
-            #endregion
+            CloseForm = new DelegateCommand(CloseCurrentForm);
+
+            DesktopInit();
+            PurseInit();
         }
+
+        partial void DesktopInit();
+        partial void PurseInit();
 
         private void CreateNewGame()
         {
@@ -57,6 +59,14 @@ namespace Computer_Era_X.ViewModels
             if (SelectedScenario == null) { Views.MessageBox.Show(Properties.Resources.NewGame, Properties.Resources.NoScenarioSelected, MessageBoxType.Warning); return; }
             if (string.IsNullOrEmpty(PlayerName)) { Views.MessageBox.Show(Properties.Resources.NewGame, Properties.Resources.NoPlayerNameEntered, MessageBoxType.Warning); return; }
             if (ScenarioSettings is StackPanel stackPanel) { MenuModel.SetScenarioSettings(SelectedScenario, stackPanel); }
+
+            //LOAD BASE
+            ApplicationContext db = new ApplicationContext();
+            db.BaseCurrencies.Load();
+            GameEnvironment.Currencies = db.BaseCurrencies.Local;
+
+            //START GAME
+            GameEnvironment.Player.Name = PlayerName;
             SelectedScenario.Start(GameEnvironment);
             ShowDesktop();
         }
@@ -113,32 +123,7 @@ namespace Computer_Era_X.ViewModels
 
         public DelegateCommand StartGame { get; }
 
-        #region MyRegion
-        public string GameTime => GameEnvironment.Events.Timer.DateTime.ToString("HH:mm \r\n dd.MM.yyyy");
-
-        private void GamePause()
-        {
-            GameEnvironment.Events.Timer.DTimer.Stop();
-        }
-        private void GamePlay()
-        {
-            GameEnvironment.Events.Timer.DTimer.Interval = GameEnvironment.Events.Timer.TimeSpanPlay;
-            GameEnvironment.Events.Timer.DTimer.Start();
-        }
-        private void GameFastPlay()
-        {
-            GameEnvironment.Events.Timer.DTimer.Interval = GameEnvironment.Events.Timer.TimeSpanFastPlay;
-            GameEnvironment.Events.Timer.DTimer.Start();
-        }
-        private void GameVeryFastPlay()
-        {
-            GameEnvironment.Events.Timer.DTimer.Interval = GameEnvironment.Events.Timer.TimeSpanVeryFastPlay;
-            GameEnvironment.Events.Timer.DTimer.Start();
-        }
-        public DelegateCommand Pause { get; }
-        public DelegateCommand Play { get; }
-        public DelegateCommand FastPlay { get; }
-        public DelegateCommand VeryFastPlay { get; }
-        #endregion
+        private void CloseCurrentForm() => Form = null;
+        public  DelegateCommand CloseForm { get; }
     }
 }

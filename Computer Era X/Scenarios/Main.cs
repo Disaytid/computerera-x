@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Computer_Era_X.DataTypes.Interfaces;
+using Computer_Era_X.DataTypes.Objects;
 using Computer_Era_X.Models;
 
 namespace Computer_Era_X.Scenarios
@@ -15,7 +16,9 @@ namespace Computer_Era_X.Scenarios
         {
             _gameEnvironment = gameEnvironment;
 
-            //_gameEnvironment.Money.PlayerCurrency[0].TopUp(Properties.Resources.MainScenarioPaymentName, Properties.Resources.MainScenarioPaymentInitiator, _gameEnvironment.GameEvents.GameTimer.DateAndTime, 10000);
+            _gameEnvironment.Player.Money.Add(new Currency(_gameEnvironment.Currencies[1]));
+            _gameEnvironment.Player.Money.Add(new Currency(_gameEnvironment.Currencies[2]));
+            _gameEnvironment.Player.Money[0].TopUp(Properties.Resources.MainScenarioPaymentName, Properties.Resources.MainScenarioPaymentInitiator, _gameEnvironment.Events.Timer.DateTime, 10000);
 
             _gameEnvironment.Events.Timer.DTimer.Start();
         }

@@ -51,6 +51,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Computer_Era_X.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="CommonServiceLocator, Version=2.0.4.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.2.0.4\lib\net47\CommonServiceLocator.dll</HintPath>
@@ -111,6 +114,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Converters\DateConverter.cs" />
+    <Compile Include="Converters\MoneyConverter.cs" />
     <Compile Include="Converters\PeriodicityConverter.cs" />
     <Compile Include="DataTypes\Dictionaries\DItems.cs" />
     <Compile Include="DataTypes\Enums\EItems.cs" />
@@ -122,10 +127,12 @@
     <Compile Include="DataTypes\Objects\Computer\CPU.cs" />
     <Compile Include="DataTypes\Objects\Money.cs" />
     <Compile Include="Models\Events.cs" />
+    <Compile Include="Models\Items.cs" />
     <Compile Include="Models\ItemsModel.cs" />
     <Compile Include="Models\ApplicationContext.cs" />
     <Compile Include="Models\GameEnvironment.cs" />
     <Compile Include="Models\MenuModel.cs" />
+    <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Timer.cs" />
     <Compile Include="Properties\Resources.ru-RU.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -133,6 +140,8 @@
       <DependentUpon>Resources.ru-RU.resx</DependentUpon>
     </Compile>
     <Compile Include="Scenarios\Main.cs" />
+    <Compile Include="ViewModels\DesktopVM.cs" />
+    <Compile Include="ViewModels\Forms\PurseVM.cs" />
     <Compile Include="ViewModels\GameVM.cs" />
     <Compile Include="Views\Forms\Form.xaml.cs">
       <DependentUpon>Form.xaml</DependentUpon>
@@ -190,7 +199,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Assets\Backgrounds\leather.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Page Include="Dictionarys\ComboBox.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -314,6 +325,11 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Assets\Icons\veryfastplay-button.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\Icons\usd.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
