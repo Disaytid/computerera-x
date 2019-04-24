@@ -37,9 +37,6 @@ namespace Computer_Era_X.Models
             DTimer.Interval = TimeSpanPlay;
             _oldDateTime = DateTime;
         }
-        /// <summary>
-        /// Stops the timer and simulates until the specified date.
-        /// </summary>
         public void FastSimulation(DateTime dateTime)
         {
             DTimer.Stop();

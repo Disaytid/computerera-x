@@ -52,7 +52,7 @@
                             <Image Source ="pack://application:,,,/Assets/Icons/wallet.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Name="MenuMapItem" Header="{x:Static res:Resources.Map}" Style="{StaticResource MenuItem}">
+                    <MenuItem Name="MenuMapItem" Header="{x:Static res:Resources.Map}" Style="{StaticResource MenuItem}" Command="{Binding Map}">
                         <MenuItem.Icon>
                             <Image Source ="pack://application:,,,/Assets/Icons/treasure-map.png"/>
                         </MenuItem.Icon>

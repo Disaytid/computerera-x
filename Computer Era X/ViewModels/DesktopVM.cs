@@ -13,6 +13,7 @@ namespace Computer_Era_X.ViewModels
             FastPlay = new DelegateCommand(GameFastPlay);
             VeryFastPlay = new DelegateCommand(GameVeryFastPlay);
             Purse = new DelegateCommand(ShowPurse);
+            Map = new DelegateCommand(ShowMap);
         }
 
         private void GamePause()
@@ -35,10 +36,8 @@ namespace Computer_Era_X.ViewModels
             GameEnvironment.Events.Timer.DTimer.Start();
         }
 
-        private void ShowPurse()
-        {
-            Form = new Purse();
-        }
+        private void ShowPurse() => Form = new Purse();
+        private void ShowMap() => Form = new Map();
 
         public string GameTime => GameEnvironment.Events.Timer.DateTime.ToString("HH:mm \r\n dd.MM.yyyy");
         UserControl _form = new UserControl();
@@ -54,5 +53,6 @@ namespace Computer_Era_X.ViewModels
         public DelegateCommand FastPlay { get; private set; }
         public DelegateCommand VeryFastPlay { get; private set; }
         public DelegateCommand Purse { get; private set; }
+        public DelegateCommand Map { get; private set; }
     }
 }

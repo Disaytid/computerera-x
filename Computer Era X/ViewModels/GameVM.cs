@@ -36,10 +36,12 @@ namespace Computer_Era_X.ViewModels
 
             DesktopInit();
             PurseInit();
+            MapInit();
         }
 
         partial void DesktopInit();
         partial void PurseInit();
+        partial void MapInit();
 
         private void CreateNewGame()
         {
