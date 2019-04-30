@@ -117,6 +117,7 @@
     <Compile Include="Converters\DateConverter.cs" />
     <Compile Include="Converters\MoneyConverter.cs" />
     <Compile Include="Converters\PeriodicityConverter.cs" />
+    <Compile Include="DataTypes\Enums\ETransition.cs" />
     <Compile Include="DataTypes\Dictionaries\DItems.cs" />
     <Compile Include="DataTypes\Enums\EItems.cs" />
     <Compile Include="DataTypes\Enums\EMessageBox.cs" />
@@ -151,6 +152,9 @@
     </Compile>
     <Compile Include="Views\Forms\Map.xaml.cs">
       <DependentUpon>Map.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\MovingMap.xaml.cs">
+      <DependentUpon>MovingMap.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Forms\Purse.xaml.cs">
       <DependentUpon>Purse.xaml</DependentUpon>
@@ -226,6 +230,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Forms\Map.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Forms\MovingMap.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -370,6 +378,30 @@
     <Resource Include="Map\images\pc.png" />
     <Resource Include="Map\images\weight-lifting.png" />
     <Resource Include="Map\images\wheelbarrow.png" />
+    <Resource Include="Assets\Backgrounds\fantasy-background.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\bus.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\chariot.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\city-car.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\cycling.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\scooter.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\unicycle.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Icons\walk.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Map\index.css" />
     <Content Include="Map\index.html" />
     <Content Include="Map\index.js" />

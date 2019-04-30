@@ -9,8 +9,8 @@
     <Grid>
         <views:Form/>
         <Grid Margin="0,30,0,0">
-            <WebBrowser x:Name="Browser" views:WebBrowserHelper.Body="{Binding BrowserSource}" Tag="{Binding BrowserTag}" Visibility="{Binding MapVisibility}" ScrollViewer.VerticalScrollBarVisibility="Disabled"/>
-            <ContentControl Content="{Binding Map}"/>
+            <ContentControl Content="{Binding GameMap}" Visibility="{Binding MapVisibility}"/>
+            <ContentControl Content="{Binding MovingMap}" Visibility="{Binding MovingVisibility}"/>
         </Grid>
     </Grid>
 </UserControl>

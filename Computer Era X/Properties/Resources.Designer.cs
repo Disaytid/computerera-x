@@ -142,6 +142,42 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Bus park №1.
+        /// </summary>
+        public static string BusParkNumberOne {
+            get {
+                return ResourceManager.GetString("BusParkNumberOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на By bike.
+        /// </summary>
+        public static string ByBike {
+            get {
+                return ResourceManager.GetString("ByBike", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на By car.
+        /// </summary>
+        public static string ByCar {
+            get {
+                return ResourceManager.GetString("ByCar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на By public transport.
+        /// </summary>
+        public static string ByPublicTransport {
+            get {
+                return ResourceManager.GetString("ByPublicTransport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Case.
         /// </summary>
         public static string Case {
@@ -318,6 +354,15 @@ namespace Computer_Era_X.Properties {
         public static string Exit {
             get {
                 return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Found on the road.
+        /// </summary>
+        public static string FoundOnTheRoad {
+            get {
+                return ResourceManager.GetString("FoundOnTheRoad", resourceCulture);
             }
         }
         
@@ -529,6 +574,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Moving in space and time.
+        /// </summary>
+        public static string MovingInSpaceAndTime {
+            get {
+                return ResourceManager.GetString("MovingInSpaceAndTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Name.
         /// </summary>
         public static string Name {
@@ -619,6 +673,60 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на On foot.
+        /// </summary>
+        public static string OnFoot {
+            get {
+                return ResourceManager.GetString("OnFoot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на On monowheel.
+        /// </summary>
+        public static string OnMonowheel {
+            get {
+                return ResourceManager.GetString("OnMonowheel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на On moped.
+        /// </summary>
+        public static string OnMoped {
+            get {
+                return ResourceManager.GetString("OnMoped", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на On motorcycle.
+        /// </summary>
+        public static string OnMotorcycle {
+            get {
+                return ResourceManager.GetString("OnMotorcycle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на On scooter.
+        /// </summary>
+        public static string OnScooterA {
+            get {
+                return ResourceManager.GetString("OnScooterA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на On scooter.
+        /// </summary>
+        public static string OnScooterB {
+            get {
+                return ResourceManager.GetString("OnScooterB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Operating system.
         /// </summary>
         public static string OperatingSystem {
@@ -669,6 +777,15 @@ namespace Computer_Era_X.Properties {
         public static string Pause {
             get {
                 return ResourceManager.GetString("Pause", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Penalty for unpaid fare.
+        /// </summary>
+        public static string PenaltyForUnpaidFare {
+            get {
+                return ResourceManager.GetString("PenaltyForUnpaidFare", resourceCulture);
             }
         }
         
@@ -844,6 +961,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на What are we going to get to?.
+        /// </summary>
+        public static string WhatAreWeGoingToGetTo {
+            get {
+                return ResourceManager.GetString("WhatAreWeGoingToGetTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Year.
         /// </summary>
         public static string Year {
@@ -858,6 +984,15 @@ namespace Computer_Era_X.Properties {
         public static string Yes {
             get {
                 return ResourceManager.GetString("Yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You could not pay a fine for an unpaid fare..
+        /// </summary>
+        public static string YouCouldNotPayAFineForAnUnpaidFare {
+            get {
+                return ResourceManager.GetString("YouCouldNotPayAFineForAnUnpaidFare", resourceCulture);
             }
         }
         

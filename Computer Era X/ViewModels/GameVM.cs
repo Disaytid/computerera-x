@@ -69,6 +69,7 @@ namespace Computer_Era_X.ViewModels
 
             //START GAME
             GameEnvironment.Player.Name = PlayerName;
+            GameEnvironment.Scenario = SelectedScenario;
             SelectedScenario.Start(GameEnvironment);
             ShowDesktop();
         }

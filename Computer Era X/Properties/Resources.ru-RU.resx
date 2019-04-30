@@ -387,4 +387,49 @@
   <data name="YouDoNotHaveComputer" xml:space="preserve">
     <value>У вас нет компьютера</value>
   </data>
+  <data name="ByBike" xml:space="preserve">
+    <value>На велосипеде</value>
+  </data>
+  <data name="ByCar" xml:space="preserve">
+    <value>На машине</value>
+  </data>
+  <data name="ByPublicTransport" xml:space="preserve">
+    <value>На общественном транспорте</value>
+  </data>
+  <data name="OnFoot" xml:space="preserve">
+    <value>Пешком</value>
+  </data>
+  <data name="OnMonowheel" xml:space="preserve">
+    <value>На моноколесе</value>
+  </data>
+  <data name="OnMoped" xml:space="preserve">
+    <value>На мопеде</value>
+  </data>
+  <data name="OnMotorcycle" xml:space="preserve">
+    <value>На мотоцикле</value>
+  </data>
+  <data name="OnScooterA" xml:space="preserve">
+    <value>На самокате</value>
+  </data>
+  <data name="OnScooterB" xml:space="preserve">
+    <value>На скутере</value>
+  </data>
+  <data name="WhatAreWeGoingToGetTo" xml:space="preserve">
+    <value>На чем добираться будем?</value>
+  </data>
+  <data name="MovingInSpaceAndTime" xml:space="preserve">
+    <value>Перемещение в пространстве и времени</value>
+  </data>
+  <data name="FoundOnTheRoad" xml:space="preserve">
+    <value>Нашли на дороге</value>
+  </data>
+  <data name="PenaltyForUnpaidFare" xml:space="preserve">
+    <value>Penalty for unpaid fare</value>
+  </data>
+  <data name="BusParkNumberOne" xml:space="preserve">
+    <value>Автобусный парк №1</value>
+  </data>
+  <data name="YouCouldNotPayAFineForAnUnpaidFare" xml:space="preserve">
+    <value>Вы не смогли оплатить штраф за неоплаченный проезд.</value>
+  </data>
 </root>

@@ -387,4 +387,49 @@
   <data name="YouDoNotHaveComputer" xml:space="preserve">
     <value>You do not have a computer</value>
   </data>
+  <data name="ByBike" xml:space="preserve">
+    <value>By bike</value>
+  </data>
+  <data name="ByCar" xml:space="preserve">
+    <value>By car</value>
+  </data>
+  <data name="ByPublicTransport" xml:space="preserve">
+    <value>By public transport</value>
+  </data>
+  <data name="OnFoot" xml:space="preserve">
+    <value>On foot</value>
+  </data>
+  <data name="OnMonowheel" xml:space="preserve">
+    <value>On monowheel</value>
+  </data>
+  <data name="OnMoped" xml:space="preserve">
+    <value>On moped</value>
+  </data>
+  <data name="OnMotorcycle" xml:space="preserve">
+    <value>On motorcycle</value>
+  </data>
+  <data name="OnScooterA" xml:space="preserve">
+    <value>On scooter</value>
+  </data>
+  <data name="OnScooterB" xml:space="preserve">
+    <value>On scooter</value>
+  </data>
+  <data name="WhatAreWeGoingToGetTo" xml:space="preserve">
+    <value>What are we going to get to?</value>
+  </data>
+  <data name="MovingInSpaceAndTime" xml:space="preserve">
+    <value>Moving in space and time</value>
+  </data>
+  <data name="FoundOnTheRoad" xml:space="preserve">
+    <value>Found on the road</value>
+  </data>
+  <data name="PenaltyForUnpaidFare" xml:space="preserve">
+    <value>Penalty for unpaid fare</value>
+  </data>
+  <data name="BusParkNumberOne" xml:space="preserve">
+    <value>Bus park №1</value>
+  </data>
+  <data name="YouCouldNotPayAFineForAnUnpaidFare" xml:space="preserve">
+    <value>You could not pay a fine for an unpaid fare.</value>
+  </data>
 </root>

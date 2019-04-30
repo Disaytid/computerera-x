@@ -1,24 +1,21 @@
-﻿using System.Runtime.InteropServices;
-using Computer_Era_X.Views;
+﻿using System;
+using System.Runtime.InteropServices;
 
 namespace Computer_Era_X.Models
 {
     [ComVisible(true)]
     public class MapReader
     {
-        object map;
+        private Action<string> _func;
 
-        public MapReader(object sender)
+        public MapReader(Action<string> func)
         {
-            map = sender;
+            _func = func;
         }
 
         public void ReadState(string obj)
         {
-            if (map is Map map1)
-            {
-                map1.TransitionProcessing(obj);
-            }
+            _func(obj);
         }
     }
 }
