@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AboutTheAuthor" xml:space="preserve">
+  <data name="+" xml:space="preserve">
     <value>About the author</value>
   </data>
   <data name="All" xml:space="preserve">
@@ -431,5 +431,56 @@
   </data>
   <data name="YouCouldNotPayAFineForAnUnpaidFare" xml:space="preserve">
     <value>You could not pay a fine for an unpaid fare.</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="Before" xml:space="preserve">
+    <value>Before</value>
+  </data>
+  <data name="DateOfServiceContract" xml:space="preserve">
+    <value>Date of service contract</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Invested" xml:space="preserve">
+    <value>Invested</value>
+  </data>
+  <data name="NotLimited" xml:space="preserve">
+    <value>Not limited</value>
+  </data>
+  <data name="Received" xml:space="preserve">
+    <value>Received</value>
+  </data>
+  <data name="Under" xml:space="preserve">
+    <value>Under</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Area</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="PantrySize" xml:space="preserve">
+    <value>Pantry size</value>
+  </data>
+  <data name="Cells" xml:space="preserve">
+    <value>Cells</value>
+  </data>
+  <data name="DistanceToCityCenter" xml:space="preserve">
+    <value>Distance to city center</value>
+  </data>
+  <data name="GameMessage1" xml:space="preserve">
+    <value>It turns out walking in the air is useful not only for health but also for pocket. You found {0} {1} on the road.</value>
+  </data>
+  <data name="ReceiptOfFunds" xml:space="preserve">
+    <value>Receipt of funds</value>
+  </data>
+  <data name="YouWereChargedForUnpaidFare" xml:space="preserve">
+    <value>You were charged for unpaid fare!</value>
   </data>
 </root>

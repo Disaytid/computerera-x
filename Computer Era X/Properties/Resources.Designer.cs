@@ -63,9 +63,9 @@ namespace Computer_Era_X.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на About the author.
         /// </summary>
-        public static string AboutTheAuthor {
+        public static string _ {
             get {
-                return ResourceManager.GetString("AboutTheAuthor", resourceCulture);
+                return ResourceManager.GetString("+", resourceCulture);
             }
         }
         
@@ -84,6 +84,24 @@ namespace Computer_Era_X.Properties {
         public static string All {
             get {
                 return ResourceManager.GetString("All", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Amount.
+        /// </summary>
+        public static string Amount {
+            get {
+                return ResourceManager.GetString("Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Area.
+        /// </summary>
+        public static string Area {
+            get {
+                return ResourceManager.GetString("Area", resourceCulture);
             }
         }
         
@@ -142,6 +160,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Before.
+        /// </summary>
+        public static string Before {
+            get {
+                return ResourceManager.GetString("Before", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Bus park №1.
         /// </summary>
         public static string BusParkNumberOne {
@@ -183,6 +210,15 @@ namespace Computer_Era_X.Properties {
         public static string Case {
             get {
                 return ResourceManager.GetString("Case", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Cells.
+        /// </summary>
+        public static string Cells {
+            get {
+                return ResourceManager.GetString("Cells", resourceCulture);
             }
         }
         
@@ -259,6 +295,24 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Currency.
+        /// </summary>
+        public static string Currency {
+            get {
+                return ResourceManager.GetString("Currency", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Date of service contract.
+        /// </summary>
+        public static string DateOfServiceContract {
+            get {
+                return ResourceManager.GetString("DateOfServiceContract", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Day.
         /// </summary>
         public static string Day {
@@ -273,6 +327,15 @@ namespace Computer_Era_X.Properties {
         public static string DeleteAllNotifications {
             get {
                 return ResourceManager.GetString("DeleteAllNotifications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Distance to city center.
+        /// </summary>
+        public static string DistanceToCityCenter {
+            get {
+                return ResourceManager.GetString("DistanceToCityCenter", resourceCulture);
             }
         }
         
@@ -376,6 +439,24 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на From.
+        /// </summary>
+        public static string From {
+            get {
+                return ResourceManager.GetString("From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на It turns out walking in the air is useful not only for health but also for pocket. You found {0} {1} on the road..
+        /// </summary>
+        public static string GameMessage1 {
+            get {
+                return ResourceManager.GetString("GameMessage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Hard disk drive.
         /// </summary>
         public static string HDD {
@@ -439,6 +520,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Invested.
+        /// </summary>
+        public static string Invested {
+            get {
+                return ResourceManager.GetString("Invested", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Keyboard.
         /// </summary>
         public static string Keyboard {
@@ -471,6 +561,15 @@ namespace Computer_Era_X.Properties {
         public static string LocalDisk {
             get {
                 return ResourceManager.GetString("LocalDisk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Location.
+        /// </summary>
+        public static string Location {
+            get {
+                return ResourceManager.GetString("Location", resourceCulture);
             }
         }
         
@@ -637,6 +736,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Not limited.
+        /// </summary>
+        public static string NotLimited {
+            get {
+                return ResourceManager.GetString("NotLimited", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на No value selected in scenario settings.
         /// </summary>
         public static string NoValueSelectedInScenarioSettings {
@@ -763,6 +871,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Pantry size.
+        /// </summary>
+        public static string PantrySize {
+            get {
+                return ResourceManager.GetString("PantrySize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Partition.
         /// </summary>
         public static string Partition {
@@ -849,6 +966,24 @@ namespace Computer_Era_X.Properties {
         public static string RAM {
             get {
                 return ResourceManager.GetString("RAM", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Receipt of funds.
+        /// </summary>
+        public static string ReceiptOfFunds {
+            get {
+                return ResourceManager.GetString("ReceiptOfFunds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Received.
+        /// </summary>
+        public static string Received {
+            get {
+                return ResourceManager.GetString("Received", resourceCulture);
             }
         }
         
@@ -943,6 +1078,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Under.
+        /// </summary>
+        public static string Under {
+            get {
+                return ResourceManager.GetString("Under", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Video card.
         /// </summary>
         public static string VideoCard {
@@ -1002,6 +1146,15 @@ namespace Computer_Era_X.Properties {
         public static string YouDoNotHaveComputer {
             get {
                 return ResourceManager.GetString("YouDoNotHaveComputer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You were charged for unpaid fare!.
+        /// </summary>
+        public static string YouWereChargedForUnpaidFare {
+            get {
+                return ResourceManager.GetString("YouWereChargedForUnpaidFare", resourceCulture);
             }
         }
     }

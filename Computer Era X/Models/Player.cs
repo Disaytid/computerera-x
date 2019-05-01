@@ -7,5 +7,6 @@ namespace Computer_Era_X.Models
     {
         public string Name { get; set; }
         public Collection<Currency> Money { get; set; } = new Collection<Currency>();
+        public House House;
     }
 }

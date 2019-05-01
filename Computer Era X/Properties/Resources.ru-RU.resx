@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AboutTheAuthor" xml:space="preserve">
+  <data name="+" xml:space="preserve">
     <value>О авторе</value>
   </data>
   <data name="All" xml:space="preserve">
@@ -431,5 +431,56 @@
   </data>
   <data name="YouCouldNotPayAFineForAnUnpaidFare" xml:space="preserve">
     <value>Вы не смогли оплатить штраф за неоплаченный проезд.</value>
+  </data>
+  <data name="Currency" xml:space="preserve">
+    <value>Валюта</value>
+  </data>
+  <data name="Amount" xml:space="preserve">
+    <value>Сумма</value>
+  </data>
+  <data name="Before" xml:space="preserve">
+    <value>До</value>
+  </data>
+  <data name="DateOfServiceContract" xml:space="preserve">
+    <value>Дата заключения договора на услугу</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>От</value>
+  </data>
+  <data name="Invested" xml:space="preserve">
+    <value>Вложено</value>
+  </data>
+  <data name="NotLimited" xml:space="preserve">
+    <value>Не ограничена</value>
+  </data>
+  <data name="Received" xml:space="preserve">
+    <value>Получено</value>
+  </data>
+  <data name="Under" xml:space="preserve">
+    <value>Под</value>
+  </data>
+  <data name="Area" xml:space="preserve">
+    <value>Площадь</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Расположение</value>
+  </data>
+  <data name="PantrySize" xml:space="preserve">
+    <value>Размер кладовки</value>
+  </data>
+  <data name="Cells" xml:space="preserve">
+    <value>Ячеек</value>
+  </data>
+  <data name="DistanceToCityCenter" xml:space="preserve">
+    <value>Расстояние до центра города</value>
+  </data>
+  <data name="GameMessage1" xml:space="preserve">
+    <value>Оказываеться прогулки на воздухе полезны не только для здоровья но и для кармана. Вы нашли на дороге {0} {1}.</value>
+  </data>
+  <data name="ReceiptOfFunds" xml:space="preserve">
+    <value>Поступление средств</value>
+  </data>
+  <data name="YouWereChargedForUnpaidFare" xml:space="preserve">
+    <value>Вам был выписан штраф за неоплаченный проезд!</value>
   </data>
 </root>

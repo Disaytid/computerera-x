@@ -9,6 +9,7 @@ namespace Computer_Era_X.Models
     {
         public GameEvents Events = new GameEvents();
         public Random Random = new Random(DateTime.Now.Millisecond);
+        public Collection<Message> Messages = new Collection<Message>();
         public IScenario Scenario;
         public Collection<BaseCurrency> Currencies = new Collection<BaseCurrency>();
         public Player Player = new Player();

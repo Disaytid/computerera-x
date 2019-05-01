@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Controls;
-using Computer_Era_X.Converters;
 using Computer_Era_X.DataTypes.Enums;
 using Computer_Era_X.Models;
 using Computer_Era_X.Views;
@@ -106,7 +105,7 @@ namespace Computer_Era_X.ViewModels
         {
             int _transitionTime = 15;
             int _speed = 6000 / 60; //Meters per minute where 6000 is the pedestrian speed in meters / h, and 60 is the number of minutes per hour
-            //if (GameEnvironment.Player.House != null) { transition_time += Convert.ToInt32(Math.Floor(GameEnvironment.Player.House.Distance / (double)speed)); }
+            if (GameEnvironment.Player.House != null) { _transitionTime += Convert.ToInt32(Math.Floor(GameEnvironment.Player.House.Distance / (double)_speed)); }
             Transition(_transitionTime);
         }
 
@@ -179,7 +178,7 @@ namespace Computer_Era_X.ViewModels
                     {
                         int money = Convert.ToInt32(GameEnvironment.Random.Next(1, 21) / (double)100 * GameEnvironment.Player.Money[0].Course);
                         GameEnvironment.Player.Money[0].TopUp(Properties.Resources.FoundOnTheRoad, GameEnvironment.Player.Name, GameEnvironment.Events.Timer.DateTime, money);
-                        //GameEnvironment.Messages.NewMessage("Поступление средств", "Оказываеться прогулки на воздухе полезны не только для здоровья но и для кармана. Вы нашли на дороге " + money + " " + GameEnvironment.Money.PlayerCurrency[0].Abbreviation, GameMessages.Icon.Money);
+                        GameEnvironment.Messages.Add(new Message(Properties.Resources.ReceiptOfFunds, string.Format(Properties.Resources.GameMessage1, money, GameEnvironment.Player.Money[0].Abbreviation), Icon.Money));
                     }
                     break;
                 case TransitionType.ByPublicTransport:
@@ -190,9 +189,8 @@ namespace Computer_Era_X.ViewModels
                             var _fine = 15; //The size of the penalty in the universal game currency
                             if (GameEnvironment.Player.Money[0].Withdraw(Properties.Resources.PenaltyForUnpaidFare, Properties.Resources.BusParkNumberOne, GameEnvironment.Events.Timer.DateTime, _fine * GameEnvironment.Player.Money[0].Course))
                             {
-                                // GameEnvironment.Messages.NewMessage(Properties.Resources.BusParkNumberOne, "Вам был выписан штраф за неоплаченный проезд!", GameMessages.Icon.Info);
-                            }
-                            else { GameEnvironment.Scenario.GameOver(Properties.Resources.YouCouldNotPayAFineForAnUnpaidFare); }
+                                GameEnvironment.Messages.Add(new Message(Properties.Resources.BusParkNumberOne, Properties.Resources.YouWereChargedForUnpaidFare, Icon.Info));
+                            } else { GameEnvironment.Scenario.GameOver(Properties.Resources.YouCouldNotPayAFineForAnUnpaidFare); }
                         }
                     }
                     break;
