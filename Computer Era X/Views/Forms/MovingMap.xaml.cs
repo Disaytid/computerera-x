@@ -8,5 +8,10 @@ namespace Computer_Era_X.Views
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+
+        }
     }
 }

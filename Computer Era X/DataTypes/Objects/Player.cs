@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
-using Computer_Era_X.DataTypes.Objects;
 
-namespace Computer_Era_X.Models
+namespace Computer_Era_X.DataTypes.Objects
 {
     public class Player
     {

@@ -70,6 +70,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Author.
+        /// </summary>
+        public static string AboutTheAuthor {
+            get {
+                return ResourceManager.GetString("AboutTheAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Add assembly.
         /// </summary>
         public static string AddAssembly {
@@ -295,6 +304,33 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Creative.
+        /// </summary>
+        public static string CreativeScenario {
+            get {
+                return ResourceManager.GetString("CreativeScenario", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Creator&apos;s Hand.
+        /// </summary>
+        public static string CreativeScenarioPaymentInitiator {
+            get {
+                return ResourceManager.GetString("CreativeScenarioPaymentInitiator", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Gift.
+        /// </summary>
+        public static string CreativeScenarioPaymentName {
+            get {
+                return ResourceManager.GetString("CreativeScenarioPaymentName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Currency.
         /// </summary>
         public static string Currency {
@@ -421,6 +457,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Fare payment.
+        /// </summary>
+        public static string FarePayment {
+            get {
+                return ResourceManager.GetString("FarePayment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Found on the road.
         /// </summary>
         public static string FoundOnTheRoad {
@@ -448,7 +493,7 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на It turns out walking in the air is useful not only for health but also for pocket. You found {0} {1} on the road..
+        ///   Ищет локализованную строку, похожую на It turns out walking in the air is useful not only for health but also for pocket. You found {0} {1} on the road.
         /// </summary>
         public static string GameMessage1 {
             get {
@@ -633,6 +678,15 @@ namespace Computer_Era_X.Properties {
         public static string ModifiedAssembly {
             get {
                 return ResourceManager.GetString("ModifiedAssembly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Money.
+        /// </summary>
+        public static string Money {
+            get {
+                return ResourceManager.GetString("Money", resourceCulture);
             }
         }
         
@@ -898,6 +952,24 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Pay.
+        /// </summary>
+        public static string Pay {
+            get {
+                return ResourceManager.GetString("Pay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Payment for public transport.
+        /// </summary>
+        public static string PaymentForPublicTransport {
+            get {
+                return ResourceManager.GetString("PaymentForPublicTransport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Penalty for unpaid fare.
         /// </summary>
         public static string PenaltyForUnpaidFare {
@@ -1146,6 +1218,24 @@ namespace Computer_Era_X.Properties {
         public static string YouDoNotHaveComputer {
             get {
                 return ResourceManager.GetString("YouDoNotHaveComputer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You do not have enough money!.
+        /// </summary>
+        public static string YouDoNotHaveEnoughMoney {
+            get {
+                return ResourceManager.GetString("YouDoNotHaveEnoughMoney", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You want to buy a ticket for.
+        /// </summary>
+        public static string YouWantToBuyATicketFor {
+            get {
+                return ResourceManager.GetString("YouWantToBuyATicketFor", resourceCulture);
             }
         }
         

@@ -3,6 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Computer_Era_X.DataTypes.Enums;
 using Computer_Era_X.Models;
+using Computer_Era_X.Models.Systems;
 using Computer_Era_X.Views;
 using Prism.Commands;
 using MessageBox = Computer_Era_X.Views.MessageBox;
@@ -38,6 +39,7 @@ namespace Computer_Era_X.ViewModels
         private double _progressMinimum;
         private double _progressMaximum;
         private double _progressValue;
+        private Visibility _transportVisibility = Visibility.Visible;
         public WebBrowser GameMap
         {
             get => _map;
@@ -79,11 +81,17 @@ namespace Computer_Era_X.ViewModels
             set => SetProperty(ref _progressValue, value);
         }
 
+        public Visibility TransportVisibility
+        {
+            get => _transportVisibility;
+            set => SetProperty(ref _transportVisibility, value);
+        }
+
         // METHOD'S
         TransitionType _transitionType;
         private void GoToPlace(string transport)
         {
-            MovingVisibility = Visibility.Collapsed;
+            TransportVisibility = Visibility.Collapsed;
             MoveVisibility = Visibility.Visible;
 
             switch (transport)
@@ -103,17 +111,31 @@ namespace Computer_Era_X.ViewModels
         }
         private void Walk()
         {
-            int _transitionTime = 15;
-            int _speed = 6000 / 60; //Meters per minute where 6000 is the pedestrian speed in meters / h, and 60 is the number of minutes per hour
-            if (GameEnvironment.Player.House != null) { _transitionTime += Convert.ToInt32(Math.Floor(GameEnvironment.Player.House.Distance / (double)_speed)); }
-            Transition(_transitionTime);
+            var transitionTime = 15;
+            const int speed = 6000 / 60; //Meters per minute where 6000 is the pedestrian speed in meters / h, and 60 is the number of minutes per hour
+            if (GameEnvironment.Player.House != null) { transitionTime += Convert.ToInt32(Math.Floor(GameEnvironment.Player.House.Distance / (double)speed)); }
+            Transition(transitionTime);
         }
 
-        private readonly double _fare = 0.1;
         private bool _payment;
         private void GoByPublicTransport()
         {
-
+            var transitionTime = 3;
+            const int speed = 40000 / 60; //meters per minute where 40,000 is the speed of transport in meters/h, and 60 is the number of minutes per hour
+            var price = Convert.ToInt32(0.15 * GameEnvironment.Player.Money[0].Course);
+            if (GameEnvironment.Player.House != null)
+            {
+                const double fare = 0.1;
+                transitionTime += Convert.ToInt32(Math.Floor(GameEnvironment.Player.House.Distance / (double)speed));
+                price += Convert.ToInt32(GameEnvironment.Player.House.Distance / 1000.0 * fare * GameEnvironment.Player.Money[0].Course);
+            }
+            if (MessageBox.Show(Properties.Resources.FarePayment, Properties.Resources.YouWantToBuyATicketFor + " " + price + " " + GameEnvironment.Player.Money[0].Abbreviation + "?", MessageBoxType.ConfirmationWithYesNo) == MessageBoxResult.Yes)
+            {
+                if (!GameEnvironment.Player.Money[0].Withdraw(Properties.Resources.Pay, GameEnvironment.Player.Name, GameEnvironment.Events.Timer.DateTime, price))
+                { MessageBox.Show(Properties.Resources.FarePayment, Properties.Resources.YouDoNotHaveEnoughMoney, MessageBoxType.Information); return; }
+                _payment = true;
+            } else { _payment = false; }
+            Transition(transitionTime);
         }
 
         private void ShowBuilding()
@@ -164,6 +186,11 @@ namespace Computer_Era_X.ViewModels
                 GameEnvironment.Events.Events.Remove(@event);
                 EndTransition();
                 ShowBuilding();
+
+                MapVisibility = Visibility.Visible;
+                MovingVisibility = Visibility.Collapsed;
+                TransportVisibility = Visibility.Visible;
+                MoveVisibility = Visibility.Collapsed;
             } else {
                 ProgressValue += 1;
             }

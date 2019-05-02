@@ -50,7 +50,7 @@ namespace Computer_Era_X.ViewModels
         }
         private void ScenarioSelection()
         {
-            if (SelectedScenario?.Settings == null || SelectedScenario.Settings.Count == 0) { return; }
+            if (SelectedScenario?.Settings == null || SelectedScenario.Settings.Count == 0) { ScenarioSettings = null; return; }
             var stackPanel = MenuModel.GetScenarioSettings(SelectedScenario);
             ScenarioSettings = stackPanel;
         }
@@ -73,7 +73,6 @@ namespace Computer_Era_X.ViewModels
             SelectedScenario.Start(GameEnvironment);
             ShowDesktop();
         }
-
         private void ShowDesktop()
         {
             NewGameVisibility = Visibility.Collapsed;
@@ -127,6 +126,6 @@ namespace Computer_Era_X.ViewModels
         public DelegateCommand StartGame { get; }
 
         private void CloseCurrentForm() => Form = null;
-        public  DelegateCommand CloseForm { get; }
+        public DelegateCommand CloseForm { get; }
     }
 }

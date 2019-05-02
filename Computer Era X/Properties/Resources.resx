@@ -475,12 +475,42 @@
     <value>Distance to city center</value>
   </data>
   <data name="GameMessage1" xml:space="preserve">
-    <value>It turns out walking in the air is useful not only for health but also for pocket. You found {0} {1} on the road.</value>
+    <value>It turns out walking in the air is useful not only for health but also for pocket. You found {0} {1} on the road</value>
   </data>
   <data name="ReceiptOfFunds" xml:space="preserve">
     <value>Receipt of funds</value>
   </data>
   <data name="YouWereChargedForUnpaidFare" xml:space="preserve">
     <value>You were charged for unpaid fare!</value>
+  </data>
+  <data name="AboutTheAuthor" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="CreativeScenario" xml:space="preserve">
+    <value>Creative</value>
+  </data>
+  <data name="Money" xml:space="preserve">
+    <value>Money</value>
+  </data>
+  <data name="CreativeScenarioPaymentInitiator" xml:space="preserve">
+    <value>Creator's Hand</value>
+  </data>
+  <data name="CreativeScenarioPaymentName" xml:space="preserve">
+    <value>Gift</value>
+  </data>
+  <data name="FarePayment" xml:space="preserve">
+    <value>Fare payment</value>
+  </data>
+  <data name="YouDoNotHaveEnoughMoney" xml:space="preserve">
+    <value>You do not have enough money!</value>
+  </data>
+  <data name="PaymentForPublicTransport" xml:space="preserve">
+    <value>Payment for public transport</value>
+  </data>
+  <data name="Pay" xml:space="preserve">
+    <value>Pay</value>
+  </data>
+  <data name="YouWantToBuyATicketFor" xml:space="preserve">
+    <value>You want to buy a ticket for</value>
   </data>
 </root>

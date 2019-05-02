@@ -31,16 +31,16 @@
             </Grid>
             <ContentControl Content="{Binding Form}"/>
             <Grid Name="Program"/>
-            <Grid Name="GameMessagePanel" HorizontalAlignment="Right" Width="300" Background="#E5FFFFFF" Visibility="Visible">
+            <Grid Name="GameMessagePanel" HorizontalAlignment="Right" Width="300" Background="#E5FFFFFF" Visibility="{Binding MessageBarVisibility}">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Button Grid.Row="0" Content="{x:Static res:Resources.DeleteAllNotifications}" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Blue"/>
-                <ListBox x:Name="listBox" Grid.Row="1" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                <Button Grid.Row="0" Content="{x:Static res:Resources.DeleteAllNotifications}" BorderBrush="{x:Null}" Background="{x:Null}" Foreground="Blue" Command="{Binding RemoveMessages}"/>
+                <ListBox x:Name="Messages" Grid.Row="1" ItemsSource="{Binding Messages}"  Background="{x:Null}" ScrollViewer.HorizontalScrollBarVisibility="Disabled" IsSynchronizedWithCurrentItem="True">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
-                            <StackPanel Height="{Binding ActualHeight, ElementName=listBox, Mode=OneWay}">
+                            <StackPanel Width="{Binding ActualWidth, ElementName=Messages, Mode=OneWay}">
                                 <DockPanel VerticalAlignment="Top" Background="#FF48BABA">
                                     <Image Source="{Binding Icon}" Width="16" Height="16" Margin="10,0,0,0"/>
                                     <Label Content="{Binding Title}" FontSize="16" Foreground="White" Margin="5,0,10,0"/>
@@ -51,7 +51,21 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
             </Grid>
-            <ContentControl Width="300" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Bottom" Background="#E5FFFFFF" Visibility="Collapsed" Content="{Binding MessageBubble}"/>
+            <Grid Width="300" Margin="10" HorizontalAlignment="Right" VerticalAlignment="Bottom" Visibility="{Binding BubbleMessageVisibility}" Background="#E5FFFFFF">
+                <ContentControl Name="MessageBubble" Content="{Binding BubbleMessage}">
+                    <ContentControl.ContentTemplate>
+                        <DataTemplate>
+                            <StackPanel Width="{Binding ActualWidth, ElementName=MessageBubble, Mode=OneWay}">
+                                <DockPanel VerticalAlignment="Top" Background="#FF48BABA">
+                                    <Image Source="{Binding Icon}" Width="16" Height="16" Margin="10,0,0,0"/>
+                                    <Label Content="{Binding Title}" FontSize="16" Foreground="White" Margin="5,0,10,0"/>
+                                </DockPanel>
+                                <TextBlock Text="{Binding Text}" FontSize="14" Foreground="DarkSlateGray" Margin="10" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ContentControl.ContentTemplate>
+                </ContentControl>
+            </Grid>
         </Grid>
         <DockPanel Height="50" Background="#E5747474" VerticalAlignment="Bottom" LastChildFill="False">
             <Menu HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="50" Background="{x:Null}" UseLayoutRounding="False" VerticalContentAlignment="Top">
@@ -96,7 +110,7 @@
                     </MenuItem>
                 </MenuItem>
             </Menu>
-            <Button Name="GameMessage" DockPanel.Dock="Right" Width="50" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="DarkGray">
+            <Button Name="GameMessage" Content="{Binding MessagesCount}" DockPanel.Dock="Right" Width="50" BorderBrush="{x:Null}" FontWeight="Bold" Foreground="DarkGray" Command="{Binding ShowHideMessageBar}">
                 <Button.Background>
                     <ImageBrush Stretch="Uniform" ImageSource="pack://application:,,,/Assets/Icons/talk.png"/>
                 </Button.Background>

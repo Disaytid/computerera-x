@@ -475,12 +475,42 @@
     <value>Расстояние до центра города</value>
   </data>
   <data name="GameMessage1" xml:space="preserve">
-    <value>Оказываеться прогулки на воздухе полезны не только для здоровья но и для кармана. Вы нашли на дороге {0} {1}.</value>
+    <value>Оказываеться прогулки на воздухе полезны не только для здоровья но и для кармана. Вы нашли на дороге {0} {1}</value>
   </data>
   <data name="ReceiptOfFunds" xml:space="preserve">
     <value>Поступление средств</value>
   </data>
   <data name="YouWereChargedForUnpaidFare" xml:space="preserve">
     <value>Вам был выписан штраф за неоплаченный проезд!</value>
+  </data>
+  <data name="AboutTheAuthor" xml:space="preserve">
+    <value>Автор</value>
+  </data>
+  <data name="CreativeScenario" xml:space="preserve">
+    <value>Творческий</value>
+  </data>
+  <data name="Money" xml:space="preserve">
+    <value>Деньги</value>
+  </data>
+  <data name="CreativeScenarioPaymentInitiator" xml:space="preserve">
+    <value>Рука творца</value>
+  </data>
+  <data name="CreativeScenarioPaymentName" xml:space="preserve">
+    <value>Дар</value>
+  </data>
+  <data name="FarePayment" xml:space="preserve">
+    <value>Оплата проезда</value>
+  </data>
+  <data name="YouDoNotHaveEnoughMoney" xml:space="preserve">
+    <value>У вас не хватает денег!</value>
+  </data>
+  <data name="PaymentForPublicTransport" xml:space="preserve">
+    <value>Оплата за проезд в общественном транспорте</value>
+  </data>
+  <data name="Pay" xml:space="preserve">
+    <value>Оплата</value>
+  </data>
+  <data name="YouWantToBuyATicketFor" xml:space="preserve">
+    <value>Вы хотите купить билет за</value>
   </data>
 </root>

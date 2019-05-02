@@ -6,15 +6,26 @@
              xmlns:res="clr-namespace:Computer_Era_X.Properties"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <Style TargetType="Button" x:Key="MovingButton">
+            <Setter Property="MinHeight" Value="96"/>
+            <Setter Property="MinWidth" Value="96"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Template" Value="{DynamicResource MovingButtonStyle}"/>
+            <Setter Property="Command" Value="{Binding GoTo}"/>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/Computer Era X;component/Assets/Backgrounds/fantasy-background.jpg"/>
         </Grid.Background>
-        <StackPanel VerticalAlignment="Center" MaxWidth="500">
+        <StackPanel VerticalAlignment="Center" MaxWidth="500" Visibility="{Binding TransportVisibility}">
             <TextBlock Text="{x:Static res:Resources.WhatAreWeGoingToGetTo}" TextAlignment="Center" Foreground="White" FontSize="24" VerticalAlignment="Center" Margin="10,0,10,5"/>
             <DockPanel LastChildFill="False" HorizontalAlignment="Center">
                 <StackPanel Width="96" >
-                    <Button Width="96" Height="96" VerticalAlignment="Center" Margin="0" BorderThickness="0" Command="{Binding GoTo}" CommandParameter="on_foot">
+                    <Button CommandParameter="on_foot" Style="{StaticResource MovingButton}">
                         <Button.Background>
                             <ImageBrush ImageSource="/Computer Era X;component/Assets/Icons/walk.png" Stretch="UniformToFill"/>
                         </Button.Background>
@@ -22,7 +33,7 @@
                     <TextBlock Text="{x:Static res:Resources.OnFoot}" TextWrapping="Wrap" Foreground="White" FontSize="10" TextAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Width="96" >
-                    <Button Width="96" Height="96" VerticalAlignment="Center" Margin="0" BorderThickness="0" Command="{Binding GoTo}" CommandParameter="public_transport">
+                    <Button CommandParameter="public_transport" Style="{StaticResource MovingButton}">
                         <Button.Background>
                             <ImageBrush ImageSource="/Computer Era X;component/Assets/Icons/bus.png" Stretch="UniformToFill"/>
                         </Button.Background>
@@ -30,7 +41,7 @@
                     <TextBlock Text="{x:Static res:Resources.ByPublicTransport}" TextWrapping="Wrap" Foreground="White" FontSize="10" TextAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Width="96" >
-                    <Button Name="ByBike" Width="96" Height="96" VerticalAlignment="Center" Margin="0" BorderThickness="0">
+                    <Button Name="ByBike" Style="{StaticResource MovingButton}">
                         <Button.Background>
                             <ImageBrush ImageSource="/Computer Era X;component/Assets/Icons/cycling.png" Stretch="UniformToFill"/>
                         </Button.Background>
@@ -38,7 +49,7 @@
                     <TextBlock Text="{x:Static res:Resources.ByBike}" TextWrapping="Wrap" Foreground="White" FontSize="10" TextAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Width="96" >
-                    <Button Name="OnScooterA" Width="96" Height="96" VerticalAlignment="Center" Margin="0" BorderThickness="0">
+                    <Button Name="OnScooterA" Style="{StaticResource MovingButton}">
                         <Button.Background>
                             <ImageBrush ImageSource="/Computer Era X;component/Assets/Icons/chariot.png" Stretch="UniformToFill"/>
                         </Button.Background>
@@ -46,7 +57,7 @@
                     <TextBlock Text="{x:Static res:Resources.OnScooterA}" TextWrapping="Wrap" Foreground="White" FontSize="10" TextAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Width="96" >
-                    <Button Name="OnMonowheel" Width="96" Height="96" VerticalAlignment="Center" Margin="0" BorderThickness="0">
+                    <Button Name="OnMonowheel" Style="{StaticResource MovingButton}">
                         <Button.Background>
                             <ImageBrush ImageSource="/Computer Era X;component/Assets/Icons/unicycle.png" Stretch="UniformToFill"/>
                         </Button.Background>
@@ -56,7 +67,7 @@
             </DockPanel>
             <DockPanel LastChildFill="False" HorizontalAlignment="Center">
                 <StackPanel Width="96" >
-                    <Button Name="OnScooterB" Width="96" Height="96" VerticalAlignment="Center" Margin="0" BorderThickness="0">
+                    <Button Name="OnScooterB" Style="{StaticResource MovingButton}">
                         <Button.Background>
                             <ImageBrush ImageSource="/Computer Era X;component/Assets/Icons/scooter.png" Stretch="UniformToFill"/>
                         </Button.Background>
@@ -64,7 +75,7 @@
                     <TextBlock Text="{x:Static res:Resources.OnScooterB}" TextWrapping="Wrap" Foreground="White" FontSize="10" TextAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Width="96" >
-                    <Button Name="OnMoped" Width="96" Height="96" VerticalAlignment="Center" Margin="0" BorderThickness="0">
+                    <Button Name="OnMoped" Style="{StaticResource MovingButton}">
                         <Button.Background>
                             <ImageBrush ImageSource="/Computer Era X;component/Assets/Icons/scooter.png" Stretch="UniformToFill"/>
                         </Button.Background>
@@ -72,7 +83,7 @@
                     <TextBlock Text="{x:Static res:Resources.OnMoped}" TextWrapping="Wrap" Foreground="White" FontSize="10" TextAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Width="96" >
-                    <Button Name="OnMotorcycle" Width="96" Height="96" VerticalAlignment="Center" Margin="0" BorderThickness="0">
+                    <Button Name="OnMotorcycle" Style="{StaticResource MovingButton}">
                         <Button.Background>
                             <ImageBrush ImageSource="/Computer Era X;component/Assets/Icons/scooter.png" Stretch="UniformToFill"/>
                         </Button.Background>
@@ -80,7 +91,7 @@
                     <TextBlock Text="{x:Static res:Resources.OnMotorcycle}" TextWrapping="Wrap" Foreground="White" FontSize="10" TextAlignment="Center"/>
                 </StackPanel>
                 <StackPanel Width="96" >
-                    <Button Name="ByCar" Width="96" Height="96" VerticalAlignment="Center" Margin="0" BorderThickness="0">
+                    <Button Name="ByCar" Style="{StaticResource MovingButton}" IsEnabled="False">
                         <Button.Background>
                             <ImageBrush ImageSource="/Computer Era X;component/Assets/Icons/city-car.png" Stretch="UniformToFill"/>
                         </Button.Background>
@@ -91,7 +102,7 @@
         </StackPanel>
         <StackPanel VerticalAlignment="Center" MaxWidth="500" Visibility="{Binding MoveVisibility}">
             <TextBlock Text="{x:Static res:Resources.MovingInSpaceAndTime}" Foreground="White" TextAlignment="Center" FontSize="24" VerticalAlignment="Center" Margin="10,0,10,5"/>
-            <ProgressBar Name="MoveProgress" Height="25" Margin="10, 5, 10, 0"></ProgressBar>
+            <ProgressBar Name="MoveProgress" Minimum="{Binding ProgressMinimum}" Maximum="{Binding ProgressMaximum}" Value="{Binding ProgressValue}" Height="25" Margin="10, 5, 10, 0"/>
         </StackPanel>
     </Grid>
 </UserControl>
