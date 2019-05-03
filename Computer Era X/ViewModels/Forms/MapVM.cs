@@ -88,6 +88,14 @@ namespace Computer_Era_X.ViewModels
         }
 
         // METHOD'S
+        private void ReturnToInitialState()
+        {
+            MapVisibility = Visibility.Visible;
+            MovingVisibility = Visibility.Collapsed;
+            TransportVisibility = Visibility.Visible;
+            MoveVisibility = Visibility.Collapsed;
+        }
+
         TransitionType _transitionType;
         private void GoToPlace(string transport)
         {
@@ -132,7 +140,11 @@ namespace Computer_Era_X.ViewModels
             if (MessageBox.Show(Properties.Resources.FarePayment, Properties.Resources.YouWantToBuyATicketFor + " " + price + " " + GameEnvironment.Player.Money[0].Abbreviation + "?", MessageBoxType.ConfirmationWithYesNo) == MessageBoxResult.Yes)
             {
                 if (!GameEnvironment.Player.Money[0].Withdraw(Properties.Resources.Pay, GameEnvironment.Player.Name, GameEnvironment.Events.Timer.DateTime, price))
-                { MessageBox.Show(Properties.Resources.FarePayment, Properties.Resources.YouDoNotHaveEnoughMoney, MessageBoxType.Information); return; }
+                {
+                    MessageBox.Show(Properties.Resources.FarePayment, Properties.Resources.YouDoNotHaveEnoughMoney, MessageBoxType.Information);
+                    ReturnToInitialState();
+                    return;
+                }
                 _payment = true;
             } else { _payment = false; }
             Transition(transitionTime);
@@ -145,6 +157,7 @@ namespace Computer_Era_X.ViewModels
                 case "labor_exchange":
                     break;
                 case "computer_parts_store":
+                    Form = new ComponentStore();
                     break;
                 case "bank":
                     break;
@@ -186,11 +199,7 @@ namespace Computer_Era_X.ViewModels
                 GameEnvironment.Events.Events.Remove(@event);
                 EndTransition();
                 ShowBuilding();
-
-                MapVisibility = Visibility.Visible;
-                MovingVisibility = Visibility.Collapsed;
-                TransportVisibility = Visibility.Visible;
-                MoveVisibility = Visibility.Collapsed;
+                ReturnToInitialState();
             } else {
                 ProgressValue += 1;
             }

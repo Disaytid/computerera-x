@@ -513,4 +513,40 @@
   <data name="YouWantToBuyATicketFor" xml:space="preserve">
     <value>Вы хотите купить билет за</value>
   </data>
+  <data name="InYourPocket" xml:space="preserve">
+    <value>У вас в кармане</value>
+  </data>
+  <data name="BuildingsMessage1" xml:space="preserve">
+    <value>Добро пожаловать в магазин компьютерных комплектующих "Клепаем сами"! Хотели бы что-то прикупить?</value>
+  </data>
+  <data name="Buy" xml:space="preserve">
+    <value>Купить</value>
+  </data>
+  <data name="BuiltInFans" xml:space="preserve">
+    <value>Встроенных вентиляторов</value>
+  </data>
+  <data name="FormFactor" xml:space="preserve">
+    <value>Форм фактор</value>
+  </data>
+  <data name="HeadphoneJack" xml:space="preserve">
+    <value>Гнездо для наушников</value>
+  </data>
+  <data name="LiquidCoolingSupport" xml:space="preserve">
+    <value>Поддержка жидкостного охлаждения</value>
+  </data>
+  <data name="MicrophoneJack" xml:space="preserve">
+    <value>Гнездо для микрофона</value>
+  </data>
+  <data name="Nests" xml:space="preserve">
+    <value>Гнезд</value>
+  </data>
+  <data name="PlacesForFans" xml:space="preserve">
+    <value>Мест для вентиляторов</value>
+  </data>
+  <data name="Sections" xml:space="preserve">
+    <value>Секций</value>
+  </data>
+  <data name="TypeСase" xml:space="preserve">
+    <value>Тип корпуса</value>
+  </data>
 </root>

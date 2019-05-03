@@ -120,13 +120,15 @@
     <Compile Include="Converters\PeriodicityConverter.cs" />
     <Compile Include="DataTypes\Enums\EMessages.cs" />
     <Compile Include="DataTypes\Enums\ETransition.cs" />
-    <Compile Include="DataTypes\Dictionaries\DItems.cs" />
+    <Compile Include="DataTypes\Dictionarys\DItems.cs" />
     <Compile Include="DataTypes\Enums\EItems.cs" />
     <Compile Include="DataTypes\Enums\EMessageBox.cs" />
     <Compile Include="DataTypes\Enums\EScenarios.cs" />
     <Compile Include="DataTypes\Enums\ETime.cs" />
-    <Compile Include="DataTypes\Enums\Operators.cs" />
+    <Compile Include="DataTypes\Enums\EOperators.cs" />
+    <Compile Include="DataTypes\Interfaces\IItem.cs" />
     <Compile Include="DataTypes\Interfaces\IScenario.cs" />
+    <Compile Include="DataTypes\Objects\Computer\Case.cs" />
     <Compile Include="DataTypes\Objects\Computer\CPU.cs" />
     <Compile Include="DataTypes\Objects\Money.cs" />
     <Compile Include="DataTypes\Objects\Realty.cs" />
@@ -150,9 +152,13 @@
     <Compile Include="Scenarios\Creative.cs" />
     <Compile Include="Scenarios\Main.cs" />
     <Compile Include="ViewModels\DesktopVM.cs" />
+    <Compile Include="ViewModels\Forms\Buildings\ComponentStoreVM.cs" />
     <Compile Include="ViewModels\Forms\MapVM.cs" />
     <Compile Include="ViewModels\Forms\PurseVM.cs" />
     <Compile Include="ViewModels\GameVM.cs" />
+    <Compile Include="Views\Forms\Buildings\ComponentStore.xaml.cs">
+      <DependentUpon>ComponentStore.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Forms\Form.xaml.cs">
       <DependentUpon>Form.xaml</DependentUpon>
     </Compile>
@@ -234,6 +240,10 @@
     <Page Include="Dictionarys\Menu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Forms\Buildings\ComponentStore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Forms\Form.xaml">
       <SubType>Designer</SubType>
@@ -412,6 +422,12 @@
     <Resource Include="Assets\Icons\walk.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Assets\Backgrounds\computers.jpg" />
+    <Resource Include="Assets\Characters\business-01.png" />
+    <Resource Include="Assets\Characters\geek2.png" />
+    <Resource Include="Assets\Characters\geek1.png" />
+    <Resource Include="Assets\Characters\real-estate-agent.png" />
+    <Resource Include="Assets\Characters\troll.png" />
     <Content Include="Map\index.css" />
     <Content Include="Map\index.html" />
     <Content Include="Map\index.js" />
@@ -1117,7 +1133,9 @@
     <Resource Include="Map\tiles\17\74959\42340.png" />
     <Resource Include="Map\tiles\17\74959\42341.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Assets\Items\CPU\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.110.0\build\net46\System.Data.SQLite.Core.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

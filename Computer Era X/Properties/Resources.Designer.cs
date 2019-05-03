@@ -178,11 +178,38 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Welcome to the Riveting Yourself computer parts store! Would you like to buy something?.
+        /// </summary>
+        public static string BuildingsMessage1 {
+            get {
+                return ResourceManager.GetString("BuildingsMessage1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Built-in fans.
+        /// </summary>
+        public static string BuiltInFans {
+            get {
+                return ResourceManager.GetString("BuiltInFans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Bus park №1.
         /// </summary>
         public static string BusParkNumberOne {
             get {
                 return ResourceManager.GetString("BusParkNumberOne", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Buy.
+        /// </summary>
+        public static string Buy {
+            get {
+                return ResourceManager.GetString("Buy", resourceCulture);
             }
         }
         
@@ -466,6 +493,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Form factor.
+        /// </summary>
+        public static string FormFactor {
+            get {
+                return ResourceManager.GetString("FormFactor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Found on the road.
         /// </summary>
         public static string FoundOnTheRoad {
@@ -507,6 +543,15 @@ namespace Computer_Era_X.Properties {
         public static string HDD {
             get {
                 return ResourceManager.GetString("HDD", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Headphone jack.
+        /// </summary>
+        public static string HeadphoneJack {
+            get {
+                return ResourceManager.GetString("HeadphoneJack", resourceCulture);
             }
         }
         
@@ -574,6 +619,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на In your pocket.
+        /// </summary>
+        public static string InYourPocket {
+            get {
+                return ResourceManager.GetString("InYourPocket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Keyboard.
         /// </summary>
         public static string Keyboard {
@@ -588,6 +642,15 @@ namespace Computer_Era_X.Properties {
         public static string Launch {
             get {
                 return ResourceManager.GetString("Launch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Liquid cooling support.
+        /// </summary>
+        public static string LiquidCoolingSupport {
+            get {
+                return ResourceManager.GetString("LiquidCoolingSupport", resourceCulture);
             }
         }
         
@@ -660,6 +723,15 @@ namespace Computer_Era_X.Properties {
         public static string MaximumWorkingTemperature {
             get {
                 return ResourceManager.GetString("MaximumWorkingTemperature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Microphone jack.
+        /// </summary>
+        public static string MicrophoneJack {
+            get {
+                return ResourceManager.GetString("MicrophoneJack", resourceCulture);
             }
         }
         
@@ -741,6 +813,15 @@ namespace Computer_Era_X.Properties {
         public static string Name {
             get {
                 return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Nests.
+        /// </summary>
+        public static string Nests {
+            get {
+                return ResourceManager.GetString("Nests", resourceCulture);
             }
         }
         
@@ -979,6 +1060,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Places for fans.
+        /// </summary>
+        public static string PlacesForFans {
+            get {
+                return ResourceManager.GetString("PlacesForFans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Player.
         /// </summary>
         public static string Player {
@@ -1096,6 +1186,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Sections.
+        /// </summary>
+        public static string Sections {
+            get {
+                return ResourceManager.GetString("Sections", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Settings.
         /// </summary>
         public static string Settings {
@@ -1146,6 +1245,15 @@ namespace Computer_Era_X.Properties {
         public static string TestingAndRunning {
             get {
                 return ResourceManager.GetString("TestingAndRunning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Type case.
+        /// </summary>
+        public static string TypeСase {
+            get {
+                return ResourceManager.GetString("TypeСase", resourceCulture);
             }
         }
         

@@ -513,4 +513,40 @@
   <data name="YouWantToBuyATicketFor" xml:space="preserve">
     <value>You want to buy a ticket for</value>
   </data>
+  <data name="InYourPocket" xml:space="preserve">
+    <value>In your pocket</value>
+  </data>
+  <data name="BuildingsMessage1" xml:space="preserve">
+    <value>Welcome to the Riveting Yourself computer parts store! Would you like to buy something?</value>
+  </data>
+  <data name="Buy" xml:space="preserve">
+    <value>Buy</value>
+  </data>
+  <data name="BuiltInFans" xml:space="preserve">
+    <value>Built-in fans</value>
+  </data>
+  <data name="FormFactor" xml:space="preserve">
+    <value>Form factor</value>
+  </data>
+  <data name="HeadphoneJack" xml:space="preserve">
+    <value>Headphone jack</value>
+  </data>
+  <data name="LiquidCoolingSupport" xml:space="preserve">
+    <value>Liquid cooling support</value>
+  </data>
+  <data name="MicrophoneJack" xml:space="preserve">
+    <value>Microphone jack</value>
+  </data>
+  <data name="Nests" xml:space="preserve">
+    <value>Nests</value>
+  </data>
+  <data name="PlacesForFans" xml:space="preserve">
+    <value>Places for fans</value>
+  </data>
+  <data name="Sections" xml:space="preserve">
+    <value>Sections</value>
+  </data>
+  <data name="TypeСase" xml:space="preserve">
+    <value>Type case</value>
+  </data>
 </root>

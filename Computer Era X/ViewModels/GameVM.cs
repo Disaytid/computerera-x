@@ -42,6 +42,7 @@ namespace Computer_Era_X.ViewModels
         partial void DesktopInit();
         partial void PurseInit();
         partial void MapInit();
+        partial void ComponentStoreInit();
 
         private void CreateNewGame()
         {
@@ -64,7 +65,9 @@ namespace Computer_Era_X.ViewModels
 
             //LOAD BASE
             ApplicationContext db = new ApplicationContext();
+            db.Items.Load();
             db.BaseCurrencies.Load();
+            GameEnvironment.Items.LoadingItems(db.Items.Local);
             GameEnvironment.Currencies = db.BaseCurrencies.Local;
 
             //START GAME

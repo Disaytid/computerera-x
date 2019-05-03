@@ -38,4 +38,53 @@
         Socket939,
         Socket940,
     }
+    public enum CaseTypes
+    {
+        AT,
+        ATX,
+        Slim,
+        MiniTower,
+        MidiTower,
+        BigTower,
+        Barebone,
+        Rack,
+        TinyTower,
+    }
+    public enum MotherboardTypes
+    {
+        ATX,
+        MiniATX,
+        NLX,
+        FlexATX,
+        MicroATX,
+        CEB,
+        WTX,
+        PicoITX,
+        NanoITX,
+        MiniITX,
+        PicoBTX,
+        MicroBTX,
+        BTX,
+        LPX,
+        BabyAT,
+        EATX,
+    }
+    public enum PSUTypes
+    {
+        ATX
+    }
+    public enum HDDFormFactor
+    {
+        ThreeFive,
+        TwoFive
+    }
+
+    public enum HDDInterface
+    {
+        // ReSharper disable once InconsistentNaming
+        Sata2_0,
+        // ReSharper disable once InconsistentNaming
+        Sata3_0,
+        IDE
+    }
 }

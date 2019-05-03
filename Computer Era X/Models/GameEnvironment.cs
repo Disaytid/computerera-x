@@ -12,6 +12,7 @@ namespace Computer_Era_X.Models
         public Random Random = new Random(DateTime.Now.Millisecond);
         public ObservableCollection<Message> Messages = new ObservableCollection<Message>();
         public IScenario Scenario;
+        public Items Items = new Items();
         public Collection<BaseCurrency> Currencies = new Collection<BaseCurrency>();
         public Player Player = new Player();
     }
