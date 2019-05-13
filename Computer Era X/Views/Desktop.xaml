@@ -98,7 +98,7 @@
                             <Image Source ="pack://application:,,,/Assets/Icons/screwdriver.png"/>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Name="MenuInventoryItem" Header="{x:Static res:Resources.Pantry}" Style="{StaticResource MenuItem}">
+                    <MenuItem Name="MenuInventoryItem" Header="{x:Static res:Resources.Pantry}" Style="{StaticResource MenuItem}" Command="{Binding Pantry}">
                         <MenuItem.Icon>
                             <Image Source ="pack://application:,,,/Assets/Icons/cardboard-box.png"/>
                         </MenuItem.Icon>

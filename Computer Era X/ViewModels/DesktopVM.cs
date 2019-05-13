@@ -20,6 +20,7 @@ namespace Computer_Era_X.ViewModels
             VeryFastPlay = new DelegateCommand(GameVeryFastPlay);
             Purse = new DelegateCommand(ShowPurse);
             Map = new DelegateCommand(ShowMap);
+            Pantry = new DelegateCommand(ShowPantry);
             ShowHideMessageBar = new DelegateCommand(ShowHideMessages);
             RemoveMessages = new DelegateCommand(RemoveAllMessages);
             Messages.CollectionChanged += QuantityСhange;
@@ -61,6 +62,7 @@ namespace Computer_Era_X.ViewModels
         }
         private void ShowPurse() => Form = new Purse();
         private void ShowMap() => Form = new Map();
+        private void ShowPantry() => Form = new Pantry();
         private void ShowHideMessages()
         {
             MessageBarVisibility = MessageBarVisibility == Visibility.Collapsed ? Visibility.Visible : Visibility.Collapsed;
@@ -113,6 +115,7 @@ namespace Computer_Era_X.ViewModels
         public DelegateCommand VeryFastPlay { get; private set; }
         public DelegateCommand Purse { get; private set; }
         public DelegateCommand Map { get; private set; }
+        public DelegateCommand Pantry { get; private set; }
         public DelegateCommand ShowHideMessageBar { get; private set; }
         public DelegateCommand RemoveMessages { get; set; }
     }

@@ -154,6 +154,7 @@
     <Compile Include="ViewModels\DesktopVM.cs" />
     <Compile Include="ViewModels\Forms\Buildings\ComponentStoreVM.cs" />
     <Compile Include="ViewModels\Forms\MapVM.cs" />
+    <Compile Include="ViewModels\Forms\PantryVM.cs" />
     <Compile Include="ViewModels\Forms\PurseVM.cs" />
     <Compile Include="ViewModels\GameVM.cs" />
     <Compile Include="Views\Forms\Buildings\ComponentStore.xaml.cs">
@@ -167,6 +168,9 @@
     </Compile>
     <Compile Include="Views\Forms\MovingMap.xaml.cs">
       <DependentUpon>MovingMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\Pantry.xaml.cs">
+      <DependentUpon>Pantry.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Forms\Purse.xaml.cs">
       <DependentUpon>Purse.xaml</DependentUpon>
@@ -254,6 +258,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Forms\MovingMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Forms\Pantry.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -428,6 +436,7 @@
     <Resource Include="Assets\Characters\geek1.png" />
     <Resource Include="Assets\Characters\real-estate-agent.png" />
     <Resource Include="Assets\Characters\troll.png" />
+    <Resource Include="Assets\Backgrounds\jars.jpg" />
     <Content Include="Map\index.css" />
     <Content Include="Map\index.html" />
     <Content Include="Map\index.js" />

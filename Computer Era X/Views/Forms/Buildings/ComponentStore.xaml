@@ -5,103 +5,108 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:res="clr-namespace:Computer_Era_X.Properties"
              xmlns:converters="clr-namespace:Computer_Era_X.Converters"
+             xmlns:local="clr-namespace:Computer_Era_X.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <converters:MoneyConverter x:Key="MoneyConverter"></converters:MoneyConverter>
     </UserControl.Resources>
+    
     <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/Computer Era X;component/Assets/Backgrounds/computers.jpg" Stretch="UniformToFill"/>
-        </Grid.Background>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <DockPanel VerticalAlignment="Top" MaxHeight="200" Grid.Row="0" Background="#CCFFFFFF">
-            <Image HorizontalAlignment="Left" Source="/Assets/Characters/geek1.png"/>
-            <StackPanel>
-                <ContentControl Content="{Binding Currency}" Margin="10, 10, 10, 0">
-                    <ContentControl.ContentTemplate>
-                        <DataTemplate>
-                            <DockPanel>
-                                <Label Content="{x:Static res:Resources.InYourPocket}" FontSize="16"/>
-                                <Label Content=": " FontSize="16"/>
-                                <Image Source="{Binding Icon}" Width="32" Height="32"/>
-                                <Label Content="{Binding Count, Converter={StaticResource MoneyConverter}}" Margin="5, 0, 0, 0" FontSize="16"/>
-                                <Label Content="{Binding Abbreviation}" FontSize="16"/>
-                            </DockPanel>
-                        </DataTemplate>
-                    </ContentControl.ContentTemplate>
-                </ContentControl>
-                <Border Margin="10, 0" Height="1" BorderThickness="0, 0, 0, 1" BorderBrush="DarkGray"/>
-                <TextBlock x:Name="SellerText" Text="{x:Static res:Resources.BuildingsMessage1}" FontSize="18" TextWrapping="Wrap" Margin="10,5,10,5" />
-            </StackPanel>
-        </DockPanel>
-        <Grid Grid.Row="1" Background="#CCFFFFFF">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="60*"/>
-                <ColumnDefinition Width="auto"/>
-                <ColumnDefinition Width="40*"/>
-            </Grid.ColumnDefinitions>
-            <Grid Grid.Column="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <DockPanel  Grid.Row="0" Margin="0, 0, 0, 10">
-                    <Label Content="Тип: "/>
-                    <ComboBox SelectedItem="{Binding SelectedCategory}" SelectedIndex="0">
-                        <ComboBox.Background>
-                            <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                                <GradientStop Color="#FFF0F0F0" Offset="0"/>
-                                <GradientStop Color="#CCE5E5E5" Offset="1"/>
-                            </LinearGradientBrush>
-                        </ComboBox.Background>
-                        <ComboBoxItem Content="{x:Static res:Resources.Case}"/>
-                        <ComboBoxItem Content="{x:Static res:Resources.Motherboard}"/>
-                        <ComboBoxItem Content="{x:Static res:Resources.PSU}"/>
-                        <ComboBoxItem Content="{x:Static res:Resources.CPU}"/>
-                        <ComboBoxItem Content="{x:Static res:Resources.CPUCooler}"/>
-                        <ComboBoxItem Content="{x:Static res:Resources.RAM}"/>
-                        <ComboBoxItem Content="{x:Static res:Resources.HDD}"/>
-                        <ComboBoxItem Content="{x:Static res:Resources.VideoCard}"/>
-                        <ComboBoxItem Content="{x:Static res:Resources.Monitor}"/>
-                        <ComboBoxItem Content="{x:Static res:Resources.OpticalDrive}"/>
-                        <ComboBoxItem Content="{x:Static res:Resources.Mouse}"/>
-                        <ComboBoxItem Content="{x:Static res:Resources.Keyboard}"/>
-                    </ComboBox>
-                </DockPanel>
-                <ListBox x:Name="ComputerСomponents" Grid.Row="1" ItemsSource="{Binding ItemsCollection}" Background="{x:Null}" BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Grid Grid.IsSharedSizeScope="True" Width="{Binding ActualWidth, ElementName=ComputerСomponents, Mode=OneWay}">
+        <local:Form/>
+        <Grid Margin="0,30,0,0">
+            <Grid.Background>
+                <ImageBrush ImageSource="/Computer Era X;component/Assets/Backgrounds/computers.jpg" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <DockPanel VerticalAlignment="Top" MaxHeight="200" Grid.Row="0" Background="#CCFFFFFF">
+                <Image HorizontalAlignment="Left" Source="/Assets/Characters/geek1.png"/>
+                <StackPanel>
+                    <ContentControl Content="{Binding Currency}" Margin="10, 10, 10, 0">
+                        <ContentControl.ContentTemplate>
+                            <DataTemplate>
                                 <DockPanel>
-                                    <Image Height="64"/>
-                                    <StackPanel DockPanel.Dock="Right" Width="128">
-                                        <TextBlock VerticalAlignment="Center" Margin="0,5,5,5"/>
-                                        <DockPanel VerticalAlignment="Center" Margin="0,5,5,5">
-                                            <Label Content="{Binding ShopPrice, Converter={StaticResource MoneyConverter}}"/>
-                                            <Label Content="{Binding Currency.Abbreviation}"/>
-                                        </DockPanel>
-                                    </StackPanel>
-                                    <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center">
-                                        <Button x:Name="BuyButton" Content="{x:Static res:Resources.Buy}" Margin="10" Padding="5" Background="Blue" Foreground="White" BorderThickness="0"/>
-                                    </StackPanel>
-                                    <StackPanel DockPanel.Dock="Left">
-                                        <TextBlock Text="{Binding LocalizedType}" VerticalAlignment="Center" Margin="5,5,5,0" FontSize="14" />
-                                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Margin="5,0,5,5" FontSize="24" />
-                                    </StackPanel>
+                                    <Label Content="{x:Static res:Resources.InYourPocket}" FontSize="16"/>
+                                    <Label Content=": " FontSize="16"/>
+                                    <Image Source="{Binding Icon}" Width="32" Height="32"/>
+                                    <Label Content="{Binding Count, Converter={StaticResource MoneyConverter}}" Margin="5, 0, 0, 0" FontSize="16"/>
+                                    <Label Content="{Binding Abbreviation}" FontSize="16"/>
                                 </DockPanel>
-                            </Grid>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
+                            </DataTemplate>
+                        </ContentControl.ContentTemplate>
+                    </ContentControl>
+                    <Border Margin="10, 0" Height="1" BorderThickness="0, 0, 0, 1" BorderBrush="DarkGray"/>
+                    <TextBlock x:Name="SellerText" Text="{x:Static res:Resources.BuildingsMessage1}" FontSize="18" TextWrapping="Wrap" Margin="10,5,10,5" />
+                </StackPanel>
+            </DockPanel>
+            <Grid Grid.Row="1" Background="#CCFFFFFF">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="40*"/>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <DockPanel  Grid.Row="0" Margin="0, 0, 0, 10">
+                        <Label Content="Тип: "/>
+                        <ComboBox SelectedItem="{Binding SelectedCategory}" SelectedIndex="0">
+                            <ComboBox.Background>
+                                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                                    <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                                    <GradientStop Color="#CCE5E5E5" Offset="1"/>
+                                </LinearGradientBrush>
+                            </ComboBox.Background>
+                            <ComboBoxItem Content="{x:Static res:Resources.Case}"/>
+                            <ComboBoxItem Content="{x:Static res:Resources.Motherboard}"/>
+                            <ComboBoxItem Content="{x:Static res:Resources.PSU}"/>
+                            <ComboBoxItem Content="{x:Static res:Resources.CPU}"/>
+                            <ComboBoxItem Content="{x:Static res:Resources.CPUCooler}"/>
+                            <ComboBoxItem Content="{x:Static res:Resources.RAM}"/>
+                            <ComboBoxItem Content="{x:Static res:Resources.HDD}"/>
+                            <ComboBoxItem Content="{x:Static res:Resources.VideoCard}"/>
+                            <ComboBoxItem Content="{x:Static res:Resources.Monitor}"/>
+                            <ComboBoxItem Content="{x:Static res:Resources.OpticalDrive}"/>
+                            <ComboBoxItem Content="{x:Static res:Resources.Mouse}"/>
+                            <ComboBoxItem Content="{x:Static res:Resources.Keyboard}"/>
+                        </ComboBox>
+                    </DockPanel>
+                    <ListBox x:Name="ComputerСomponents" Grid.Row="1" ItemsSource="{Binding ItemsCollection}" Background="{x:Null}" BorderThickness="0" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Grid.IsSharedSizeScope="True" Width="{Binding ActualWidth, ElementName=ComputerСomponents, Mode=OneWay}">
+                                    <DockPanel>
+                                        <Image Height="64"/>
+                                        <StackPanel DockPanel.Dock="Right" Width="128">
+                                            <TextBlock VerticalAlignment="Center" Margin="0,5,5,5"/>
+                                            <DockPanel VerticalAlignment="Center" Margin="0,5,5,5">
+                                                <Label Content="{Binding ShopPrice, Converter={StaticResource MoneyConverter}}"/>
+                                                <Label Content="{Binding Currency.Abbreviation}"/>
+                                            </DockPanel>
+                                        </StackPanel>
+                                        <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center">
+                                            <Button x:Name="BuyButton" Content="{x:Static res:Resources.Buy}" Margin="10" Padding="5" Background="Blue" Foreground="White" BorderThickness="0"/>
+                                        </StackPanel>
+                                        <StackPanel DockPanel.Dock="Left">
+                                            <TextBlock Text="{Binding LocalizedType}" VerticalAlignment="Center" Margin="5,5,5,0" FontSize="14" />
+                                            <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Margin="5,0,5,5" FontSize="24" />
+                                        </StackPanel>
+                                    </DockPanel>
+                                </Grid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </Grid>
+                <GridSplitter Grid.Column="1"  ShowsPreview="False" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+                <ScrollViewer Grid.Column="2">
+                    <TextBlock x:Name="Description" Margin="10, 0, 10, 10" FontSize="16" TextWrapping="Wrap"/>
+                </ScrollViewer>
             </Grid>
-            <GridSplitter Grid.Column="1"  ShowsPreview="False" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
-            <ScrollViewer Grid.Column="2">
-                <TextBlock x:Name="Description" Margin="10, 0, 10, 10" FontSize="16" TextWrapping="Wrap"/>
-            </ScrollViewer>
         </Grid>
     </Grid>
 </UserControl>

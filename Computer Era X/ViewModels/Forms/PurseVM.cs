@@ -57,7 +57,7 @@ namespace Computer_Era_X.ViewModels
 
         private void ShowOrHideHistoryPanel()
         {
-            if (_historyPanelWidth == "Auto") //Show
+            if (HistoryPanelWidth == "Auto") //Show
             {
                 HistoryPanelWidth = "*";
                 HistoryPanelButton = ">";

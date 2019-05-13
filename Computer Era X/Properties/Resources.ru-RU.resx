@@ -549,4 +549,7 @@
   <data name="TypeСase" xml:space="preserve">
     <value>Тип корпуса</value>
   </data>
+  <data name="Installed" xml:space="preserve">
+    <value>Установлено</value>
+  </data>
 </root>
