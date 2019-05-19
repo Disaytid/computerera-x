@@ -30,7 +30,6 @@ namespace Computer_Era_X.ViewModels
         {
             if (SelectedItem == null) return;
         }
-
         private void ListFormation(ItemTypes itemTypes, bool yearFiltering = false)
         {
             var year = 0;
@@ -47,10 +46,22 @@ namespace Computer_Era_X.ViewModels
                             GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], @case.Info()));
                     break;
                 case ItemTypes.Motherboard:
+                    foreach (var motherboard in GameEnvironment.Items.MotherboardCollection.Where(item => item.ManufacturingDate.Year >= year))
+                        ItemsCollection.Add(new Product(motherboard,
+                            (motherboard.Price + motherboard.Price / 100 * StoreComponentPercentage) *
+                            GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], motherboard.Info()));
                     break;
                 case ItemTypes.RAM:
+                    foreach (var ram in GameEnvironment.Items.RAMCollection.Where(item => item.ManufacturingDate.Year >= year))
+                        ItemsCollection.Add(new Product(ram,
+                            (ram.Price + ram.Price / 100 * StoreComponentPercentage) *
+                            GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], ram.Info()));
                     break;
                 case ItemTypes.PSU:
+                    foreach (var psu in GameEnvironment.Items.PSUCollection.Where(item => item.ManufacturingDate.Year >= year))
+                        ItemsCollection.Add(new Product(psu,
+                            (psu.Price + psu.Price / 100 * StoreComponentPercentage) *
+                            GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], psu.Info()));
                     break;
                 case ItemTypes.CPU:
                     foreach (var cpu in GameEnvironment.Items.CPUCollection.Where( item => item.ManufacturingDate.Year >= year))

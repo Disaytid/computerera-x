@@ -178,6 +178,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на BIOS.
+        /// </summary>
+        public static string BIOS {
+            get {
+                return ResourceManager.GetString("BIOS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Welcome to the Riveting Yourself computer parts store! Would you like to buy something?.
         /// </summary>
         public static string BuildingsMessage1 {
@@ -255,6 +264,15 @@ namespace Computer_Era_X.Properties {
         public static string Cells {
             get {
                 return ResourceManager.GetString("Cells", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Chipset.
+        /// </summary>
+        public static string Chipset {
+            get {
+                return ResourceManager.GetString("Chipset", resourceCulture);
             }
         }
         
@@ -403,6 +421,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на EFI support.
+        /// </summary>
+        public static string EFISupport {
+            get {
+                return ResourceManager.GetString("EFISupport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на No central processing unit.
         /// </summary>
         public static string ErrorСodeNoCPU {
@@ -516,6 +543,15 @@ namespace Computer_Era_X.Properties {
         public static string Free {
             get {
                 return ResourceManager.GetString("Free", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Frequency.
+        /// </summary>
+        public static string Frequency {
+            get {
+                return ResourceManager.GetString("Frequency", resourceCulture);
             }
         }
         
@@ -727,11 +763,38 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Maximum volume.
+        /// </summary>
+        public static string MaximumVolume {
+            get {
+                return ResourceManager.GetString("MaximumVolume", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Maximum working temperature.
         /// </summary>
         public static string MaximumWorkingTemperature {
             get {
                 return ResourceManager.GetString("MaximumWorkingTemperature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Memory.
+        /// </summary>
+        public static string Memory {
+            get {
+                return ResourceManager.GetString("Memory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Memory type.
+        /// </summary>
+        public static string MemoryType {
+            get {
+                return ResourceManager.GetString("MemoryType", resourceCulture);
             }
         }
         
@@ -799,6 +862,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Motherboard type.
+        /// </summary>
+        public static string MotherboardType {
+            get {
+                return ResourceManager.GetString("MotherboardType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Mouse.
         /// </summary>
         public static string Mouse {
@@ -813,6 +885,15 @@ namespace Computer_Era_X.Properties {
         public static string MovingInSpaceAndTime {
             get {
                 return ResourceManager.GetString("MovingInSpaceAndTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Multi-core processor support.
+        /// </summary>
+        public static string MultiCoreProcessorSupport {
+            get {
+                return ResourceManager.GetString("MultiCoreProcessorSupport", resourceCulture);
             }
         }
         
@@ -835,6 +916,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Network card speed.
+        /// </summary>
+        public static string NetworkCardSpeed {
+            get {
+                return ResourceManager.GetString("NetworkCardSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на New Game.
         /// </summary>
         public static string NewGame {
@@ -849,6 +939,15 @@ namespace Computer_Era_X.Properties {
         public static string No {
             get {
                 return ResourceManager.GetString("No", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Noise level.
+        /// </summary>
+        public static string NoiseLevel {
+            get {
+                return ResourceManager.GetString("NoiseLevel", resourceCulture);
             }
         }
         
@@ -903,6 +1002,78 @@ namespace Computer_Era_X.Properties {
         public static string NumberOfCores {
             get {
                 return ResourceManager.GetString("NumberOfCores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of IDE 4 pins.
+        /// </summary>
+        public static string NumberOfIDE4Pins {
+            get {
+                return ResourceManager.GetString("NumberOfIDE4Pins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of PCI-E 6 + 2 pins.
+        /// </summary>
+        public static string NumberOfPCIE6plus2Pins {
+            get {
+                return ResourceManager.GetString("NumberOfPCIE6plus2Pins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of pins CPU 4 + 4.
+        /// </summary>
+        public static string NumberOfPinsCPU4plus4 {
+            get {
+                return ResourceManager.GetString("NumberOfPinsCPU4plus4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of pins IDE 4 Floppy.
+        /// </summary>
+        public static string NumberOfPinsIDE4Floppy {
+            get {
+                return ResourceManager.GetString("NumberOfPinsIDE4Floppy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of SATA 15 pins.
+        /// </summary>
+        public static string NumberOfSATA15Pins {
+            get {
+                return ResourceManager.GetString("NumberOfSATA15Pins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of slots.
+        /// </summary>
+        public static string NumberOfSlots {
+            get {
+                return ResourceManager.GetString("NumberOfSlots", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of sockets.
+        /// </summary>
+        public static string NumberOfSockets {
+            get {
+                return ResourceManager.GetString("NumberOfSockets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of {0} sockets.
+        /// </summary>
+        public static string NumberOfXSockets {
+            get {
+                return ResourceManager.GetString("NumberOfXSockets", resourceCulture);
             }
         }
         
@@ -1006,6 +1177,24 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Overload protection.
+        /// </summary>
+        public static string OverloadProtection {
+            get {
+                return ResourceManager.GetString("OverloadProtection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Overvoltage protection.
+        /// </summary>
+        public static string OvervoltageProtection {
+            get {
+                return ResourceManager.GetString("OvervoltageProtection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Pantry.
         /// </summary>
         public static string Pantry {
@@ -1096,11 +1285,47 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Power.
+        /// </summary>
+        public static string Power {
+            get {
+                return ResourceManager.GetString("Power", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Power to the motherboard.
+        /// </summary>
+        public static string PowerToTheMotherboard {
+            get {
+                return ResourceManager.GetString("PowerToTheMotherboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Program.
         /// </summary>
         public static string Program {
             get {
                 return ResourceManager.GetString("Program", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на PS/2 for keyboard.
+        /// </summary>
+        public static string PS2ForKeyboard {
+            get {
+                return ResourceManager.GetString("PS2ForKeyboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на PS/2 for mouse.
+        /// </summary>
+        public static string PS2ForMouse {
+            get {
+                return ResourceManager.GetString("PS2ForMouse", resourceCulture);
             }
         }
         
@@ -1222,6 +1447,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Short circuit protection.
+        /// </summary>
+        public static string ShortCircuitProtection {
+            get {
+                return ResourceManager.GetString("ShortCircuitProtection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Shutdown.
         /// </summary>
         public static string Shutdown {
@@ -1258,6 +1492,51 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на The number of pins PCI-E 6.
+        /// </summary>
+        public static string TheNumberOfPinsPCIE6 {
+            get {
+                return ResourceManager.GetString("TheNumberOfPinsPCIE6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The number of pins PCI-E 8.
+        /// </summary>
+        public static string TheNumberOfPinsPCIE8 {
+            get {
+                return ResourceManager.GetString("TheNumberOfPinsPCIE8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The number of {0} buses.
+        /// </summary>
+        public static string TheNumberOfXBuses {
+            get {
+                return ResourceManager.GetString("TheNumberOfXBuses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The presence of a sound card.
+        /// </summary>
+        public static string ThePresenceOfASoundCard {
+            get {
+                return ResourceManager.GetString("ThePresenceOfASoundCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Type.
+        /// </summary>
+        public static string Type {
+            get {
+                return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Type case.
         /// </summary>
         public static string TypeСase {
@@ -1276,11 +1555,47 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на USB 2.0 sockets.
+        /// </summary>
+        public static string USB20Sockets {
+            get {
+                return ResourceManager.GetString("USB20Sockets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на USB 3.0 sockets.
+        /// </summary>
+        public static string USB30Sockets {
+            get {
+                return ResourceManager.GetString("USB30Sockets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Video card.
         /// </summary>
         public static string VideoCard {
             get {
                 return ResourceManager.GetString("VideoCard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Voltage.
+        /// </summary>
+        public static string Voltage {
+            get {
+                return ResourceManager.GetString("Voltage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Volume.
+        /// </summary>
+        public static string Volume {
+            get {
+                return ResourceManager.GetString("Volume", resourceCulture);
             }
         }
         
@@ -1299,6 +1614,15 @@ namespace Computer_Era_X.Properties {
         public static string WhatAreWeGoingToGetTo {
             get {
                 return ResourceManager.GetString("WhatAreWeGoingToGetTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на {0} support.
+        /// </summary>
+        public static string XSupport {
+            get {
+                return ResourceManager.GetString("XSupport", resourceCulture);
             }
         }
         

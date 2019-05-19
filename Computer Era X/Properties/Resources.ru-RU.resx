@@ -552,4 +552,112 @@
   <data name="Installed" xml:space="preserve">
     <value>Установлено</value>
   </data>
+  <data name="MotherboardType" xml:space="preserve">
+    <value>Тип материнской платы</value>
+  </data>
+  <data name="Chipset" xml:space="preserve">
+    <value>Чипсет</value>
+  </data>
+  <data name="MultiCoreProcessorSupport" xml:space="preserve">
+    <value>Поддержка многоядерных процессоров</value>
+  </data>
+  <data name="BIOS" xml:space="preserve">
+    <value>БИОС</value>
+  </data>
+  <data name="EFISupport" xml:space="preserve">
+    <value>Поддержка EFI</value>
+  </data>
+  <data name="Frequency" xml:space="preserve">
+    <value>Частота</value>
+  </data>
+  <data name="MaximumVolume" xml:space="preserve">
+    <value>Максимальный объем</value>
+  </data>
+  <data name="Memory" xml:space="preserve">
+    <value>Память</value>
+  </data>
+  <data name="MemoryType" xml:space="preserve">
+    <value>Тип памяти</value>
+  </data>
+  <data name="NetworkCardSpeed" xml:space="preserve">
+    <value>Скорость сетевой карты</value>
+  </data>
+  <data name="NumberOfSlots" xml:space="preserve">
+    <value>Количество слотов</value>
+  </data>
+  <data name="NumberOfSockets" xml:space="preserve">
+    <value>Количество гнезд</value>
+  </data>
+  <data name="NumberOfXSockets" xml:space="preserve">
+    <value>Количество гнезд {0}</value>
+  </data>
+  <data name="PS2ForKeyboard" xml:space="preserve">
+    <value>PS/2 для клавиатуры</value>
+  </data>
+  <data name="PS2ForMouse" xml:space="preserve">
+    <value>PS/2 для мышки</value>
+  </data>
+  <data name="TheNumberOfXBuses" xml:space="preserve">
+    <value>Количество шин {0}</value>
+  </data>
+  <data name="ThePresenceOfASoundCard" xml:space="preserve">
+    <value>Наличие звуковой карты</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="USB20Sockets" xml:space="preserve">
+    <value>USB гнезд 2.0</value>
+  </data>
+  <data name="USB30Sockets" xml:space="preserve">
+    <value>USB гнезд 3.0</value>
+  </data>
+  <data name="XSupport" xml:space="preserve">
+    <value>Поддержка {0}</value>
+  </data>
+  <data name="Voltage" xml:space="preserve">
+    <value>Напряжение</value>
+  </data>
+  <data name="Volume" xml:space="preserve">
+    <value>Объем</value>
+  </data>
+  <data name="NoiseLevel" xml:space="preserve">
+    <value>Уровень шума</value>
+  </data>
+  <data name="NumberOfIDE4Pins" xml:space="preserve">
+    <value>Количество пинов IDE 4</value>
+  </data>
+  <data name="NumberOfPCIE6plus2Pins" xml:space="preserve">
+    <value>Количество пинов PCI-E 6+2</value>
+  </data>
+  <data name="NumberOfPinsCPU4plus4" xml:space="preserve">
+    <value>Количество пинов CPU 4+4</value>
+  </data>
+  <data name="NumberOfPinsIDE4Floppy" xml:space="preserve">
+    <value>Количество пинов IDE 4 Floppy</value>
+  </data>
+  <data name="NumberOfSATA15Pins" xml:space="preserve">
+    <value>Количество пинов SATA 15</value>
+  </data>
+  <data name="OverloadProtection" xml:space="preserve">
+    <value>Защита от перегрузки</value>
+  </data>
+  <data name="OvervoltageProtection" xml:space="preserve">
+    <value>Защита от перенапряжения</value>
+  </data>
+  <data name="Power" xml:space="preserve">
+    <value>Мощность</value>
+  </data>
+  <data name="PowerToTheMotherboard" xml:space="preserve">
+    <value>Питание к материнской плате</value>
+  </data>
+  <data name="ShortCircuitProtection" xml:space="preserve">
+    <value>Защита от короткого замыкания</value>
+  </data>
+  <data name="TheNumberOfPinsPCIE6" xml:space="preserve">
+    <value>Количество пинов PCI-E 6</value>
+  </data>
+  <data name="TheNumberOfPinsPCIE8" xml:space="preserve">
+    <value>Количество пинов PCI-E 8</value>
+  </data>
 </root>

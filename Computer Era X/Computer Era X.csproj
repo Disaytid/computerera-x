@@ -130,6 +130,9 @@
     <Compile Include="DataTypes\Interfaces\IScenario.cs" />
     <Compile Include="DataTypes\Objects\Computer\Case.cs" />
     <Compile Include="DataTypes\Objects\Computer\CPU.cs" />
+    <Compile Include="DataTypes\Objects\Computer\Motherboard.cs" />
+    <Compile Include="DataTypes\Objects\Computer\PSU.cs" />
+    <Compile Include="DataTypes\Objects\Computer\RAM.cs" />
     <Compile Include="DataTypes\Objects\Money.cs" />
     <Compile Include="DataTypes\Objects\Realty.cs" />
     <Compile Include="DataTypes\Objects\Services.cs" />

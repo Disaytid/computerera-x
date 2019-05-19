@@ -552,4 +552,112 @@
   <data name="Installed" xml:space="preserve">
     <value>Installed</value>
   </data>
+  <data name="MotherboardType" xml:space="preserve">
+    <value>Motherboard type</value>
+  </data>
+  <data name="MultiCoreProcessorSupport" xml:space="preserve">
+    <value>Multi-core processor support</value>
+  </data>
+  <data name="Chipset" xml:space="preserve">
+    <value>Chipset</value>
+  </data>
+  <data name="BIOS" xml:space="preserve">
+    <value>BIOS</value>
+  </data>
+  <data name="EFISupport" xml:space="preserve">
+    <value>EFI support</value>
+  </data>
+  <data name="Memory" xml:space="preserve">
+    <value>Memory</value>
+  </data>
+  <data name="Frequency" xml:space="preserve">
+    <value>Frequency</value>
+  </data>
+  <data name="MaximumVolume" xml:space="preserve">
+    <value>Maximum volume</value>
+  </data>
+  <data name="MemoryType" xml:space="preserve">
+    <value>Memory type</value>
+  </data>
+  <data name="NetworkCardSpeed" xml:space="preserve">
+    <value>Network card speed</value>
+  </data>
+  <data name="NumberOfSlots" xml:space="preserve">
+    <value>Number of slots</value>
+  </data>
+  <data name="NumberOfSockets" xml:space="preserve">
+    <value>Number of sockets</value>
+  </data>
+  <data name="NumberOfXSockets" xml:space="preserve">
+    <value>Number of {0} sockets</value>
+  </data>
+  <data name="PS2ForKeyboard" xml:space="preserve">
+    <value>PS/2 for keyboard</value>
+  </data>
+  <data name="PS2ForMouse" xml:space="preserve">
+    <value>PS/2 for mouse</value>
+  </data>
+  <data name="TheNumberOfXBuses" xml:space="preserve">
+    <value>The number of {0} buses</value>
+  </data>
+  <data name="ThePresenceOfASoundCard" xml:space="preserve">
+    <value>The presence of a sound card</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="USB20Sockets" xml:space="preserve">
+    <value>USB 2.0 sockets</value>
+  </data>
+  <data name="USB30Sockets" xml:space="preserve">
+    <value>USB 3.0 sockets</value>
+  </data>
+  <data name="XSupport" xml:space="preserve">
+    <value>{0} support</value>
+  </data>
+  <data name="Voltage" xml:space="preserve">
+    <value>Voltage</value>
+  </data>
+  <data name="Volume" xml:space="preserve">
+    <value>Volume</value>
+  </data>
+  <data name="Power" xml:space="preserve">
+    <value>Power</value>
+  </data>
+  <data name="NoiseLevel" xml:space="preserve">
+    <value>Noise level</value>
+  </data>
+  <data name="NumberOfIDE4Pins" xml:space="preserve">
+    <value>Number of IDE 4 pins</value>
+  </data>
+  <data name="NumberOfPCIE6plus2Pins" xml:space="preserve">
+    <value>Number of PCI-E 6 + 2 pins</value>
+  </data>
+  <data name="NumberOfPinsCPU4plus4" xml:space="preserve">
+    <value>Number of pins CPU 4 + 4</value>
+  </data>
+  <data name="NumberOfPinsIDE4Floppy" xml:space="preserve">
+    <value>Number of pins IDE 4 Floppy</value>
+  </data>
+  <data name="NumberOfSATA15Pins" xml:space="preserve">
+    <value>Number of SATA 15 pins</value>
+  </data>
+  <data name="OverloadProtection" xml:space="preserve">
+    <value>Overload protection</value>
+  </data>
+  <data name="OvervoltageProtection" xml:space="preserve">
+    <value>Overvoltage protection</value>
+  </data>
+  <data name="PowerToTheMotherboard" xml:space="preserve">
+    <value>Power to the motherboard</value>
+  </data>
+  <data name="ShortCircuitProtection" xml:space="preserve">
+    <value>Short circuit protection</value>
+  </data>
+  <data name="TheNumberOfPinsPCIE6" xml:space="preserve">
+    <value>The number of pins PCI-E 6</value>
+  </data>
+  <data name="TheNumberOfPinsPCIE8" xml:space="preserve">
+    <value>The number of pins PCI-E 8</value>
+  </data>
 </root>

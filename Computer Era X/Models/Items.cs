@@ -8,6 +8,9 @@ namespace Computer_Era_X.Models
     public class Items
     {
         public ObservableCollection<Case> CaseCollection = new ObservableCollection<Case>();
+        public ObservableCollection<Motherboard> MotherboardCollection = new ObservableCollection<Motherboard>();
+        public ObservableCollection<RAM> RAMCollection = new ObservableCollection<RAM>();
+        public ObservableCollection<PowerSupplyUnit> PSUCollection = new ObservableCollection<PowerSupplyUnit>();
         public ObservableCollection<CPU> CPUCollection = new ObservableCollection<CPU>();
 
         public void LoadingItems(Collection<Item> items)
@@ -21,10 +24,13 @@ namespace Computer_Era_X.Models
                         CaseCollection.Add(new Case(item));
                         break;
                     case ItemTypes.Motherboard:
+                        MotherboardCollection.Add(new Motherboard(item));
                         break;
                     case ItemTypes.RAM:
+                        RAMCollection.Add(new RAM(item));
                         break;
                     case ItemTypes.PSU:
+                        PSUCollection.Add(new PowerSupplyUnit(item));
                         break;
                     case ItemTypes.CPU:
                         CPUCollection.Add(new CPU(item));

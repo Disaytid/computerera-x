@@ -87,4 +87,35 @@
         Sata3_0,
         IDE
     }
+    public enum MotherboardBIOS
+    {
+        AMI,
+        Award,
+    }
+
+    public enum RAMTypes
+    {
+        SIMM,
+        FPM,
+        DIMM,
+        RIMM,
+        DDR,
+        DDR2,
+        DDR3,
+        DDR4
+    }
+    public enum VideoInterface
+    {
+        VGA,
+        DVI,
+        HDMI,
+        DisplayPort,
+        DVI_D,
+        MiniHDMI,
+    }
+
+    public enum TypeConnectorMotherboard
+    {
+        pin20plus4
+    }
 }

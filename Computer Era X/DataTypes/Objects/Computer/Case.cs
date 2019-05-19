@@ -3,7 +3,6 @@ using System.Collections.ObjectModel;
 using Computer_Era_X.DataTypes.Enums;
 using Computer_Era_X.Models;
 using Computer_Era_X.Properties;
-using Computer_Era_X.Properties;
 
 namespace Computer_Era_X.DataTypes.Objects.Computer
 {
