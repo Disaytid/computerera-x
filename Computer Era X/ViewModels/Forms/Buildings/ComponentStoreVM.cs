@@ -6,6 +6,7 @@ using Computer_Era_X.DataTypes.Enums;
 using Computer_Era_X.DataTypes.Objects;
 using Computer_Era_X.Models;
 using Computer_Era_X.Views;
+using Prism.Commands;
 
 namespace Computer_Era_X.ViewModels
 {
@@ -16,7 +17,7 @@ namespace Computer_Era_X.ViewModels
 
         partial void ComponentStoreInit()
         {
-            
+
         }
         private void SelectionCategory()
         {
@@ -89,6 +90,7 @@ namespace Computer_Era_X.ViewModels
                     return;
             }
         }
+
         public Currency Currency => GameEnvironment.Player.Money[0];
         private ObservableCollection<Product> _itemsCollection = new ObservableCollection<Product>();
         private Product _selectedItem;

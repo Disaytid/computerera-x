@@ -62,18 +62,18 @@ namespace Computer_Era_X.DataTypes.Objects.Computer
             info += Resources.Frequency + ": " + Properties.MinFrequency + " - " + Properties.MaxFrequency + Environment.NewLine;
             info += Resources.MaximumVolume + ": " + Properties.RAMVolume + Environment.NewLine + Environment.NewLine;
 
-            info += string.Format(Resources.NumberOfXSockets + ": ", "IDE") + Properties.IDE + Environment.NewLine;
-            info += string.Format(Resources.NumberOfXSockets + ": ", "SATA 2.0") + Properties.SATA2_0 + Environment.NewLine;
-            info += string.Format(Resources.NumberOfXSockets + ": ", "SATA 3.0") + Properties.SATA3_0 + Environment.NewLine + Environment.NewLine;
+            info += Resources.NumberOfIDESockets + ": " + Properties.IDE + Environment.NewLine;
+            info += Resources.NumberOfSATA20Sockets + ": " + Properties.SATA2_0 + Environment.NewLine;
+            info += Resources.NumberOfSATA30Sockets + ": " + Properties.SATA3_0 + Environment.NewLine + Environment.NewLine;
 
-            info += string.Format(Resources.TheNumberOfXBuses + ": ", "PCI") + Properties.PCI + Environment.NewLine;
-            info += string.Format(Resources.TheNumberOfXBuses + ": ", "PCI-Express x1") + Properties.PCI_Ex1 + Environment.NewLine;
-            info += string.Format(Resources.TheNumberOfXBuses + ": ", "PCI-Express x4") + Properties.PCI_Ex4 + Environment.NewLine;
-            info += string.Format(Resources.TheNumberOfXBuses + ": ", "PCI-Express x8") + Properties.PCI_Ex8 + Environment.NewLine;
-            info += string.Format(Resources.TheNumberOfXBuses + ": ", "PCI-Express x16") + Properties.PCI_Ex16 + Environment.NewLine + Environment.NewLine;
+            info += Resources.TheNumberOfPCIBuses + ": " + Properties.PCI + Environment.NewLine;
+            info += Resources.NumberOfPCIExpressX1Buses + ": " + Properties.PCI_Ex1 + Environment.NewLine;
+            info += Resources.NumberOfPCIExpressX4Buses + ": " + Properties.PCI_Ex4 + Environment.NewLine;
+            info += Resources.NumberOfPCIExpressX8Buses + ": " + Properties.PCI_Ex8 + Environment.NewLine;
+            info += Resources.NumberOfPCIExpressX16Buses + ": " + Properties.PCI_Ex16 + Environment.NewLine + Environment.NewLine;
 
-            info += string.Format(Resources.XSupport + ": ", "PCI-Express 2.0") + (Properties.PCIE2_0 ? Resources.Yes : Resources.No) + Environment.NewLine;
-            info += string.Format(Resources.XSupport + ": ", "PCI-Express 3.0") + (Properties.PCIE3_0 ? Resources.Yes : Resources.No) + Environment.NewLine;
+            info += Resources.PCIExpress20Support + ": " + (Properties.PCIE2_0 ? Resources.Yes : Resources.No) + Environment.NewLine;
+            info += Resources.PCIExpress30Support + ": " + (Properties.PCIE3_0 ? Resources.Yes : Resources.No) + Environment.NewLine;
             info += Resources.ThePresenceOfASoundCard + ": " + (Properties.PCIE3_0 ? Resources.Yes : Resources.No) + Environment.NewLine;
             info += Resources.NetworkCardSpeed + ": " + Properties.EthernetSpeed + Environment.NewLine + Environment.NewLine;
 

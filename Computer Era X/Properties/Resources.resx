@@ -588,17 +588,11 @@
   <data name="NumberOfSockets" xml:space="preserve">
     <value>Number of sockets</value>
   </data>
-  <data name="NumberOfXSockets" xml:space="preserve">
-    <value>Number of {0} sockets</value>
-  </data>
   <data name="PS2ForKeyboard" xml:space="preserve">
     <value>PS/2 for keyboard</value>
   </data>
   <data name="PS2ForMouse" xml:space="preserve">
     <value>PS/2 for mouse</value>
-  </data>
-  <data name="TheNumberOfXBuses" xml:space="preserve">
-    <value>The number of {0} buses</value>
   </data>
   <data name="ThePresenceOfASoundCard" xml:space="preserve">
     <value>The presence of a sound card</value>
@@ -659,5 +653,35 @@
   </data>
   <data name="TheNumberOfPinsPCIE8" xml:space="preserve">
     <value>The number of pins PCI-E 8</value>
+  </data>
+  <data name="NumberOfIDESockets" xml:space="preserve">
+    <value>Number of IDE sockets</value>
+  </data>
+  <data name="NumberOfPCIExpressX16Buses" xml:space="preserve">
+    <value>Number of PCI-Express x16 buses</value>
+  </data>
+  <data name="NumberOfPCIExpressX1Buses" xml:space="preserve">
+    <value>Number of PCI-Express x1 buses</value>
+  </data>
+  <data name="NumberOfPCIExpressX4Buses" xml:space="preserve">
+    <value>Number of PCI-Express x4 buses</value>
+  </data>
+  <data name="NumberOfPCIExpressX8Buses" xml:space="preserve">
+    <value>Number of PCI-Express x8 buses</value>
+  </data>
+  <data name="NumberOfSATA20Sockets" xml:space="preserve">
+    <value>Number of SATA 2.0 sockets</value>
+  </data>
+  <data name="NumberOfSATA30Sockets" xml:space="preserve">
+    <value>Number of SATA 3.0 sockets</value>
+  </data>
+  <data name="PCIExpress20Support" xml:space="preserve">
+    <value>PCI-Express 2.0 support</value>
+  </data>
+  <data name="PCIExpress30Support" xml:space="preserve">
+    <value>PCI-Express 3.0 support</value>
+  </data>
+  <data name="TheNumberOfPCIBuses" xml:space="preserve">
+    <value>The number of PCI buses</value>
   </data>
 </root>

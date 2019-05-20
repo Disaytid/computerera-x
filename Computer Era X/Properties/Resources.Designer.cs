@@ -1015,11 +1015,56 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of IDE sockets.
+        /// </summary>
+        public static string NumberOfIDESockets {
+            get {
+                return ResourceManager.GetString("NumberOfIDESockets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Number of PCI-E 6 + 2 pins.
         /// </summary>
         public static string NumberOfPCIE6plus2Pins {
             get {
                 return ResourceManager.GetString("NumberOfPCIE6plus2Pins", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of PCI-Express x16 buses.
+        /// </summary>
+        public static string NumberOfPCIExpressX16Buses {
+            get {
+                return ResourceManager.GetString("NumberOfPCIExpressX16Buses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of PCI-Express x1 buses.
+        /// </summary>
+        public static string NumberOfPCIExpressX1Buses {
+            get {
+                return ResourceManager.GetString("NumberOfPCIExpressX1Buses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of PCI-Express x4 buses.
+        /// </summary>
+        public static string NumberOfPCIExpressX4Buses {
+            get {
+                return ResourceManager.GetString("NumberOfPCIExpressX4Buses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of PCI-Express x8 buses.
+        /// </summary>
+        public static string NumberOfPCIExpressX8Buses {
+            get {
+                return ResourceManager.GetString("NumberOfPCIExpressX8Buses", resourceCulture);
             }
         }
         
@@ -1051,6 +1096,24 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of SATA 2.0 sockets.
+        /// </summary>
+        public static string NumberOfSATA20Sockets {
+            get {
+                return ResourceManager.GetString("NumberOfSATA20Sockets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of SATA 3.0 sockets.
+        /// </summary>
+        public static string NumberOfSATA30Sockets {
+            get {
+                return ResourceManager.GetString("NumberOfSATA30Sockets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Number of slots.
         /// </summary>
         public static string NumberOfSlots {
@@ -1065,15 +1128,6 @@ namespace Computer_Era_X.Properties {
         public static string NumberOfSockets {
             get {
                 return ResourceManager.GetString("NumberOfSockets", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Number of {0} sockets.
-        /// </summary>
-        public static string NumberOfXSockets {
-            get {
-                return ResourceManager.GetString("NumberOfXSockets", resourceCulture);
             }
         }
         
@@ -1245,6 +1299,24 @@ namespace Computer_Era_X.Properties {
         public static string PaymentForPublicTransport {
             get {
                 return ResourceManager.GetString("PaymentForPublicTransport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на PCI-Express 2.0 support.
+        /// </summary>
+        public static string PCIExpress20Support {
+            get {
+                return ResourceManager.GetString("PCIExpress20Support", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на PCI-Express 3.0 support.
+        /// </summary>
+        public static string PCIExpress30Support {
+            get {
+                return ResourceManager.GetString("PCIExpress30Support", resourceCulture);
             }
         }
         
@@ -1492,6 +1564,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на The number of PCI buses.
+        /// </summary>
+        public static string TheNumberOfPCIBuses {
+            get {
+                return ResourceManager.GetString("TheNumberOfPCIBuses", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на The number of pins PCI-E 6.
         /// </summary>
         public static string TheNumberOfPinsPCIE6 {
@@ -1506,15 +1587,6 @@ namespace Computer_Era_X.Properties {
         public static string TheNumberOfPinsPCIE8 {
             get {
                 return ResourceManager.GetString("TheNumberOfPinsPCIE8", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на The number of {0} buses.
-        /// </summary>
-        public static string TheNumberOfXBuses {
-            get {
-                return ResourceManager.GetString("TheNumberOfXBuses", resourceCulture);
             }
         }
         

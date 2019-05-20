@@ -90,7 +90,7 @@
                                             </DockPanel>
                                         </StackPanel>
                                         <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center">
-                                            <Button x:Name="BuyButton" Content="{x:Static res:Resources.Buy}" Margin="10" Padding="5" Background="Blue" Foreground="White" BorderThickness="0"/>
+                                            <Button Content="{x:Static res:Resources.Buy}" Margin="10" Padding="5" Background="Blue" Foreground="White" BorderThickness="0" Command="{Binding Buy}"/>
                                         </StackPanel>
                                         <StackPanel DockPanel.Dock="Left">
                                             <TextBlock Text="{Binding LocalizedType}" VerticalAlignment="Center" Margin="5,5,5,0" FontSize="14" />

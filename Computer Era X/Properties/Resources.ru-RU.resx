@@ -588,17 +588,11 @@
   <data name="NumberOfSockets" xml:space="preserve">
     <value>Количество гнезд</value>
   </data>
-  <data name="NumberOfXSockets" xml:space="preserve">
-    <value>Количество гнезд {0}</value>
-  </data>
   <data name="PS2ForKeyboard" xml:space="preserve">
     <value>PS/2 для клавиатуры</value>
   </data>
   <data name="PS2ForMouse" xml:space="preserve">
     <value>PS/2 для мышки</value>
-  </data>
-  <data name="TheNumberOfXBuses" xml:space="preserve">
-    <value>Количество шин {0}</value>
   </data>
   <data name="ThePresenceOfASoundCard" xml:space="preserve">
     <value>Наличие звуковой карты</value>
@@ -659,5 +653,35 @@
   </data>
   <data name="TheNumberOfPinsPCIE8" xml:space="preserve">
     <value>Количество пинов PCI-E 8</value>
+  </data>
+  <data name="NumberOfIDESockets" xml:space="preserve">
+    <value>Количество гнезд IDE</value>
+  </data>
+  <data name="NumberOfPCIExpressX16Buses" xml:space="preserve">
+    <value>Количество шин PCI-Express x16</value>
+  </data>
+  <data name="NumberOfPCIExpressX1Buses" xml:space="preserve">
+    <value>Количество шин PCI-Express x1</value>
+  </data>
+  <data name="NumberOfPCIExpressX4Buses" xml:space="preserve">
+    <value>Количество шин PCI-Express x4</value>
+  </data>
+  <data name="NumberOfPCIExpressX8Buses" xml:space="preserve">
+    <value>Количество шин PCI-Express x8</value>
+  </data>
+  <data name="NumberOfSATA20Sockets" xml:space="preserve">
+    <value>Количество гнезд SATA 2.0</value>
+  </data>
+  <data name="NumberOfSATA30Sockets" xml:space="preserve">
+    <value>Количество гнезд SATA 3.0</value>
+  </data>
+  <data name="PCIExpress20Support" xml:space="preserve">
+    <value>Поддержка PCI-Express 2.0</value>
+  </data>
+  <data name="PCIExpress30Support" xml:space="preserve">
+    <value>Поддержка PCI-Express 3.0</value>
+  </data>
+  <data name="TheNumberOfPCIBuses" xml:space="preserve">
+    <value>Количество шин PCI</value>
   </data>
 </root>
