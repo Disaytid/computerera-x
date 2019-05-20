@@ -5,6 +5,7 @@ using Computer_Era_X.DataTypes.Dictionaries;
 using Computer_Era_X.DataTypes.Enums;
 using Computer_Era_X.DataTypes.Objects;
 using Computer_Era_X.Models;
+using Computer_Era_X.Properties;
 using Computer_Era_X.Views;
 using Prism.Commands;
 
@@ -17,7 +18,7 @@ namespace Computer_Era_X.ViewModels
 
         partial void ComponentStoreInit()
         {
-
+            Buy = new DelegateCommand<Product>(BuyItem);
         }
         private void SelectionCategory()
         {
@@ -91,6 +92,14 @@ namespace Computer_Era_X.ViewModels
             }
         }
 
+        private void BuyItem(Product product)
+        {
+            if (product.Currency.Withdraw(string.Format(Resources.BuyingAX, product.Name), Resources.ComponentStoreFullName, GameEnvironment.Events.Timer.DateTime, product.ShopPrice))
+            {
+
+            } else { MessageBox.Show(Resources.ComponentStoreFullName ,Resources.ShopMessage1, MessageBoxType.Warning); }
+        }
+
         public Currency Currency => GameEnvironment.Player.Money[0];
         private ObservableCollection<Product> _itemsCollection = new ObservableCollection<Product>();
         private Product _selectedItem;
@@ -119,6 +128,7 @@ namespace Computer_Era_X.ViewModels
                 SelectionCategory();
             }
         }
+        public DelegateCommand<Product> Buy { get; private set; }
     }
 } 
 

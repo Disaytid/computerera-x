@@ -684,4 +684,10 @@
   <data name="TheNumberOfPCIBuses" xml:space="preserve">
     <value>The number of PCI buses</value>
   </data>
+  <data name="BuyingAX" xml:space="preserve">
+    <value>Buying a {0}</value>
+  </data>
+  <data name="ShopMessage1" xml:space="preserve">
+    <value>Sorry buddy, no money, no goods.</value>
+  </data>
 </root>

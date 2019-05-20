@@ -223,6 +223,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Buying a {0}.
+        /// </summary>
+        public static string BuyingAX {
+            get {
+                return ResourceManager.GetString("BuyingAX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на By bike.
         /// </summary>
         public static string ByBike {
@@ -1515,6 +1524,15 @@ namespace Computer_Era_X.Properties {
         public static string Shop {
             get {
                 return ResourceManager.GetString("Shop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Sorry buddy, no money, no goods..
+        /// </summary>
+        public static string ShopMessage1 {
+            get {
+                return ResourceManager.GetString("ShopMessage1", resourceCulture);
             }
         }
         

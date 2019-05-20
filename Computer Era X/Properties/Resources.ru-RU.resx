@@ -684,4 +684,10 @@
   <data name="TheNumberOfPCIBuses" xml:space="preserve">
     <value>Количество шин PCI</value>
   </data>
+  <data name="BuyingAX" xml:space="preserve">
+    <value>Покупка {0}</value>
+  </data>
+  <data name="ShopMessage1" xml:space="preserve">
+    <value>Извини дружище, нет денег нет товара.</value>
+  </data>
 </root>
