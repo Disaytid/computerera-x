@@ -687,7 +687,25 @@
   <data name="BuyingAX" xml:space="preserve">
     <value>Покупка {0}</value>
   </data>
-  <data name="ShopMessage1" xml:space="preserve">
+  <data name="GameMessage2" xml:space="preserve">
     <value>Извини дружище, нет денег нет товара.</value>
+  </data>
+  <data name="AirFlow" xml:space="preserve">
+    <value>Воздушный поток</value>
+  </data>
+  <data name="GameMessage3" xml:space="preserve">
+    <value>Спасибо за покупку {0}, хороший выбор!</value>
+  </data>
+  <data name="MaximumRotationSpeed" xml:space="preserve">
+    <value>Максимальная скорость вращения</value>
+  </data>
+  <data name="MinimumRotationSpeed" xml:space="preserve">
+    <value>Минимальная скорость вращения</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Размер</value>
+  </data>
+  <data name="SpeedControl" xml:space="preserve">
+    <value>Регулирование оборотов</value>
   </data>
 </root>

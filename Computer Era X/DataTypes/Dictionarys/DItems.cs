@@ -7,21 +7,21 @@ namespace Computer_Era_X.DataTypes.Dictionaries
     {
         public static readonly Dictionary<ItemTypes, string> ItemIcon = new Dictionary<ItemTypes, string>
         {
-            { ItemTypes.Case, "pack://application:,,,/Resources/coffin.png" },
-            { ItemTypes.Motherboard, "pack://application:,,,/Resources/circuitry.png" },
-            { ItemTypes.PSU, "pack://application:,,,/Resources/plug.png" },
-            { ItemTypes.RAM, "pack://application:,,,/Resources/brain.png" },
-            { ItemTypes.CPU, "pack://application:,,,/Resources/processor.png" },
-            { ItemTypes.CPUCooler, "pack://application:,,,/Resources/computer-fan.png" },
-            { ItemTypes.HDD, "pack://application:,,,/Resources/stone-tablet.png" },
-            { ItemTypes.VideoCard, "pack://application:,,,/Resources/cyber-eye.png" },
-            { ItemTypes.Monitor, "pack://application:,,,/Resources/tv.png" },
-            { ItemTypes.OpticalDrive, "pack://application:,,,/Resources/compact-disc.png" },
-            { ItemTypes.Mouse, "pack://application:,,,/Resources/mouse.png" },
-            { ItemTypes.Keyboard, "pack://application:,,,/Resources/keyboard.png" },
-            { ItemTypes.OpticalDisc, "pack://application:,,,/Resources/compact-disc.png" },
-            { ItemTypes.OS, "pack://application:,,,/Resources/compact-disc.png" },
-            { ItemTypes.Program, "pack://application:,,,/Resources/compact-disc.png" },
+            { ItemTypes.Case, "pack://application:,,,/Assets/Icons/coffin.png" },
+            { ItemTypes.Motherboard, "pack://application:,,,/Assets/Icons/circuitry.png" },
+            { ItemTypes.PSU, "pack://application:,,,/Assets/Icons/plug.png" },
+            { ItemTypes.RAM, "pack://application:,,,/Assets/Icons/brain.png" },
+            { ItemTypes.CPU, "pack://application:,,,/Assets/Icons/rocessor.png" },
+            { ItemTypes.CPUCooler, "pack://application:,,,/Assets/Icons/computer-fan.png" },
+            { ItemTypes.HDD, "pack://application:,,,/Assets/Icons/stone-tablet.png" },
+            { ItemTypes.VideoCard, "pack://application:,,,/Assets/Icons/cyber-eye.png" },
+            { ItemTypes.Monitor, "pack://application:,,,/Assets/Icons/tv.png" },
+            { ItemTypes.OpticalDrive, "pack://application:,,,/Assets/Icons/compact-disc.png" },
+            { ItemTypes.Mouse, "pack://application:,,,/Assets/Icons/mouse.png" },
+            { ItemTypes.Keyboard, "pack://application:,,,/Assets/Icons/keyboard.png" },
+            { ItemTypes.OpticalDisc, "pack://application:,,,/Assets/Icons/compact-disc.png" },
+            { ItemTypes.OS, "pack://application:,,,/Assets/Icons/compact-disc.png" },
+            { ItemTypes.Program, "pack://application:,,,/Assets/Icons/compact-disc.png" },
         };
 
         public static readonly Dictionary<ItemTypes, string> LocalizedItemTypes = new Dictionary<ItemTypes, string>

@@ -1,0 +1,9 @@
+﻿Adding a new item type based on BaseItem
+
+1. Add a class of objects to the Objects inheriting ITEM<ItemProperty>
+2. In Data Types/Enums, find the EItems file in it, find the ItemTypes listing and add your item type to it.
+3  In the DataTypes/Dictionaries directory, locate the DItems file, add localization information and default icon to its file.
+4. Add ObservableCollection to Models/Items
+5. In the same file add loading item in LoadingItems
+6. In the ViewModels, find the PantryVM file, find the LoadItemsToCollection () in it and add the loading of your item there
+7. Add items to stores if necessary

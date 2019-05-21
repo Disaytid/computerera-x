@@ -1,9 +1,11 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Controls;
 using Computer_Era_X.DataTypes.Dictionaries;
 using Computer_Era_X.DataTypes.Enums;
 using Computer_Era_X.DataTypes.Objects;
+using Computer_Era_X.DataTypes.Objects.Computer;
 using Computer_Era_X.Models;
 using Computer_Era_X.Properties;
 using Computer_Era_X.Views;
@@ -72,6 +74,10 @@ namespace Computer_Era_X.ViewModels
                             GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], cpu.Info()));      
                     break;
                 case ItemTypes.CPUCooler:
+                    foreach (var cpuCooler in GameEnvironment.Items.CPUCoolerCollection.Where(item => item.ManufacturingDate.Year >= year))
+                        ItemsCollection.Add(new Product(cpuCooler,
+                            (cpuCooler.Price + cpuCooler.Price / 100 * StoreComponentPercentage) *
+                            GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], cpuCooler.Info()));
                     break;
                 case ItemTypes.HDD:
                     break;
@@ -96,8 +102,54 @@ namespace Computer_Era_X.ViewModels
         {
             if (product.Currency.Withdraw(string.Format(Resources.BuyingAX, product.Name), Resources.ComponentStoreFullName, GameEnvironment.Events.Timer.DateTime, product.ShopPrice))
             {
-
-            } else { MessageBox.Show(Resources.ComponentStoreFullName ,Resources.ShopMessage1, MessageBoxType.Warning); }
+                switch ((ItemTypes)Enum.Parse((typeof(ItemTypes)), product.Type))
+                {
+                    case ItemTypes.Case:
+                        Case @case = GameEnvironment.Items.CaseCollection.Where(i => i.ID == product.ID).ToList()[0];
+                        GameEnvironment.Player.Items.CaseCollection.Add(new Case(@case.ID, @case.Name, @case.Type, @case.Price, @case.ManufacturingDate, @case.Properties));
+                        break;
+                    case ItemTypes.Motherboard:
+                        Motherboard motherboard = GameEnvironment.Items.MotherboardCollection.Where(i => i.ID == product.ID).ToList()[0];
+                        GameEnvironment.Player.Items.MotherboardCollection.Add(new Motherboard(motherboard.ID, motherboard.Name, motherboard.Type, motherboard.Price, motherboard.ManufacturingDate, motherboard.Properties));
+                        break;
+                    case ItemTypes.RAM:
+                        RAM ram = GameEnvironment.Items.RAMCollection.Where(i => i.ID == product.ID).ToList()[0];
+                        GameEnvironment.Player.Items.RAMCollection.Add(new RAM(ram.ID, ram.Name, ram.Type, ram.Price, ram.ManufacturingDate, ram.Properties));
+                        break;
+                    case ItemTypes.PSU:
+                        PowerSupplyUnit psu = GameEnvironment.Items.PSUCollection.Where(i => i.ID == product.ID).ToList()[0];
+                        GameEnvironment.Player.Items.PSUCollection.Add(new PowerSupplyUnit(psu.ID, psu.Name, psu.Type, psu.Price, psu.ManufacturingDate, psu.Properties));
+                        break;
+                    case ItemTypes.CPU:
+                        CPU cpu = GameEnvironment.Items.CPUCollection.Where(i => i.ID == product.ID).ToList()[0];
+                        GameEnvironment.Player.Items.CPUCollection.Add(new CPU(cpu.ID, cpu.Name, cpu.Type, cpu.Price, cpu.ManufacturingDate, cpu.Properties));
+                        break;
+                    case ItemTypes.CPUCooler:
+                        CPUCooler cpuCooler = GameEnvironment.Items.CPUCoolerCollection.Where(i => i.ID == product.ID).ToList()[0];
+                        GameEnvironment.Player.Items.CPUCoolerCollection.Add(new CPUCooler(cpuCooler.ID, cpuCooler.Name, cpuCooler.Type, cpuCooler.Price, cpuCooler.ManufacturingDate, cpuCooler.Properties));
+                        break;
+                    case ItemTypes.HDD:
+                        break;
+                    case ItemTypes.Monitor:
+                        break;
+                    case ItemTypes.VideoCard:
+                        break;
+                    case ItemTypes.OpticalDrive:
+                        break;
+                    case ItemTypes.Mouse:
+                        break;
+                    case ItemTypes.Keyboard:
+                        break;
+                    case ItemTypes.OpticalDisc:
+                        break;
+                    case ItemTypes.OS:
+                        break;
+                    case ItemTypes.Program:
+                        break;
+                }
+                MessageBox.Show(Resources.ComponentStoreFullName, string.Format(Resources.GameMessage3, product.Name), MessageBoxType.Information);
+            }
+            else { MessageBox.Show(Resources.ComponentStoreFullName, Resources.GameMessage2, MessageBoxType.Warning); }
         }
 
         public Currency Currency => GameEnvironment.Player.Money[0];

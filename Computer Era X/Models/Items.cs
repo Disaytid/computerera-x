@@ -12,6 +12,7 @@ namespace Computer_Era_X.Models
         public ObservableCollection<RAM> RAMCollection = new ObservableCollection<RAM>();
         public ObservableCollection<PowerSupplyUnit> PSUCollection = new ObservableCollection<PowerSupplyUnit>();
         public ObservableCollection<CPU> CPUCollection = new ObservableCollection<CPU>();
+        public ObservableCollection<CPUCooler> CPUCoolerCollection = new ObservableCollection<CPUCooler>();
 
         public void LoadingItems(Collection<Item> items)
         {
@@ -36,6 +37,7 @@ namespace Computer_Era_X.Models
                         CPUCollection.Add(new CPU(item));
                         break;
                     case ItemTypes.CPUCooler:
+                        CPUCoolerCollection.Add(new CPUCooler(item));
                         break;
                     case ItemTypes.HDD:
                         break;

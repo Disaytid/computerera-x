@@ -687,7 +687,25 @@
   <data name="BuyingAX" xml:space="preserve">
     <value>Buying a {0}</value>
   </data>
-  <data name="ShopMessage1" xml:space="preserve">
+  <data name="GameMessage2" xml:space="preserve">
     <value>Sorry buddy, no money, no goods.</value>
+  </data>
+  <data name="GameMessage3" xml:space="preserve">
+    <value>Thank you for buying {0}, a good choice!</value>
+  </data>
+  <data name="AirFlow" xml:space="preserve">
+    <value>Air flow</value>
+  </data>
+  <data name="MaximumRotationSpeed" xml:space="preserve">
+    <value>Maximum rotation speed</value>
+  </data>
+  <data name="MinimumRotationSpeed" xml:space="preserve">
+    <value>Minimum rotation speed</value>
+  </data>
+  <data name="Size" xml:space="preserve">
+    <value>Size</value>
+  </data>
+  <data name="SpeedControl" xml:space="preserve">
+    <value>Speed control</value>
   </data>
 </root>

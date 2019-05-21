@@ -30,7 +30,7 @@ namespace Computer_Era_X.DataTypes.Objects.Computer
     }
     public class Case : Item<CaseProperties>
     {
-        public Case(int uid, string name, string type, int price, DateTime manDate, CaseProperties properties) : base(uid, name, type, price, manDate, properties) { }
+        public Case(int uid, string name, string type, double price, DateTime manDate, CaseProperties properties) : base(uid, name, type, price, manDate, properties) { }
         public Case(Item item) : base(item) { }
         public override string Info()
         {

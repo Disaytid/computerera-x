@@ -15,7 +15,7 @@ namespace Computer_Era_X.DataTypes.Objects.Computer
 
     public class RAM : Item<RAMProperties>
     {
-        public RAM(int uid, string name, string type, int price, DateTime man_date, RAMProperties properties) : base(uid, name, type, price, man_date, properties) { }
+        public RAM(int uid, string name, string type, double price, DateTime man_date, RAMProperties properties) : base(uid, name, type, price, man_date, properties) { }
         public RAM(Item item) : base(item) { }
         public override string Info()
         {

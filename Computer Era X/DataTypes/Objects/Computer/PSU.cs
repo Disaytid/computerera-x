@@ -32,7 +32,7 @@ namespace Computer_Era_X.DataTypes.Objects.Computer
         public PowerSupplyUnit(int uid,
                                string name,
                                string type,
-                               int price,
+                               double price,
                                DateTime man_date,
                                PowerSupplyUnitProperties properties) : base(uid, name, type, price, man_date, properties) { }
         public PowerSupplyUnit(Item item) : base(item) { }

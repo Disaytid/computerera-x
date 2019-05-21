@@ -88,6 +88,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Air flow.
+        /// </summary>
+        public static string AirFlow {
+            get {
+                return ResourceManager.GetString("AirFlow", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на All.
         /// </summary>
         public static string All {
@@ -583,6 +592,24 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Sorry buddy, no money, no goods..
+        /// </summary>
+        public static string GameMessage2 {
+            get {
+                return ResourceManager.GetString("GameMessage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Thank you for buying {0}, a good choice!.
+        /// </summary>
+        public static string GameMessage3 {
+            get {
+                return ResourceManager.GetString("GameMessage3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Hard disk drive.
         /// </summary>
         public static string HDD {
@@ -772,6 +799,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Maximum rotation speed.
+        /// </summary>
+        public static string MaximumRotationSpeed {
+            get {
+                return ResourceManager.GetString("MaximumRotationSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Maximum volume.
         /// </summary>
         public static string MaximumVolume {
@@ -813,6 +849,15 @@ namespace Computer_Era_X.Properties {
         public static string MicrophoneJack {
             get {
                 return ResourceManager.GetString("MicrophoneJack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Minimum rotation speed.
+        /// </summary>
+        public static string MinimumRotationSpeed {
+            get {
+                return ResourceManager.GetString("MinimumRotationSpeed", resourceCulture);
             }
         }
         
@@ -1528,15 +1573,6 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Sorry buddy, no money, no goods..
-        /// </summary>
-        public static string ShopMessage1 {
-            get {
-                return ResourceManager.GetString("ShopMessage1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Ищет локализованную строку, похожую на Short circuit protection.
         /// </summary>
         public static string ShortCircuitProtection {
@@ -1555,11 +1591,29 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Size.
+        /// </summary>
+        public static string Size {
+            get {
+                return ResourceManager.GetString("Size", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Socket.
         /// </summary>
         public static string Socket {
             get {
                 return ResourceManager.GetString("Socket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Speed control.
+        /// </summary>
+        public static string SpeedControl {
+            get {
+                return ResourceManager.GetString("SpeedControl", resourceCulture);
             }
         }
         

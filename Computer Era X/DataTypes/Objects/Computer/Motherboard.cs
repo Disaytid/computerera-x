@@ -43,7 +43,7 @@ namespace Computer_Era_X.DataTypes.Objects.Computer
 
     public class Motherboard : Item<MotherboardProperties>
     {
-        public Motherboard(int uid, string name, string type, int price, DateTime man_date, MotherboardProperties properties) : base(uid, name, type, price, man_date, properties) { }
+        public Motherboard(int uid, string name, string type, double price, DateTime man_date, MotherboardProperties properties) : base(uid, name, type, price, man_date, properties) { }
         public Motherboard(Item item) : base(item) { }
 
         public override string Info()

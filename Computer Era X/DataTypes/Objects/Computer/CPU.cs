@@ -16,7 +16,7 @@ namespace Computer_Era_X.DataTypes.Objects.Computer
     }
     public class CPU : Item<CPUProperties>
     {
-        public CPU(int uid, string name, string type, int price, DateTime manDate, CPUProperties properties) : base(uid, name, type, price, manDate, properties) { }
+        public CPU(int uid, string name, string type, double price, DateTime manDate, CPUProperties properties) : base(uid, name, type, price, manDate, properties) { }
         public CPU(Item item) : base (item) { }
         public override string Info()
         {
