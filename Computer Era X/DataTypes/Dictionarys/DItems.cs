@@ -11,7 +11,7 @@ namespace Computer_Era_X.DataTypes.Dictionaries
             { ItemTypes.Motherboard, "pack://application:,,,/Assets/Icons/circuitry.png" },
             { ItemTypes.PSU, "pack://application:,,,/Assets/Icons/plug.png" },
             { ItemTypes.RAM, "pack://application:,,,/Assets/Icons/brain.png" },
-            { ItemTypes.CPU, "pack://application:,,,/Assets/Icons/rocessor.png" },
+            { ItemTypes.CPU, "pack://application:,,,/Assets/Icons/processor.png" },
             { ItemTypes.CPUCooler, "pack://application:,,,/Assets/Icons/computer-fan.png" },
             { ItemTypes.HDD, "pack://application:,,,/Assets/Icons/stone-tablet.png" },
             { ItemTypes.VideoCard, "pack://application:,,,/Assets/Icons/cyber-eye.png" },

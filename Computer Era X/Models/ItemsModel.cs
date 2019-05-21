@@ -1,12 +1,12 @@
-﻿using Computer_Era_X.DataTypes.Enums;
-using Computer_Era_X.DataTypes.Dictionaries;
-using System;
+﻿using System;
+using System.IO;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using Computer_Era_X.DataTypes.Objects;
 using Newtonsoft.Json;
+using Computer_Era_X.DataTypes.Enums;
+using Computer_Era_X.DataTypes.Dictionaries;
+using Computer_Era_X.DataTypes.Objects;
 using Computer_Era_X.DataTypes.Interfaces;
-using System.IO;
 
 namespace Computer_Era_X.Models
 {
@@ -18,12 +18,13 @@ namespace Computer_Era_X.Models
         public double Price { get; set; }
         public DateTime ManufacturingDate { get; set; }
 
-        public string GetIcon(ItemTypes type)
+        public string GetIcon()
         {
-            //"pack://application:,,,/Assets/Icons/coffin.png"
-            if (File.Exists(@"/Assets/Items/" + Type + "/" + ID + ".png")) { return "pack://application:,,,/Assets/Items/" + Type + "/" + ID + ".png"; }
-            if (!DItems.ItemIcon.ContainsKey(type)) throw new ArgumentException($@"Operation {type} is invalid", nameof(type));
-            return DItems.ItemIcon[type];
+            Uri path = new Uri("pack://application:,,,/Assets/Items/" + Type + "/" + ID + ".png");
+            if (File.Exists(Path.GetFullPath("." + path.AbsolutePath))) { return path.ToString(); }
+            ItemTypes ltype = (ItemTypes)Enum.Parse(typeof(ItemTypes), Type);
+            if (!DItems.ItemIcon.ContainsKey(ltype)) throw new ArgumentException($@"Operation {ltype} is invalid", nameof(ltype));
+            return DItems.ItemIcon[ltype];
         }
         public string GetLocalizedType()
         {
@@ -103,7 +104,7 @@ namespace Computer_Era_X.Models
             PriceInCurrency = item.Price * currency.Course;
             ManufacturingDate = item.ManufacturingDate;
             Description = description;
-            Image = new BitmapImage(new Uri(item.GetIcon((ItemTypes)Enum.Parse((typeof(ItemTypes)), item.Type))));
+            Image = new BitmapImage(new Uri(item.GetIcon()));
             Currency = currency;
         }
     }

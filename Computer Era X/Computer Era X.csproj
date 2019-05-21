@@ -454,6 +454,7 @@
     <Resource Include="Assets\Icons\keyboard.png" />
     <Resource Include="Assets\Icons\mouse.png" />
     <Resource Include="Assets\Items\CPU\5.png" />
+    <Resource Include="Assets\Icons\processor.png" />
     <Content Include="Map\index.css" />
     <Content Include="Map\index.html" />
     <Content Include="Map\index.js" />
