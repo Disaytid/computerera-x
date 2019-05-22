@@ -735,4 +735,34 @@
   <data name="WriteSpeed" xml:space="preserve">
     <value>Write speed</value>
   </data>
+  <data name="Currencies" xml:space="preserve">
+    <value>Currencies</value>
+  </data>
+  <data name="GameMessage4" xml:space="preserve">
+    <value>Free ticket office!</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="AddNewService" xml:space="preserve">
+    <value>Add new service</value>
+  </data>
+  <data name="Periods" xml:space="preserve">
+    <value>Periods</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="TariffPlan" xml:space="preserve">
+    <value>Tariff plan</value>
+  </data>
+  <data name="ToAccept" xml:space="preserve">
+    <value>To accept</value>
+  </data>
+  <data name="TypeOfService" xml:space="preserve">
+    <value>Type of service</value>
+  </data>
+  <data name="YourServices" xml:space="preserve">
+    <value>Your services</value>
+  </data>
 </root>

@@ -5,6 +5,7 @@ using Computer_Era_X.DataTypes.Enums;
 using Computer_Era_X.Models;
 using Computer_Era_X.Models.Systems;
 using Computer_Era_X.Views;
+using Computer_Era_X.Views.Forms.Buildings;
 using Prism.Commands;
 using MessageBox = Computer_Era_X.Views.MessageBox;
 
@@ -160,6 +161,7 @@ namespace Computer_Era_X.ViewModels
                     Form = new ComponentStore();
                     break;
                 case "bank":
+                    Form = new Bank();
                     break;
                 case "disc_stand":
                     break;

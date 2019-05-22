@@ -4,7 +4,6 @@ using System.Linq;
 using System.Windows.Controls;
 using Computer_Era_X.DataTypes.Dictionaries;
 using Computer_Era_X.DataTypes.Enums;
-using Computer_Era_X.DataTypes.Objects;
 using Computer_Era_X.DataTypes.Objects.Computer;
 using Computer_Era_X.Models;
 using Computer_Era_X.Properties;
@@ -188,7 +187,6 @@ namespace Computer_Era_X.ViewModels
             else { MessageBox.Show(Resources.ComponentStoreFullName, Resources.GameMessage2, MessageBoxType.Warning); }
         }
 
-        public Currency Currency => GameEnvironment.Player.Money[0];
         private ObservableCollection<Product> _itemsCollection = new ObservableCollection<Product>();
         private Product _selectedItem;
         private ComboBoxItem _selectedCategory;

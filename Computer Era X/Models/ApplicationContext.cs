@@ -11,5 +11,7 @@ namespace Computer_Era_X.Models
         [SuppressMessage("ReSharper", "InconsistentNaming")]
         public DbSet<Item> Items { get; set; }
         public DbSet<BaseCurrency> BaseCurrencies { get; set; }
+        public DbSet<Service> Services { get; set; }
+        public DbSet<Tariff> Tariffs { get; set; }
     }
 }

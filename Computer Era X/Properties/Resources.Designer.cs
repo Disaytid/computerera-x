@@ -88,6 +88,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Add new service.
+        /// </summary>
+        public static string AddNewService {
+            get {
+                return ResourceManager.GetString("AddNewService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Air flow.
         /// </summary>
         public static string AirFlow {
@@ -403,6 +412,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Currencies.
+        /// </summary>
+        public static string Currencies {
+            get {
+                return ResourceManager.GetString("Currencies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Currency.
         /// </summary>
         public static string Currency {
@@ -615,6 +633,15 @@ namespace Computer_Era_X.Properties {
         public static string GameMessage3 {
             get {
                 return ResourceManager.GetString("GameMessage3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Free ticket office!.
+        /// </summary>
+        public static string GameMessage4 {
+            get {
+                return ResourceManager.GetString("GameMessage4", resourceCulture);
             }
         }
         
@@ -1438,6 +1465,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Periods.
+        /// </summary>
+        public static string Periods {
+            get {
+                return ResourceManager.GetString("Periods", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Places for fans.
         /// </summary>
         public static string PlacesForFans {
@@ -1573,6 +1609,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Reject.
+        /// </summary>
+        public static string Reject {
+            get {
+                return ResourceManager.GetString("Reject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Rent price.
         /// </summary>
         public static string RentPrice {
@@ -1623,6 +1668,15 @@ namespace Computer_Era_X.Properties {
         public static string Sections {
             get {
                 return ResourceManager.GetString("Sections", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Services.
+        /// </summary>
+        public static string Services {
+            get {
+                return ResourceManager.GetString("Services", resourceCulture);
             }
         }
         
@@ -1699,6 +1753,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Tariff plan.
+        /// </summary>
+        public static string TariffPlan {
+            get {
+                return ResourceManager.GetString("TariffPlan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Testing and running.
         /// </summary>
         public static string TestingAndRunning {
@@ -1744,11 +1807,29 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на To accept.
+        /// </summary>
+        public static string ToAccept {
+            get {
+                return ResourceManager.GetString("ToAccept", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Type.
         /// </summary>
         public static string Type {
             get {
                 return ResourceManager.GetString("Type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Type of service.
+        /// </summary>
+        public static string TypeOfService {
+            get {
+                return ResourceManager.GetString("TypeOfService", resourceCulture);
             }
         }
         
@@ -1893,6 +1974,15 @@ namespace Computer_Era_X.Properties {
         public static string YouDoNotHaveEnoughMoney {
             get {
                 return ResourceManager.GetString("YouDoNotHaveEnoughMoney", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your services.
+        /// </summary>
+        public static string YourServices {
+            get {
+                return ResourceManager.GetString("YourServices", resourceCulture);
             }
         }
         

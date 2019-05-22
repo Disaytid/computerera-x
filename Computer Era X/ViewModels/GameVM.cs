@@ -9,6 +9,7 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Controls;
 using Computer_Era_X.Models;
+using Computer_Era_X.DataTypes.Objects;
 
 namespace Computer_Era_X.ViewModels
 {
@@ -39,6 +40,7 @@ namespace Computer_Era_X.ViewModels
             MapInit();
             ComponentStoreInit();
             PantryInit();
+            BankInit();
         }
 
         partial void DesktopInit();
@@ -46,6 +48,7 @@ namespace Computer_Era_X.ViewModels
         partial void MapInit();
         partial void ComponentStoreInit();
         partial void PantryInit();
+        partial void BankInit();
 
         private void CreateNewGame()
         {
@@ -85,6 +88,7 @@ namespace Computer_Era_X.ViewModels
             DesktopVisibility = Visibility.Visible;
         }
 
+        public Currency Currency => GameEnvironment.Player.Money[0];
         private Visibility _mainMenuVisibility = Visibility.Visible;
         private Visibility _newGameVisibility = Visibility.Collapsed;
         private Visibility _desktopVisibility = Visibility.Collapsed;

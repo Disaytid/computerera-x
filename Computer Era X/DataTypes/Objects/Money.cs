@@ -2,6 +2,7 @@
 using System.Collections.ObjectModel;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Prism.Mvvm;
 
 namespace Computer_Era_X.DataTypes.Objects
 {
@@ -37,7 +38,7 @@ namespace Computer_Era_X.DataTypes.Objects
         public double Course { get; set; }
     }
 
-    public class Currency
+    public class Currency : BindableBase
     {
         public int ID { get; }
         public ImageSource Icon { get; }
@@ -54,6 +55,7 @@ namespace Computer_Era_X.DataTypes.Objects
             if (!(amount <= Count & amount > 0)) return false;
             Count -= amount;
             TransactionHistory.Add(new Transaction(name, initiator, dateTime, amount, TransactionType.Withdraw));
+            RaisePropertyChanged("Count");
             return true;
         }
 
@@ -62,6 +64,7 @@ namespace Computer_Era_X.DataTypes.Objects
             if (!(amount > 0)) return false;
             Count += amount;
             TransactionHistory.Add(new Transaction(name, initiator, dateTime, amount, TransactionType.TopUp));
+            RaisePropertyChanged("Count");
             return true;
         }
 

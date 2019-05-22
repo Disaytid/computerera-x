@@ -8,12 +8,12 @@ namespace Computer_Era_X.Models
 {
     public class GameEnvironment
     {
-        public GameEvents Events = new GameEvents();
-        public Random Random = new Random(DateTime.Now.Millisecond);
-        public ObservableCollection<Message> Messages = new ObservableCollection<Message>();
-        public IScenario Scenario;
-        public Items Items = new Items();
-        public Collection<BaseCurrency> Currencies = new Collection<BaseCurrency>();
-        public Player Player = new Player();
+        public GameEvents Events { get; } = new GameEvents();
+        public Random Random { get; } = new Random(DateTime.Now.Millisecond);
+        public ObservableCollection<Message> Messages { get; } = new ObservableCollection<Message>();
+        public IScenario Scenario { get; set; }
+        public Items Items { get; } = new Items();
+        public ObservableCollection<BaseCurrency> Currencies { get; set; } = new ObservableCollection<BaseCurrency>();
+        public Player Player { get; } = new Player();
     }
 }

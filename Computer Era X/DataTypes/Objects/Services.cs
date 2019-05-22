@@ -6,7 +6,7 @@ namespace Computer_Era_X.DataTypes.Objects
 {
     public class Tariff
     {
-        public int UId { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
         public Currency Currency { get; set; }
         public int Coefficient { get; set; }
@@ -22,7 +22,7 @@ namespace Computer_Era_X.DataTypes.Objects
 
         public Tariff(int uid, string name, Currency currency, int coefficient, double min_sum, double max_sum, Periodicity periodicity, int periodicity_value, Periodicity term_unit, int min_term, int max_term, bool spec_offer = false)
         {
-            UId = uid;
+            ID = uid;
             Name = name;
             Currency = currency;
             Coefficient = coefficient;
@@ -37,7 +37,7 @@ namespace Computer_Era_X.DataTypes.Objects
         }
         public Tariff(int uid, string name, Currency currency, int coefficient, double min_sum, double max_sum, Periodicity periodicity, int periodicity_value, Periodicity term_unit, int min_term, int max_term, object property_pledged, bool spec_offer = false)
         {
-            UId = uid;
+            ID = uid;
             Name = name;
             Currency = currency;
             Coefficient = coefficient;
@@ -95,11 +95,11 @@ namespace Computer_Era_X.DataTypes.Objects
             string str = Name + Environment.NewLine;
             str += Properties.Resources.Currency + ": " + Currency.Name + Environment.NewLine +
             Properties.Resources.Under + ": " + Coefficient + "%" + Environment.NewLine;
-            if (Service.Type == TransactionType.TopUp)
+            if (Service.TransactionType == TransactionType.TopUp)
             {
                 str += Properties.Resources.Invested + ": " + Amount.ToString("N3") + " " + Currency.Abbreviation;
             }
-            else if (Service.Type == TransactionType.Withdraw) { str += Properties.Resources.Received + ": " + Amount.ToString("N3") + " " + Currency.Abbreviation; }
+            else if (Service.TransactionType == TransactionType.Withdraw) { str += Properties.Resources.Received + ": " + Amount.ToString("N3") + " " + Currency.Abbreviation; }
             str += Environment.NewLine +
             Properties.Resources.DateOfServiceContract + ": " + StartDateOfService.ToString("dd.MM.yyyy HH:mm");
             return str;
@@ -108,10 +108,10 @@ namespace Computer_Era_X.DataTypes.Objects
 
     public class Service
     {
-        public int UId { get; set; }
+        public int ID { get; set; }
         public string SystemName { get; set; }
         public string Name { get; set; }
-        public TransactionType Type { get; set; }
+        public TransactionType TransactionType { get; set; }
         public Collection<Tariff> Tariffs { get; set; } = new Collection<Tariff>();
         public double TotalMaxDebt { get; set; } //Indicated in UGC (Universal Game Currency)
         public double TotalMaxContribution { get; set; } //Indicated in UGC (Universal Game Currency)
@@ -119,10 +119,10 @@ namespace Computer_Era_X.DataTypes.Objects
 
         public Service(int uid, string system_name, string name, TransactionType type, Collection<Tariff> tariffs, bool isSystem, double tmd = 0, double tmc = 0)
         {
-            UId = uid;
+            ID = uid;
             SystemName = system_name;
             Name = name;
-            Type = type;
+            TransactionType = type;
             Tariffs = tariffs;
             TotalMaxDebt = tmd;
             TotalMaxContribution = tmc;

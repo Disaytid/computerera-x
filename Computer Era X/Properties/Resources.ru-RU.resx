@@ -735,4 +735,34 @@
   <data name="WriteSpeed" xml:space="preserve">
     <value>Скорость записи</value>
   </data>
+  <data name="AddNewService" xml:space="preserve">
+    <value>Добавить новую услугу</value>
+  </data>
+  <data name="Currencies" xml:space="preserve">
+    <value>Валюты</value>
+  </data>
+  <data name="GameMessage4" xml:space="preserve">
+    <value>Свободная касса!</value>
+  </data>
+  <data name="Periods" xml:space="preserve">
+    <value>Периодов</value>
+  </data>
+  <data name="Reject" xml:space="preserve">
+    <value>Отклонить</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Услуги</value>
+  </data>
+  <data name="TariffPlan" xml:space="preserve">
+    <value>Тарифный план</value>
+  </data>
+  <data name="ToAccept" xml:space="preserve">
+    <value>Принять</value>
+  </data>
+  <data name="TypeOfService" xml:space="preserve">
+    <value>Тип услуги</value>
+  </data>
+  <data name="YourServices" xml:space="preserve">
+    <value>Ваши услуги</value>
+  </data>
 </root>
