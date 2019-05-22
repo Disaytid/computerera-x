@@ -708,4 +708,31 @@
   <data name="SpeedControl" xml:space="preserve">
     <value>Регулирование оборотов</value>
   </data>
+  <data name="KBs" xml:space="preserve">
+    <value>КБ/с</value>
+  </data>
+  <data name="Kbyte" xml:space="preserve">
+    <value>Кбайт</value>
+  </data>
+  <data name="ConnectionInterface" xml:space="preserve">
+    <value>Интерфейс подключения</value>
+  </data>
+  <data name="Hz" xml:space="preserve">
+    <value>Гц</value>
+  </data>
+  <data name="Interface" xml:space="preserve">
+    <value>Интерфейс</value>
+  </data>
+  <data name="MaximumFrameRefreshRate" xml:space="preserve">
+    <value>Максимальная частота обновления кадров</value>
+  </data>
+  <data name="ReadSpeed" xml:space="preserve">
+    <value>Скорость чтения</value>
+  </data>
+  <data name="Resolution" xml:space="preserve">
+    <value>Разрешение</value>
+  </data>
+  <data name="WriteSpeed" xml:space="preserve">
+    <value>Скорость записи</value>
+  </data>
 </root>

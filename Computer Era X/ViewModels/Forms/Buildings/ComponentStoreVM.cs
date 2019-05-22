@@ -80,16 +80,40 @@ namespace Computer_Era_X.ViewModels
                             GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], cpuCooler.Info()));
                     break;
                 case ItemTypes.HDD:
+                    foreach (var hdd in GameEnvironment.Items.HDDCollection.Where(item => item.ManufacturingDate.Year >= year))
+                        ItemsCollection.Add(new Product(hdd,
+                            (hdd.Price + hdd.Price / 100 * StoreComponentPercentage) *
+                            GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], hdd.Info()));
                     break;
                 case ItemTypes.Monitor:
+                    foreach (var monitor in GameEnvironment.Items.MonitorCollection.Where(item => item.ManufacturingDate.Year >= year))
+                        ItemsCollection.Add(new Product(monitor,
+                            (monitor.Price + monitor.Price / 100 * StoreComponentPercentage) *
+                            GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], monitor.Info()));
                     break;
                 case ItemTypes.VideoCard:
+                    foreach (var videoCard in GameEnvironment.Items.VideoCardCollection.Where(item => item.ManufacturingDate.Year >= year))
+                        ItemsCollection.Add(new Product(videoCard,
+                            (videoCard.Price + videoCard.Price / 100 * StoreComponentPercentage) *
+                            GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], videoCard.Info()));
                     break;
                 case ItemTypes.OpticalDrive:
+                    foreach (var opticalDrive in GameEnvironment.Items.OpticalDriveCollection.Where(item => item.ManufacturingDate.Year >= year))
+                        ItemsCollection.Add(new Product(opticalDrive,
+                            (opticalDrive.Price + opticalDrive.Price / 100 * StoreComponentPercentage) *
+                            GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], opticalDrive.Info()));
                     break;
                 case ItemTypes.Mouse:
+                    foreach (var mouse in GameEnvironment.Items.MouseCollection.Where(item => item.ManufacturingDate.Year >= year))
+                        ItemsCollection.Add(new Product(mouse,
+                            (mouse.Price + mouse.Price / 100 * StorePeripheralsPercentage) *
+                            GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], mouse.Info()));
                     break;
                 case ItemTypes.Keyboard:
+                    foreach (var keyboard in GameEnvironment.Items.KeyboardCollection.Where(item => item.ManufacturingDate.Year >= year))
+                        ItemsCollection.Add(new Product(keyboard,
+                            (keyboard.Price + keyboard.Price / 100 * StorePeripheralsPercentage) *
+                            GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0], keyboard.Info()));
                     break;
                 case ItemTypes.OpticalDisc:
                     break;
@@ -129,16 +153,28 @@ namespace Computer_Era_X.ViewModels
                         GameEnvironment.Player.Items.CPUCoolerCollection.Add(new CPUCooler(cpuCooler.ID, cpuCooler.Name, cpuCooler.Type, cpuCooler.Price, cpuCooler.ManufacturingDate, cpuCooler.Properties));
                         break;
                     case ItemTypes.HDD:
+                        HDD hdd = GameEnvironment.Items.HDDCollection.Where(i => i.ID == product.ID).ToList()[0];
+                        GameEnvironment.Player.Items.HDDCollection.Add(new HDD(hdd.ID, hdd.Name, hdd.Type, hdd.Price, hdd.ManufacturingDate, hdd.Properties));
                         break;
                     case ItemTypes.Monitor:
+                        Monitor monitor = GameEnvironment.Items.MonitorCollection.Where(i => i.ID == product.ID).ToList()[0];
+                        GameEnvironment.Player.Items.MonitorCollection.Add(new Monitor(monitor.ID, monitor.Name, monitor.Type, monitor.Price, monitor.ManufacturingDate, monitor.Properties));
                         break;
                     case ItemTypes.VideoCard:
+                        VideoCard videoCard = GameEnvironment.Items.VideoCardCollection.Where(i => i.ID == product.ID).ToList()[0];
+                        GameEnvironment.Player.Items.VideoCardCollection.Add(new VideoCard(videoCard.ID, videoCard.Name, videoCard.Type, videoCard.Price, videoCard.ManufacturingDate, videoCard.Properties));
                         break;
                     case ItemTypes.OpticalDrive:
+                        OpticalDrive opticalDrive = GameEnvironment.Items.OpticalDriveCollection.Where(i => i.ID == product.ID).ToList()[0];
+                        GameEnvironment.Player.Items.OpticalDriveCollection.Add(new OpticalDrive(opticalDrive.ID, opticalDrive.Name, opticalDrive.Type, opticalDrive.Price, opticalDrive.ManufacturingDate, opticalDrive.Properties));
                         break;
                     case ItemTypes.Mouse:
+                        Mouse mouse = GameEnvironment.Items.MouseCollection.Where(i => i.ID == product.ID).ToList()[0];
+                        GameEnvironment.Player.Items.MouseCollection.Add(new Mouse(mouse.ID, mouse.Name, mouse.Type, mouse.Price, mouse.ManufacturingDate, mouse.Properties));
                         break;
                     case ItemTypes.Keyboard:
+                        Keyboard keyboard = GameEnvironment.Items.KeyboardCollection.Where(i => i.ID == product.ID).ToList()[0];
+                        GameEnvironment.Player.Items.KeyboardCollection.Add(new Keyboard(keyboard.ID, keyboard.Name, keyboard.Type, keyboard.Price, keyboard.ManufacturingDate, keyboard.Properties));
                         break;
                     case ItemTypes.OpticalDisc:
                         break;

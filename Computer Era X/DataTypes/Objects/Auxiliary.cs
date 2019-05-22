@@ -1,4 +1,7 @@
-﻿namespace Computer_Era_X.DataTypes.Objects
+﻿using Computer_Era_X.DataTypes.Enums;
+using Computer_Era_X.DataTypes.Objects.Computer;
+
+namespace Computer_Era_X.DataTypes.Objects
 {
     public class Size // In millimeters
     {
@@ -16,5 +19,25 @@
             Height = height;
             Depth = depth;
         }
+    }
+    public class Resolution
+    {
+        public int Width { get; set; }
+        public int Height { get; set; }
+
+        public Resolution(int width, int height)
+        {
+            Width = width;
+            Height = height;
+        }
+    }
+    public class Partition
+    {
+        public string Name { get; set; }
+        public int PartitionNumber { get; set; }
+        public string Letter { get; set; }
+        public int Volume { get; set; } // In kilobytes
+        public FileSystem FileSystem { get; set; }
+        public OperatingSystem OperatingSystem { get; set; }
     }
 }

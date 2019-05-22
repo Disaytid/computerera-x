@@ -132,10 +132,19 @@
     <Compile Include="DataTypes\Objects\Computer\Case.cs" />
     <Compile Include="DataTypes\Objects\Computer\CPU.cs" />
     <Compile Include="DataTypes\Objects\Computer\CPUCooler.cs" />
+    <Compile Include="DataTypes\Objects\Computer\HardDrives.cs" />
+    <Compile Include="DataTypes\Objects\Computer\Keyboard.cs" />
+    <Compile Include="DataTypes\Objects\Computer\Monitor.cs" />
     <Compile Include="DataTypes\Objects\Computer\Motherboard.cs" />
+    <Compile Include="DataTypes\Objects\Computer\Mouse.cs" />
+    <Compile Include="DataTypes\Objects\Computer\OperatingSystem.cs" />
+    <Compile Include="DataTypes\Objects\Computer\OpticalDrive.cs" />
+    <Compile Include="DataTypes\Objects\Computer\Program.cs" />
     <Compile Include="DataTypes\Objects\Computer\PSU.cs" />
     <Compile Include="DataTypes\Objects\Computer\RAM.cs" />
+    <Compile Include="DataTypes\Objects\Computer\VideoCard.cs" />
     <Compile Include="DataTypes\Objects\Money.cs" />
+    <Compile Include="DataTypes\Objects\OpticalDisc.cs" />
     <Compile Include="DataTypes\Objects\Realty.cs" />
     <Compile Include="DataTypes\Objects\Services.cs" />
     <Compile Include="Models\DataReader.cs" />
@@ -455,6 +464,7 @@
     <Resource Include="Assets\Icons\mouse.png" />
     <Resource Include="Assets\Items\CPU\5.png" />
     <Resource Include="Assets\Icons\processor.png" />
+    <Resource Include="Assets\Icons\tv.png" />
     <Content Include="Map\index.css" />
     <Content Include="Map\index.html" />
     <Content Include="Map\index.js" />

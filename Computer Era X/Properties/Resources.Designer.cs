@@ -322,6 +322,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Connection interface.
+        /// </summary>
+        public static string ConnectionInterface {
+            get {
+                return ResourceManager.GetString("ConnectionInterface", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Continue.
         /// </summary>
         public static string ContinueGame {
@@ -646,6 +655,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Hz.
+        /// </summary>
+        public static string Hz {
+            get {
+                return ResourceManager.GetString("Hz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Install.
         /// </summary>
         public static string Install {
@@ -682,6 +700,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Interface.
+        /// </summary>
+        public static string Interface {
+            get {
+                return ResourceManager.GetString("Interface", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Invalid scenario configuration value.
         /// </summary>
         public static string InvalidScenarioConfigurationValue {
@@ -705,6 +732,24 @@ namespace Computer_Era_X.Properties {
         public static string InYourPocket {
             get {
                 return ResourceManager.GetString("InYourPocket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на KB/s.
+        /// </summary>
+        public static string KBs {
+            get {
+                return ResourceManager.GetString("KBs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Kbyte.
+        /// </summary>
+        public static string Kbyte {
+            get {
+                return ResourceManager.GetString("Kbyte", resourceCulture);
             }
         }
         
@@ -795,6 +840,15 @@ namespace Computer_Era_X.Properties {
         public static string Map {
             get {
                 return ResourceManager.GetString("Map", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Maximum frame refresh rate.
+        /// </summary>
+        public static string MaximumFrameRefreshRate {
+            get {
+                return ResourceManager.GetString("MaximumFrameRefreshRate", resourceCulture);
             }
         }
         
@@ -1492,6 +1546,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Read speed.
+        /// </summary>
+        public static string ReadSpeed {
+            get {
+                return ResourceManager.GetString("ReadSpeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Receipt of funds.
         /// </summary>
         public static string ReceiptOfFunds {
@@ -1515,6 +1578,15 @@ namespace Computer_Era_X.Properties {
         public static string RentPrice {
             get {
                 return ResourceManager.GetString("RentPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Resolution.
+        /// </summary>
+        public static string Resolution {
+            get {
+                return ResourceManager.GetString("Resolution", resourceCulture);
             }
         }
         
@@ -1758,6 +1830,15 @@ namespace Computer_Era_X.Properties {
         public static string WhatAreWeGoingToGetTo {
             get {
                 return ResourceManager.GetString("WhatAreWeGoingToGetTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Write speed.
+        /// </summary>
+        public static string WriteSpeed {
+            get {
+                return ResourceManager.GetString("WriteSpeed", resourceCulture);
             }
         }
         

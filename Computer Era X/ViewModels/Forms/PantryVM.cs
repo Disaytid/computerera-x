@@ -75,6 +75,20 @@ namespace Computer_Era_X.ViewModels
                 _inventoryItems.Add(new InventoryItem(cpu, cpu.Info(), GameEnvironment.Player.Money[0]));
             foreach (var cpuCooler in GameEnvironment.Player.Items.CPUCoolerCollection)
                 _inventoryItems.Add(new InventoryItem(cpuCooler, cpuCooler.Info(), GameEnvironment.Player.Money[0]));
+            foreach (var hdd in GameEnvironment.Player.Items.HDDCollection)
+                _inventoryItems.Add(new InventoryItem(hdd, hdd.Info(), GameEnvironment.Player.Money[0]));
+            foreach (var monitor in GameEnvironment.Player.Items.MonitorCollection)
+                _inventoryItems.Add(new InventoryItem(monitor, monitor.Info(), GameEnvironment.Player.Money[0]));
+            foreach (var videoCard in GameEnvironment.Player.Items.VideoCardCollection)
+                _inventoryItems.Add(new InventoryItem(videoCard, videoCard.Info(), GameEnvironment.Player.Money[0]));
+            foreach (var opticalDrive in GameEnvironment.Player.Items.OpticalDriveCollection)
+                _inventoryItems.Add(new InventoryItem(opticalDrive, opticalDrive.Info(), GameEnvironment.Player.Money[0]));
+            foreach (var mouse in GameEnvironment.Player.Items.MouseCollection)
+                _inventoryItems.Add(new InventoryItem(mouse, mouse.Info(), GameEnvironment.Player.Money[0]));
+            foreach (var keyboard in GameEnvironment.Player.Items.KeyboardCollection)
+                _inventoryItems.Add(new InventoryItem(keyboard, keyboard.Info(), GameEnvironment.Player.Money[0]));
+            foreach (var opticalDisc in GameEnvironment.Player.Items.OpticalDiscCollection)
+                _inventoryItems.Add(new InventoryItem(opticalDisc, opticalDisc.Info(), GameEnvironment.Player.Money[0]));
         }
 
         public DelegateCommand UpdatePantryPanel { get; private set; }

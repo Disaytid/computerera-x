@@ -118,4 +118,45 @@
     {
         pin20plus4
     }
+
+    public enum FileSystem
+    {
+        FAT12,
+        FAT16,
+        FAT32,
+        VFAT,
+        NTFS
+    }
+
+    public enum Interface
+    {
+        PCI_E16x3_0,
+        PCI_E16x2_0,
+        PCI_E16,
+    }
+
+    public enum TypeVideoMemory
+    {
+        GDDR5,
+        GDDR4,
+        GDDR3,
+        GDDR2,
+        GDDR,
+    }
+
+    public enum OpticalDriveInterface
+    {
+        IDE,
+        SATA
+    }
+    public enum OpticalDiscType
+    {
+        CD,
+        DVD
+    }
+    public enum InputInterfaces
+    {
+        PSby2,
+        USB,
+    }
 }
