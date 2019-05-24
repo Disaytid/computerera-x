@@ -15,5 +15,6 @@ namespace Computer_Era_X.Models
         public Items Items { get; } = new Items();
         public ObservableCollection<BaseCurrency> Currencies { get; set; } = new ObservableCollection<BaseCurrency>();
         public Player Player { get; } = new Player();
+        public ObservableCollection<Service> Services { get; set; } = new ObservableCollection<Service>();
     }
 }

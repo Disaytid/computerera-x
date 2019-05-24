@@ -24,8 +24,8 @@ namespace Computer_Era_X.Scenarios
             _gameEnvironment = gameEnvironment;
             double money = Convert.ToDouble(Settings[0].Value);
 
-            _gameEnvironment.Player.Money.Add(new Currency(_gameEnvironment.Currencies[1]));
-            _gameEnvironment.Player.Money.Add(new Currency(_gameEnvironment.Currencies[2]));
+            _gameEnvironment.Player.Money.Add(new BaseCurrencies(_gameEnvironment.Currencies[1]));
+            _gameEnvironment.Player.Money.Add(new BaseCurrencies(_gameEnvironment.Currencies[2]));
             _gameEnvironment.Player.Money[0].TopUp(Properties.Resources.CreativeScenarioPaymentName, Properties.Resources.CreativeScenarioPaymentInitiator, _gameEnvironment.Events.Timer.DateTime, money);
 
             _gameEnvironment.Events.Timer.DTimer.Start();

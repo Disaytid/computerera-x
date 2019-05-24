@@ -10,6 +10,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Computer_Era_X.Models;
 using Computer_Era_X.DataTypes.Objects;
+using System.Collections.ObjectModel;
 
 namespace Computer_Era_X.ViewModels
 {
@@ -73,8 +74,11 @@ namespace Computer_Era_X.ViewModels
             ApplicationContext db = new ApplicationContext();
             db.Items.Load();
             db.BaseCurrencies.Load();
+            //db.Tariffs.Load();
+            db.Services.Load();
             GameEnvironment.Items.LoadingItems(db.Items.Local);
             GameEnvironment.Currencies = db.BaseCurrencies.Local;
+            GameEnvironment.Services = db.Services.Local;
 
             //START GAME
             GameEnvironment.Player.Name = PlayerName;
@@ -88,7 +92,8 @@ namespace Computer_Era_X.ViewModels
             DesktopVisibility = Visibility.Visible;
         }
 
-        public Currency Currency => GameEnvironment.Player.Money[0];
+        public BaseCurrencies Currency => GameEnvironment.Player.Money[0];
+        public ObservableCollection<Service> Services => GameEnvironment.Services;
         private Visibility _mainMenuVisibility = Visibility.Visible;
         private Visibility _newGameVisibility = Visibility.Collapsed;
         private Visibility _desktopVisibility = Visibility.Collapsed;

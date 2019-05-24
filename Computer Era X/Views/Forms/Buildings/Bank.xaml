@@ -38,7 +38,7 @@
                         </ContentControl.ContentTemplate>
                     </ContentControl>
                     <Border Margin="10, 0" Height="1" BorderThickness="0, 0, 0, 1" BorderBrush="DarkGray"/>
-                    <TextBlock x:Name="CashierText" Text="{x:Static res:Resources.GameMessage3}" FontSize="18" TextWrapping="Wrap" Margin="10,5,10,5" />
+                    <TextBlock x:Name="CashierText" Text="{x:Static res:Resources.GameMessage4}" FontSize="18" TextWrapping="Wrap" Margin="10,5,10,5" />
                 </StackPanel>
             </DockPanel>
             <Grid Grid.Row="1" Background="#CCFFFFFF">
@@ -77,7 +77,7 @@
                                 <TextBlock Name="TariffDescription" Margin="0, 0, 0, 10" TextWrapping="Wrap" Visibility="Collapsed"/>
                                 <DockPanel Margin="0, 0, 0, 10">
                                     <Label Content="{x:Static res:Resources.TypeOfService}"/><Label Content=": "/>
-                                    <ComboBox x:Name="ServiceType">
+                                    <ComboBox ItemsSource="{Binding Services}">
                                         <ComboBox.ItemTemplate>
                                             <DataTemplate>
                                                 <Label Content="{Binding Name}"></Label>

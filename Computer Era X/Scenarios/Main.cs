@@ -16,8 +16,8 @@ namespace Computer_Era_X.Scenarios
         {
             _gameEnvironment = gameEnvironment;
 
-            _gameEnvironment.Player.Money.Add(new Currency(_gameEnvironment.Currencies[1]));
-            _gameEnvironment.Player.Money.Add(new Currency(_gameEnvironment.Currencies[2]));
+            _gameEnvironment.Player.Money.Add(new BaseCurrencies(_gameEnvironment.Currencies[1]));
+            _gameEnvironment.Player.Money.Add(new BaseCurrencies(_gameEnvironment.Currencies[2]));
             _gameEnvironment.Player.Money[0].TopUp(Properties.Resources.MainScenarioPaymentName, Properties.Resources.MainScenarioPaymentInitiator, _gameEnvironment.Events.Timer.DateTime, 10000);
 
             _gameEnvironment.Events.Timer.DTimer.Start();

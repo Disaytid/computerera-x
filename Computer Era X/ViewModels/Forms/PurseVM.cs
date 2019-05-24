@@ -18,14 +18,14 @@ namespace Computer_Era_X.ViewModels
             Transactions = SelectedCurrency.TransactionHistory;
         }
 
-        public Collection<Currency> Money => GameEnvironment.Player.Money;
-        private Currency _selectedCurrency;
+        public Collection<BaseCurrencies> Money => GameEnvironment.Player.Money;
+        private BaseCurrencies _selectedCurrency;
         private  Collection<Transaction> _transactions;
         private string _historyPanelWidth = "Auto";
         private Visibility _historyPanelVisibility = Visibility.Collapsed;
         private string _historyPanelButton = "<";
 
-        public Currency SelectedCurrency
+        public BaseCurrencies SelectedCurrency
         {
             get => _selectedCurrency;
             set

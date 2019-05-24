@@ -6,7 +6,7 @@ namespace Computer_Era_X.DataTypes.Objects
     public class Player
     {
         public string Name { get; set; }
-        public ObservableCollection<Currency> Money { get; } = new ObservableCollection<Currency>();
+        public ObservableCollection<BaseCurrencies> Money { get; } = new ObservableCollection<BaseCurrencies>();
         public House House { get; set; }
         public Items Items { get; } = new Items();
     }

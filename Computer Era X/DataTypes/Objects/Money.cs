@@ -38,7 +38,7 @@ namespace Computer_Era_X.DataTypes.Objects
         public double Course { get; set; }
     }
 
-    public class Currency : BindableBase
+    public class BaseCurrencies : BindableBase
     {
         public int ID { get; }
         public ImageSource Icon { get; }
@@ -68,7 +68,7 @@ namespace Computer_Era_X.DataTypes.Objects
             return true;
         }
 
-        public Currency(int id, string systemName, string name, string abbreviation, DateTime dateAppearance, double course, double count)
+        public BaseCurrencies(int id, string systemName, string name, string abbreviation, DateTime dateAppearance, double course, double count)
         {
             ID = id;
             SystemName = systemName;
@@ -78,7 +78,7 @@ namespace Computer_Era_X.DataTypes.Objects
             Course = course;
             Count = count;
         }
-        public Currency(BaseCurrency currency)
+        public BaseCurrencies(BaseCurrency currency)
         {
             ID = currency.ID;
             SystemName = currency.SystemName;

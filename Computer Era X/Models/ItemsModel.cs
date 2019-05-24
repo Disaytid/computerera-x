@@ -71,9 +71,9 @@ namespace Computer_Era_X.Models
         public double ShopPrice { get; set; }
         public string LocalizedType { get; set; }
         public string Description { get; set; }
-        public Currency Currency { get; set; }
+        public BaseCurrencies Currency { get; set; }
 
-        public Product(BaseItem item, double shopPrice, Currency currency, string description)
+        public Product(BaseItem item, double shopPrice, BaseCurrencies currency, string description)
         {
             ID = item.ID;
             Name = item.Name;
@@ -92,9 +92,9 @@ namespace Computer_Era_X.Models
         public ImageSource Image { get; set; }
         public string LocalizedType { get; set; }
         public string Description { get; set; }
-        public Currency Currency { get; set; }
+        public BaseCurrencies Currency { get; set; }
         public double PriceInCurrency { get; set; }
-        public InventoryItem(BaseItem item, string description, Currency currency)
+        public InventoryItem(BaseItem item, string description, BaseCurrencies currency)
         {
             ID = item.ID;
             Name = item.Name;
