@@ -11,14 +11,19 @@ namespace Computer_Era_X.DataTypes.Objects
         public double TotalMaxDebt { get; set; } //Indicated in UGC (Universal Game Currency)
         public double TotalMaxContribution { get; set; } //Indicated in UGC (Universal Game Currency)
         public bool IsSystem { get; set; }
-        // public ObservableCollection<Tariff> Tariffs { get; set; } = new ObservableCollection<Tariff>();
+        public virtual ObservableCollection<Tariff> Tariffs { get; set; }
+
+        public Service()
+        {
+            Tariffs = new ObservableCollection<Tariff>();
+        }
     }
 
     public class Tariff
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public int BaseCurrency { get; set; }
+        public BaseCurrency BaseCurrency { get; set; }
         public int Coefficient { get; set; }
         public double MinSum { get; set; }
         public double MaxSum { get; set; }
@@ -29,6 +34,10 @@ namespace Computer_Era_X.DataTypes.Objects
         public int MaxTerm { get; set; }
         public bool SpecialOffer { get; set; }
         public int PropertyPledged { get; set; } //Property on bail
-        //public ObservableCollection<Service> Services { get; set; } = new ObservableCollection<Service>();
+        public virtual ObservableCollection<Service> Services { get; set; }
+        public Tariff()
+        {
+            Services = new ObservableCollection<Service>();
+        }       
     }
 }
