@@ -19,7 +19,7 @@ namespace Computer_Era_X.Properties {
     // с помощью такого средства, как ResGen или Visual Studio.
     // Чтобы добавить или удалить член, измените файл .ResX и снова запустите ResGen
     // с параметром /str или перестройте свой проект VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -62,15 +62,6 @@ namespace Computer_Era_X.Properties {
         
         /// <summary>
         ///   Ищет локализованную строку, похожую на About the author.
-        /// </summary>
-        public static string _ {
-            get {
-                return ResourceManager.GetString("+", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Author.
         /// </summary>
         public static string AboutTheAuthor {
             get {
@@ -174,6 +165,15 @@ namespace Computer_Era_X.Properties {
         public static string AssemblyType {
             get {
                 return ResourceManager.GetString("AssemblyType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Author.
+        /// </summary>
+        public static string Author {
+            get {
+                return ResourceManager.GetString("Author", resourceCulture);
             }
         }
         
@@ -430,6 +430,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Date of conclusion of the service.
+        /// </summary>
+        public static string DateOfConclusionOfTheService {
+            get {
+                return ResourceManager.GetString("DateOfConclusionOfTheService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Date of service contract.
         /// </summary>
         public static string DateOfServiceContract {
@@ -619,6 +628,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Stop messing around! Enter the amount already and get {0}!.
+        /// </summary>
+        public static string GameMessage10 {
+            get {
+                return ResourceManager.GetString("GameMessage10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Sorry buddy, no money, no goods..
         /// </summary>
         public static string GameMessage2 {
@@ -642,6 +660,51 @@ namespace Computer_Era_X.Properties {
         public static string GameMessage4 {
             get {
                 return ResourceManager.GetString("GameMessage4", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Is it not clear that you do not fit into the framework of the tariff?.
+        /// </summary>
+        public static string GameMessage5 {
+            get {
+                return ResourceManager.GetString("GameMessage5", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Dear, the amount you entered exceeds the maximum amount for this type of service by {0} {1}.
+        /// </summary>
+        public static string GameMessage6 {
+            get {
+                return ResourceManager.GetString("GameMessage6", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You do not have so much money, and why are you just wasting my time?.
+        /// </summary>
+        public static string GameMessage7 {
+            get {
+                return ResourceManager.GetString("GameMessage7", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The computer is frozen, I sympathize, but we will not be able to transfer money to you..
+        /// </summary>
+        public static string GameMessage8 {
+            get {
+                return ResourceManager.GetString("GameMessage8", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Your {0} is approved, your tariff plan - {1}..
+        /// </summary>
+        public static string GameMessage9 {
+            get {
+                return ResourceManager.GetString("GameMessage9", resourceCulture);
             }
         }
         
@@ -1753,6 +1816,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Tariff plan.
         /// </summary>
         public static string TariffPlan {
@@ -1807,11 +1879,29 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на The total amount of payments will be {0} {1}.
+        /// </summary>
+        public static string TheTotalAmountOfPaymentsWillBe {
+            get {
+                return ResourceManager.GetString("TheTotalAmountOfPaymentsWillBe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на To accept.
         /// </summary>
         public static string ToAccept {
             get {
                 return ResourceManager.GetString("ToAccept", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Total charges will be {0} {1}.
+        /// </summary>
+        public static string TotalСhargesWillBe {
+            get {
+                return ResourceManager.GetString("TotalСhargesWillBe", resourceCulture);
             }
         }
         

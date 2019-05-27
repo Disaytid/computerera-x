@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="+" xml:space="preserve">
+  <data name="AboutTheAuthor" xml:space="preserve">
     <value>About the author</value>
   </data>
   <data name="All" xml:space="preserve">
@@ -483,7 +483,7 @@
   <data name="YouWereChargedForUnpaidFare" xml:space="preserve">
     <value>You were charged for unpaid fare!</value>
   </data>
-  <data name="AboutTheAuthor" xml:space="preserve">
+  <data name="Author" xml:space="preserve">
     <value>Author</value>
   </data>
   <data name="CreativeScenario" xml:space="preserve">
@@ -764,5 +764,35 @@
   </data>
   <data name="YourServices" xml:space="preserve">
     <value>Your services</value>
+  </data>
+  <data name="String1" xml:space="preserve">
+    <value />
+  </data>
+  <data name="TotalСhargesWillBe" xml:space="preserve">
+    <value>Total charges will be {0} {1}</value>
+  </data>
+  <data name="TheTotalAmountOfPaymentsWillBe" xml:space="preserve">
+    <value>The total amount of payments will be {0} {1}</value>
+  </data>
+  <data name="DateOfConclusionOfTheService" xml:space="preserve">
+    <value>Date of conclusion of the service</value>
+  </data>
+  <data name="GameMessage5" xml:space="preserve">
+    <value>Is it not clear that you do not fit into the framework of the tariff?</value>
+  </data>
+  <data name="GameMessage6" xml:space="preserve">
+    <value>Dear, the amount you entered exceeds the maximum amount for this type of service by {0} {1}</value>
+  </data>
+  <data name="GameMessage7" xml:space="preserve">
+    <value>You do not have so much money, and why are you just wasting my time?</value>
+  </data>
+  <data name="GameMessage8" xml:space="preserve">
+    <value>The computer is frozen, I sympathize, but we will not be able to transfer money to you.</value>
+  </data>
+  <data name="GameMessage9" xml:space="preserve">
+    <value>Your {0} is approved, your tariff plan - {1}.</value>
+  </data>
+  <data name="GameMessage10" xml:space="preserve">
+    <value>Stop messing around! Enter the amount already and get {0}!</value>
   </data>
 </root>

@@ -9,5 +9,6 @@ namespace Computer_Era_X.DataTypes.Objects
         public ObservableCollection<BaseCurrencies> Money { get; } = new ObservableCollection<BaseCurrencies>();
         public House House { get; set; }
         public Items Items { get; } = new Items();
+        public ObservableCollection<PlayerTariff> Tariffs { get; set; } = new ObservableCollection<PlayerTariff>();
     }
 }

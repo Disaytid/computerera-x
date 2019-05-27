@@ -117,7 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="+" xml:space="preserve">
+  <data name="AboutTheAuthor" xml:space="preserve">
     <value>О авторе</value>
   </data>
   <data name="All" xml:space="preserve">
@@ -483,7 +483,7 @@
   <data name="YouWereChargedForUnpaidFare" xml:space="preserve">
     <value>Вам был выписан штраф за неоплаченный проезд!</value>
   </data>
-  <data name="AboutTheAuthor" xml:space="preserve">
+  <data name="Author" xml:space="preserve">
     <value>Автор</value>
   </data>
   <data name="CreativeScenario" xml:space="preserve">
@@ -764,5 +764,32 @@
   </data>
   <data name="YourServices" xml:space="preserve">
     <value>Ваши услуги</value>
+  </data>
+  <data name="TheTotalAmountOfPaymentsWillBe" xml:space="preserve">
+    <value>Итоговая сумма выплат составит {0} {1}</value>
+  </data>
+  <data name="TotalСhargesWillBe" xml:space="preserve">
+    <value>Итого начисления составят {0} {1}</value>
+  </data>
+  <data name="DateOfConclusionOfTheService" xml:space="preserve">
+    <value>Дата заключения услуги</value>
+  </data>
+  <data name="GameMessage5" xml:space="preserve">
+    <value>Разве не видно что вы не укладывается в рамки тарифа?</value>
+  </data>
+  <data name="GameMessage6" xml:space="preserve">
+    <value>Уважаемый, введенная вами сумма превышает максимальную сумму по данному типу услуги на {0} {1}</value>
+  </data>
+  <data name="GameMessage7" xml:space="preserve">
+    <value>У вас нет столько денег, и зачем вы только тратите мое время?</value>
+  </data>
+  <data name="GameMessage8" xml:space="preserve">
+    <value>Компьютер завис, сочувствую но мы не сможем перевести вам деньги.</value>
+  </data>
+  <data name="GameMessage9" xml:space="preserve">
+    <value>Ваш {0} одобрен, ваш тарифный план - {1}.</value>
+  </data>
+  <data name="GameMessage10" xml:space="preserve">
+    <value>Хватит баловаться! Введите уже сумму и оформим {0}!</value>
   </data>
 </root>

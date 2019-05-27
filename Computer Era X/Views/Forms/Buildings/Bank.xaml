@@ -74,7 +74,7 @@
                                 <TextBlock x:Name="TarifInfo" TextWrapping="Wrap"/>
                             </StackPanel>
                             <StackPanel Grid.Column="2" Margin="10" Visibility="{Binding AdditionsPanelServices}">
-                                <TextBlock Name="TariffDescription" Margin="0, 0, 0, 10" TextWrapping="Wrap" Visibility="Collapsed"/>
+                                <TextBlock Text="{Binding TariffDescription}" Margin="0, 0, 0, 10" TextWrapping="Wrap" Visibility="{Binding TariffDescriptionVisibility}"/>
                                 <DockPanel Margin="0, 0, 0, 10">
                                     <Label Content="{x:Static res:Resources.TypeOfService}"/><Label Content=": "/>
                                     <ComboBox ItemsSource="{Binding Services}" SelectedItem="{Binding BankSelectedService}">
@@ -97,22 +97,22 @@
                                     </ComboBox>
                                 </DockPanel>
                                 <DockPanel Margin="0, 0, 0, 10">
-                                    <Label Name="LabelPeriod" Content="{x:Static res:Resources.Periods}"/>
+                                    <Label Name="LabelPeriod" Content="{Binding LabelTariffPeriod}"/>
                                     <Label Content=": "/>
-                                    <TextBox Width="Auto" BorderBrush="#FFABADB3"/>
+                                    <TextBox Text="{Binding TariffPeriods}" Width="Auto" BorderBrush="#FFABADB3"/>
                                 </DockPanel>
                                 <DockPanel Margin="0, 0, 0, 10">
                                     <Label Content="{x:Static res:Resources.Amount}"/>
-                                    <TextBox Name="Sum"/>
+                                    <TextBox Text="{Binding TariffAmount}"/>
                                 </DockPanel>
-                                <Label Name="SummaryInformation" Content="Итого: " Margin="0, 0, 0, 10"/>
+                                <Label Content="{Binding TotalService}" Margin="0, 0, 0, 10"/>
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="*"/>
                                     </Grid.ColumnDefinitions>
-                                    <Button Name="Accept" Grid.Column="0" Content="{x:Static res:Resources.ToAccept}" Margin="10,0,5,0" Background="Green" Foreground="White" BorderThickness="0"/>
-                                    <Button Name="CloseServiceForm" Grid.Column="1" Content="{x:Static res:Resources.Reject}" Margin="5,0,10,0" Background="Red" Foreground="White" BorderThickness="0"/>
+                                    <Button Name="Accept" Grid.Column="0" Content="{x:Static res:Resources.ToAccept}" Margin="10,0,5,0" Background="Green" Foreground="White" BorderThickness="0" Command="{Binding AcceptTerms}"/>
+                                    <Button Name="CloseServiceForm" Grid.Column="1" Content="{x:Static res:Resources.Reject}" Margin="5,0,10,0" Background="Red" Foreground="White" BorderThickness="0" Command="{Binding RejectСonditions}"/>
                                 </Grid>
                             </StackPanel>
 
