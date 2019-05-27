@@ -77,7 +77,7 @@
                                 <TextBlock Name="TariffDescription" Margin="0, 0, 0, 10" TextWrapping="Wrap" Visibility="Collapsed"/>
                                 <DockPanel Margin="0, 0, 0, 10">
                                     <Label Content="{x:Static res:Resources.TypeOfService}"/><Label Content=": "/>
-                                    <ComboBox ItemsSource="{Binding Services}" SelectedItem="{Binding BankSelectedService}">
+                                    <ComboBox ItemsSource="{Binding Services}">
                                         <ComboBox.ItemTemplate>
                                             <DataTemplate>
                                                 <Label Content="{Binding Name}"></Label>
@@ -88,7 +88,7 @@
                                 <DockPanel Margin="0, 0, 0, 10">
                                     <Label Content="{x:Static res:Resources.TariffPlan}"/>
                                     <Label Content=": "/>
-                                    <ComboBox ItemsSource="{Binding BankTariffs}" SelectedItem="{Binding BankSelectedTariff}">
+                                    <ComboBox x:Name="ServiceTariff">
                                         <ComboBox.ItemTemplate>
                                             <DataTemplate>
                                                 <Label Content="{Binding Name}"></Label>
