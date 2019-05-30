@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations.Schema;
-using Computer_Era_X.DataTypes.Enums;
 using Computer_Era_X.Properties;
 
 namespace Computer_Era_X.DataTypes.Objects
@@ -37,7 +36,6 @@ namespace Computer_Era_X.DataTypes.Objects
         public int MinTerm { get; set; }
         public int MaxTerm { get; set; }
         public bool SpecialOffer { get; set; }
-        public int PropertyPledged { get; set; } //Property on bail
         public virtual ObservableCollection<Service> Services { get; set; }
 
         public Tariff()
@@ -66,7 +64,8 @@ namespace Computer_Era_X.DataTypes.Objects
         public double Amount { get; set; }
         public int Term { get; set; }
         public DateTime StartDateOfService { get; set; }
-        public PlayerTariff(Tariff tariff, Service service, double amount, int term, DateTime start_date, bool spec_offer = false)
+        public object PropertyPledged { get; set; }
+        public PlayerTariff(Tariff tariff, Service service, double amount, int term, DateTime start_date, bool spec_offer = false, object propertyPledged = null)
         {
             ID = tariff.ID;
             Name = tariff.Name;
@@ -80,7 +79,7 @@ namespace Computer_Era_X.DataTypes.Objects
             MinTerm = tariff.MinTerm;
             MaxTerm = tariff.MaxTerm;
             SpecialOffer = tariff.SpecialOffer;
-            PropertyPledged = tariff.PropertyPledged;
+            PropertyPledged = propertyPledged;
             Services = tariff.Services;
 
             Service = service;

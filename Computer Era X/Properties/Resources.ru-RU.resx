@@ -792,4 +792,28 @@
   <data name="GameMessage10" xml:space="preserve">
     <value>Хватит баловаться! Введите уже сумму и оформим {0}!</value>
   </data>
+  <data name="Bank" xml:space="preserve">
+    <value>Банк</value>
+  </data>
+  <data name="GameMessage11" xml:space="preserve">
+    <value>Возврат средств в связи с истечением периода оказания услуги</value>
+  </data>
+  <data name="GameMessage12" xml:space="preserve">
+    <value>У вас изъяли недвижимость в связи с отсутствием средств для выплаты!задолженности!</value>
+  </data>
+  <data name="GameMessage13" xml:space="preserve">
+    <value>Нет денег для выплаты по услуге "{0}" тарифный план "{1}".</value>
+  </data>
+  <data name="GameMessage14" xml:space="preserve">
+    <value>Что-то пошло не так, тариф не найден!</value>
+  </data>
+  <data name="PaymentOnPayment" xml:space="preserve">
+    <value>Выплата по услуге</value>
+  </data>
+  <data name="ProcessingPaymentsAndPenalties" xml:space="preserve">
+    <value>Обработка выплат и взысканий</value>
+  </data>
+  <data name="RecoveryByService" xml:space="preserve">
+    <value>Взыскание по услуге</value>
+  </data>
 </root>

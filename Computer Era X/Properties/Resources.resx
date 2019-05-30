@@ -795,4 +795,28 @@
   <data name="GameMessage10" xml:space="preserve">
     <value>Stop messing around! Enter the amount already and get {0}!</value>
   </data>
+  <data name="Bank" xml:space="preserve">
+    <value>Bank</value>
+  </data>
+  <data name="GameMessage11" xml:space="preserve">
+    <value>Refunds due to the expiration of the service period</value>
+  </data>
+  <data name="GameMessage12" xml:space="preserve">
+    <value>You have withdrawn property due to lack of funds to pay the debt!</value>
+  </data>
+  <data name="GameMessage13" xml:space="preserve">
+    <value>No money to pay for the service "{0}" tariff plan "{1}".</value>
+  </data>
+  <data name="GameMessage14" xml:space="preserve">
+    <value>Something went wrong, the tariff was not found!</value>
+  </data>
+  <data name="PaymentOnPayment" xml:space="preserve">
+    <value>Payment on payment</value>
+  </data>
+  <data name="ProcessingPaymentsAndPenalties" xml:space="preserve">
+    <value>Processing payments and penalties</value>
+  </data>
+  <data name="RecoveryByService" xml:space="preserve">
+    <value>Recovery by service</value>
+  </data>
 </root>

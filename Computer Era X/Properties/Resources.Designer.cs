@@ -19,7 +19,7 @@ namespace Computer_Era_X.Properties {
     // с помощью такого средства, как ResGen или Visual Studio.
     // Чтобы добавить или удалить член, измените файл .ResX и снова запустите ResGen
     // с параметром /str или перестройте свой проект VS.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -174,6 +174,15 @@ namespace Computer_Era_X.Properties {
         public static string Author {
             get {
                 return ResourceManager.GetString("Author", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Bank.
+        /// </summary>
+        public static string Bank {
+            get {
+                return ResourceManager.GetString("Bank", resourceCulture);
             }
         }
         
@@ -633,6 +642,42 @@ namespace Computer_Era_X.Properties {
         public static string GameMessage10 {
             get {
                 return ResourceManager.GetString("GameMessage10", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Refunds due to the expiration of the service period.
+        /// </summary>
+        public static string GameMessage11 {
+            get {
+                return ResourceManager.GetString("GameMessage11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You have withdrawn property due to lack of funds to pay the debt!.
+        /// </summary>
+        public static string GameMessage12 {
+            get {
+                return ResourceManager.GetString("GameMessage12", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на No money to pay for the service &quot;{0}&quot; tariff plan &quot;{1}&quot;..
+        /// </summary>
+        public static string GameMessage13 {
+            get {
+                return ResourceManager.GetString("GameMessage13", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Something went wrong, the tariff was not found!.
+        /// </summary>
+        public static string GameMessage14 {
+            get {
+                return ResourceManager.GetString("GameMessage14", resourceCulture);
             }
         }
         
@@ -1501,6 +1546,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Payment on payment.
+        /// </summary>
+        public static string PaymentOnPayment {
+            get {
+                return ResourceManager.GetString("PaymentOnPayment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на PCI-Express 2.0 support.
         /// </summary>
         public static string PCIExpress20Support {
@@ -1578,6 +1632,15 @@ namespace Computer_Era_X.Properties {
         public static string PowerToTheMotherboard {
             get {
                 return ResourceManager.GetString("PowerToTheMotherboard", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Processing payments and penalties.
+        /// </summary>
+        public static string ProcessingPaymentsAndPenalties {
+            get {
+                return ResourceManager.GetString("ProcessingPaymentsAndPenalties", resourceCulture);
             }
         }
         
@@ -1668,6 +1731,15 @@ namespace Computer_Era_X.Properties {
         public static string Received {
             get {
                 return ResourceManager.GetString("Received", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Recovery by service.
+        /// </summary>
+        public static string RecoveryByService {
+            get {
+                return ResourceManager.GetString("RecoveryByService", resourceCulture);
             }
         }
         

@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using System.Linq;
 using System.Windows;
+using System.Windows.Media;
 using Computer_Era_X.Converters;
 using Computer_Era_X.DataTypes.Enums;
 using Computer_Era_X.DataTypes.Objects;
 using Computer_Era_X.Models;
+using Computer_Era_X.Models.Systems;
 using Computer_Era_X.Properties;
 using Prism.Commands;
 
@@ -18,6 +21,9 @@ namespace Computer_Era_X.ViewModels
         {
             AddService = new DelegateCommand(AdditionsPanelServices_Show);
             AcceptTerms = new DelegateCommand(BankAcceptTerms);
+            RejectСonditions = new DelegateCommand(BankRejectСonditions);
+
+            GameEnvironment.Player.Money.CollectionChanged += AddExchangeRate;
         }
 
         private void AdditionsPanelServices_Show()
@@ -98,54 +104,75 @@ namespace Computer_Era_X.ViewModels
                     if (curr.ID == BankSelectedTariff.BaseCurrency.ID) { currency = curr; break; }
                 if (tariff.Service.TransactionType == 0) //TopUp
                 {
-                    currency.TopUp("Выплата по услуге \"" + tariff.Service.Name + "\" (" + tariff.Name + ")", Resources.BankName, GameEnvironment.Events.Timer.DateTime, (tariff.Amount * tariff.Coefficient / 100));
+                    currency.TopUp(Resources.PaymentOnPayment + " \"" + tariff.Service.Name + "\" (" + tariff.Name + ")", Resources.BankName, GameEnvironment.Events.Timer.DateTime, (tariff.Amount * tariff.Coefficient / 100));
                     if (DateTime.Compare(PeriodicityConverter.GetDateByPeriod(tariff.StartDateOfService, tariff.TermUnit, tariff.Term), @event.ResponseTime) <= 0)
                     {
                         GameEnvironment.Events.Events.Remove(@event);
                         GameEnvironment.Player.Tariffs.Remove(tariff);
-                        currency.TopUp("Возврат средств в связи с истечением периода оказания услуги \"" + tariff.Service.Name + "\" (" + tariff.Name + ")", Properties.Resources.BankName, GameEnvironment.Events.Timer.DateTime, tariff.Amount);
+                        currency.TopUp(Resources.GameMessage11 + " \"" + tariff.Service.Name + "\" (" + tariff.Name + ")", Resources.BankName, GameEnvironment.Events.Timer.DateTime, tariff.Amount);
                     }
                 }
                 else if (tariff.Service.TransactionType == 1) //Withdraw
                 {
                     int per_s = PeriodicityConverter.GetNumberOfPeriods(tariff.Periodicity, tariff.PeriodicityValue, tariff.StartDateOfService, PeriodicityConverter.GetDateByPeriod(tariff.StartDateOfService, tariff.TermUnit, tariff.Term));
-                    if (!currency.Withdraw("Взыскание по услуге\"" + tariff.Service.Name + "\" (" + tariff.Name + ")", Properties.Resources.BankName, GameEnvironment.Events.Timer.DateTime, (tariff.Amount + (tariff.Amount * tariff.Coefficient / 100) * tariff.Term) / per_s))
+                    if (!currency.Withdraw(Resources.RecoveryByService + " \"" + tariff.Service.Name + "\" (" + tariff.Name + ")", Resources.BankName, GameEnvironment.Events.Timer.DateTime, (tariff.Amount + (tariff.Amount * tariff.Coefficient / 100) * tariff.Term) / per_s))
                     {
-                        if (tariff.PropertyPledged > 0)
+                        if (tariff.PropertyPledged != null)
                         {
-                            //if (tariff.PropertyPledged is House)
-                            //{
-                                //GameEnvironment.Services.PlayerTariffs.Remove(GameEnvironment.Player.House.PlayerCommunalPayments);
-                                //GameEnvironment.Player.House = null;
-                                //GameEnvironment.Services.PlayerTariffs.Remove(tariff);
-                                //GameEnvironment.GameEvents.Events.Remove(@event);
-                                //GameEnvironment.Messages.NewMessage("Банк", "У вас изъяли недвижимость в связи с отсутствием средств для выплаты задолженности!", GameMessages.Icon.Info);
-                            //}
+                            if (tariff.PropertyPledged is House)
+                            {
+                                GameEnvironment.Player.Tariffs.Remove(GameEnvironment.Player.House.PlayerCommunalPayments);
+                                GameEnvironment.Player.House = null;
+                                GameEnvironment.Player.Tariffs.Remove(tariff);
+                                GameEnvironment.Events.Events.Remove(@event);
+                                GameEnvironment.Messages.Add(new Message(Resources.Bank, Resources.GameMessage12, Icon.Info));
+                            }
                         }
-                        else { GameEnvironment.Scenario.GameOver("Нет денег для выплаты по услуге \"" + tariff.Service.Name + "\" тарифный план \"" + tariff.Name + "\""); }
-                    } //ВЫЗОВ СОБЫТИЯ GAME_OVER если не хватает денег (Игрок банкрот), исключение если есть залог
+                        else { GameEnvironment.Scenario.GameOver(string.Format(Resources.GameMessage13, tariff.Service.Name, tariff.Name)); }
+                    } //Call events GAME_OVER if there is not enough money (player is bankrupt), an exception if there is a pledge
                     if (DateTime.Compare(PeriodicityConverter.GetDateByPeriod(tariff.StartDateOfService, tariff.TermUnit, tariff.Term), @event.ResponseTime) <= 0)
                     {
-                        if (tariff.PropertyPledged > 0)
+                        if (tariff.PropertyPledged != null)
                         {
-                            //if (tariff.PropertyPledged is House)
-                            //{
-                               // GameEnvironment.Player.House.IsPurchasedOnCredit = false;
-                               // GameEnvironment.Player.House.IsPurchased = true;
-                            //}
+                            if (tariff.PropertyPledged is House)
+                            {
+                               GameEnvironment.Player.House.IsPurchasedOnCredit = false;
+                               GameEnvironment.Player.House.IsPurchased = true;
+                            }
                         }
                         GameEnvironment.Events.Events.Remove(@event);
                         GameEnvironment.Player.Tariffs.Remove(tariff);
                     }
                 }
             } else {
-                MessageBox.Show("Обработка выплат и взысканий", "Что-то пошло не так, тариф не найден!");
+                MessageBox.Show(Resources.ProcessingPaymentsAndPenalties, Resources.GameMessage14);
             }
         }
 
-
-
         private void BankRejectСonditions() => AdditionsPanelServices = Visibility.Collapsed;
+        private void PlayerTariffSelection()
+        {
+            if (SelectedPlayerTarif == null || AdditionsPanelServices == Visibility.Visible) { return; }
+            InformationPanelForTheService = Visibility.Visible;
+            TariffInformation = SelectedPlayerTarif.Info();
+        }
+        private void AddExchangeRate(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            ExchangeRates.Clear();
+            if (GameEnvironment.Player.Money.Count < 2) { return; }
+            for (int i= 1; i < GameEnvironment.Player.Money.Count; i++)
+            {
+                BaseCurrencies _firstCurrency = GameEnvironment.Player.Money[0];
+                BaseCurrencies _secondCurrency = GameEnvironment.Player.Money[i];
+                double _firstCurrencieUnit = 1 / _firstCurrency.Course; //Counts how much BGC we get per unit of base currency
+                double _secondCurrencieUnit = 1 / _secondCurrency.Course; //Counts how much BGC we get per unit of second currency
+                double _course = (_secondCurrencieUnit / _firstCurrencieUnit) - (_secondCurrencieUnit / _firstCurrencieUnit * 1 / 100);
+                ExchangeRates.Add(new ExchangeRates(_secondCurrency.Icon, _firstCurrency.Icon, "1 " + _secondCurrency.Abbreviation, _course.ToString("N3") + " " + _firstCurrency.Abbreviation));
+
+                _course = (_secondCurrencieUnit / _firstCurrencieUnit) + (_secondCurrencieUnit / _firstCurrencieUnit * 1 / 100);
+                ExchangeRates.Add(new ExchangeRates(_firstCurrency.Icon, _secondCurrency.Icon, _course.ToString("N3") + " " + _firstCurrency.Abbreviation, "1 " + _secondCurrency.Abbreviation));
+            }
+        }
 
         private Visibility _additionsPanelServices = Visibility.Collapsed;
         private Visibility _informationPanelForTheService = Visibility.Visible;
@@ -158,6 +185,10 @@ namespace Computer_Era_X.ViewModels
         private string _tariffPeriods;
         private string _tariffAmount;
         private string _totalService;
+        public ObservableCollection<PlayerTariff> PlayerTariffs => GameEnvironment.Player.Tariffs;
+        private PlayerTariff _selectedPlayerTarif;
+        private string _tariffInformation;
+        private ObservableCollection<ExchangeRates> _exchangeRates = new ObservableCollection<ExchangeRates>();
 
         public Visibility AdditionsPanelServices
         {
@@ -260,8 +291,44 @@ namespace Computer_Era_X.ViewModels
             set => SetProperty(ref _totalService, value);
         }
 
+        public PlayerTariff SelectedPlayerTarif
+        {
+            get => _selectedPlayerTarif;
+            set
+            {
+                SetProperty(ref _selectedPlayerTarif, value);
+                PlayerTariffSelection();
+            }
+        }
+
+        public string TariffInformation {
+            get => _tariffInformation;
+            set => SetProperty(ref _tariffInformation, value);
+        }
+        public ObservableCollection<ExchangeRates> ExchangeRates
+        {
+            get => _exchangeRates;
+            set => SetProperty(ref _exchangeRates, value);
+        }
+
         public DelegateCommand AddService { get; private set; }
         public DelegateCommand AcceptTerms { get; private set; }
         public DelegateCommand RejectСonditions { get; set; }
+    }
+
+    public class ExchangeRates
+    {
+        public ImageSource FirstСurrencyIcon { get; set; }
+        public ImageSource SecondСurrencyIcon { get; set; }
+        public string FirstСurrencyCourse { get; set; }
+        public string SecondСurrencyCourse { get; set; }
+
+        public ExchangeRates(ImageSource firstСurrencyIcon, ImageSource secondСurrencyIcon, string firstСurrencyCourse, string secondСurrencyCourse)
+        {
+            FirstСurrencyIcon = firstСurrencyIcon;
+            SecondСurrencyIcon = secondСurrencyIcon;
+            FirstСurrencyCourse = firstСurrencyCourse;
+            SecondСurrencyCourse = secondСurrencyCourse;
+        }
     }
 }

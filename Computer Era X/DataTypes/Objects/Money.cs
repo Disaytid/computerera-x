@@ -46,7 +46,12 @@ namespace Computer_Era_X.DataTypes.Objects
         public string Name { get; }
         public string Abbreviation { get; }
         public DateTime DateAppearance { get; }
-        public double Course { get; }
+        private double _course;
+        public double Course
+        {
+            get => _course;
+            set => SetProperty(ref _course, value);
+        } 
         public Collection<Transaction> TransactionHistory { get; } = new Collection<Transaction>();
         public double Count { get; private set; }
 
