@@ -10,7 +10,6 @@ using System.Windows;
 using System.Windows.Controls;
 using Computer_Era_X.Models;
 using Computer_Era_X.DataTypes.Objects;
-using System.Collections.ObjectModel;
 using System.Collections.Generic;
 
 namespace Computer_Era_X.ViewModels

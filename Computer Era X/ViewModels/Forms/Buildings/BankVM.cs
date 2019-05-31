@@ -23,7 +23,7 @@ namespace Computer_Era_X.ViewModels
             AcceptTerms = new DelegateCommand(BankAcceptTerms);
             RejectСonditions = new DelegateCommand(BankRejectСonditions);
 
-            GameEnvironment.Player.Money.CollectionChanged += AddExchangeRate;
+            Money.CollectionChanged += AddExchangeRate;
         }
 
         private void AdditionsPanelServices_Show()
@@ -171,6 +171,7 @@ namespace Computer_Era_X.ViewModels
 
                 _course = (_secondCurrencieUnit / _firstCurrencieUnit) + (_secondCurrencieUnit / _firstCurrencieUnit * 1 / 100);
                 ExchangeRates.Add(new ExchangeRates(_firstCurrency.Icon, _secondCurrency.Icon, _course.ToString("N3") + " " + _firstCurrency.Abbreviation, "1 " + _secondCurrency.Abbreviation));
+                MessageBox.Show("Обновлено!");
             }
         }
 

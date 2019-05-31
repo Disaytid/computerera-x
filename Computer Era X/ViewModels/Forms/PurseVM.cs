@@ -18,7 +18,7 @@ namespace Computer_Era_X.ViewModels
             Transactions = SelectedCurrency.TransactionHistory;
         }
 
-        public Collection<BaseCurrencies> Money => GameEnvironment.Player.Money;
+        public ObservableCollection<BaseCurrencies> Money => GameEnvironment.Player.Money;
         private BaseCurrencies _selectedCurrency;
         private  Collection<Transaction> _transactions;
         private string _historyPanelWidth = "Auto";

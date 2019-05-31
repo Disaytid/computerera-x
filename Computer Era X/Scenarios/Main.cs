@@ -34,13 +34,12 @@ namespace Computer_Era_X.Scenarios
                 int _interest = _gameEnvironment.Random.Next(1, 4);
                 int _direction = _gameEnvironment.Random.Next(0, 2);
                 double _accruedInterest = currency.Course * _interest / 100;
-                double _course = currency.Course + _direction == 0 ? -_accruedInterest : _accruedInterest;
+                double _course = currency.Course + (_direction == 0 ? -_accruedInterest : _accruedInterest);
                 currency.Course = _course;
 
                 foreach (BaseCurrencies playerCurrency in _gameEnvironment.Player.Money)
                     if (playerCurrency.ID == currency.ID) { playerCurrency.Course = _course; break; }
             }
-            //MessageBox.Show(_gameEnvironment.Player.Money[1].Course.ToString());
         }
 
         public void GameOver(string cause)
