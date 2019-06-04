@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
 using Computer_Era_X.DataTypes.Objects;
+using Computer_Era_X.DataTypes.Objects.Computer;
 using Prism.Commands;
 
 namespace Computer_Era_X.ViewModels
@@ -18,7 +19,7 @@ namespace Computer_Era_X.ViewModels
             Transactions = SelectedCurrency.TransactionHistory;
         }
 
-        public ObservableCollection<BaseCurrencies> Money => GameEnvironment.Player.Money;
+        public ObservableCollectionExtended<BaseCurrencies> Money => GameEnvironment.Player.Money;
         private BaseCurrencies _selectedCurrency;
         private  Collection<Transaction> _transactions;
         private string _historyPanelWidth = "Auto";

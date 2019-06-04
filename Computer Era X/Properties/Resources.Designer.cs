@@ -439,6 +439,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Currency exchange.
+        /// </summary>
+        public static string CurrencyExchange {
+            get {
+                return ResourceManager.GetString("CurrencyExchange", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Date of conclusion of the service.
         /// </summary>
         public static string DateOfConclusionOfTheService {
@@ -561,6 +570,15 @@ namespace Computer_Era_X.Properties {
         public static string ErrorСodeOk {
             get {
                 return ResourceManager.GetString("ErrorСodeOk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Exchange.
+        /// </summary>
+        public static string Exchange {
+            get {
+                return ResourceManager.GetString("Exchange", resourceCulture);
             }
         }
         

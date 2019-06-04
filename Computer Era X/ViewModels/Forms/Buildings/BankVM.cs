@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using System.Windows;
-using System.Windows.Media;
+using Computer_Era_X.Views;
 using Computer_Era_X.Converters;
 using Computer_Era_X.DataTypes.Enums;
 using Computer_Era_X.DataTypes.Objects;
 using Computer_Era_X.Models;
 using Computer_Era_X.Models.Systems;
 using Computer_Era_X.Properties;
+using Computer_Era_X.Validators;
 using Prism.Commands;
+using MessageBox = Computer_Era_X.Views.MessageBox;
 
 namespace Computer_Era_X.ViewModels
 {
@@ -22,8 +24,9 @@ namespace Computer_Era_X.ViewModels
             AddService = new DelegateCommand(AdditionsPanelServices_Show);
             AcceptTerms = new DelegateCommand(BankAcceptTerms);
             RejectСonditions = new DelegateCommand(BankRejectСonditions);
+            Exchange = new DelegateCommand(CurrencyExchange);
 
-            Money.CollectionChanged += AddExchangeRate;
+            Money.ItemPropertyChanged += AddExchangeRate;
         }
 
         private void AdditionsPanelServices_Show()
@@ -156,7 +159,7 @@ namespace Computer_Era_X.ViewModels
             InformationPanelForTheService = Visibility.Visible;
             TariffInformation = SelectedPlayerTarif.Info();
         }
-        private void AddExchangeRate(object sender, NotifyCollectionChangedEventArgs e)
+        private void AddExchangeRate(object sender, PropertyChangedEventArgs e)
         {
             ExchangeRates.Clear();
             if (GameEnvironment.Player.Money.Count < 2) { return; }
@@ -167,12 +170,36 @@ namespace Computer_Era_X.ViewModels
                 double _firstCurrencieUnit = 1 / _firstCurrency.Course; //Counts how much BGC we get per unit of base currency
                 double _secondCurrencieUnit = 1 / _secondCurrency.Course; //Counts how much BGC we get per unit of second currency
                 double _course = (_secondCurrencieUnit / _firstCurrencieUnit) - (_secondCurrencieUnit / _firstCurrencieUnit * 1 / 100);
-                ExchangeRates.Add(new ExchangeRates(_secondCurrency.Icon, _firstCurrency.Icon, "1 " + _secondCurrency.Abbreviation, _course.ToString("N3") + " " + _firstCurrency.Abbreviation));
+                ExchangeRates.Add(new ExchangeRates(_secondCurrency, _firstCurrency, 1, _course));
 
                 _course = (_secondCurrencieUnit / _firstCurrencieUnit) + (_secondCurrencieUnit / _firstCurrencieUnit * 1 / 100);
-                ExchangeRates.Add(new ExchangeRates(_firstCurrency.Icon, _secondCurrency.Icon, _course.ToString("N3") + " " + _firstCurrency.Abbreviation, "1 " + _secondCurrency.Abbreviation));
-                MessageBox.Show("Обновлено!");
+                ExchangeRates.Add(new ExchangeRates(_firstCurrency, _secondCurrency, _course, 1));
             }
+        }
+
+        private void CurrencyExchange()
+        {
+            if (LastCurrencyHighlighted == null) { return; }
+            ExchangeRates rate = LastCurrencyHighlighted;
+            double ammount = NumberValidator.GetDoubleFromString(AmountOfExchangeableCurrency);
+            if (rate.FirstCurrency.Withdraw(Resources.BankName, Resources.CurrencyExchange, GameEnvironment.Events.Timer.DateTime, ammount))
+            {
+                double course;
+                if (rate.FirstСurrencyCourse == 1)
+                {
+                    course = rate.SecondСurrencyCourse;
+                    rate.SecondCurrency.TopUp(Resources.BankName, Resources.CurrencyExchange, GameEnvironment.Events.Timer.DateTime, ammount * course);
+                } else {
+                    course = rate.FirstСurrencyCourse;
+                    rate.SecondCurrency.TopUp(Resources.BankName, Resources.CurrencyExchange, GameEnvironment.Events.Timer.DateTime, ammount / course);
+                } //Definition of the dividend
+            } else { MessageBox.Show(Resources.CurrencyExchange, Resources.YouDoNotHaveEnoughMoney, MessageBoxType.Warning); }
+        }
+
+        private void SelectionExchangeRates()
+        {
+            if (SelectedExchangeRates != null) LastCurrencyHighlighted = SelectedExchangeRates;
+            if (LastCurrencyHighlighted != null) ExchangeAvailability = true;
         }
 
         private Visibility _additionsPanelServices = Visibility.Collapsed;
@@ -190,6 +217,10 @@ namespace Computer_Era_X.ViewModels
         private PlayerTariff _selectedPlayerTarif;
         private string _tariffInformation;
         private ObservableCollection<ExchangeRates> _exchangeRates = new ObservableCollection<ExchangeRates>();
+        private string _amountOfExchangeableCurrency;
+        private bool _exchangeAvailability = false;
+        private ExchangeRates _selectedExchangeRates;
+        private ExchangeRates LastCurrencyHighlighted { get; set; }
 
         public Visibility AdditionsPanelServices
         {
@@ -267,7 +298,7 @@ namespace Computer_Era_X.ViewModels
             set
             {
                 if (BankSelectedTariff == null) { return; }
-                if (int.TryParse(value, out int _num))
+                if (double.TryParse(value, out double _num))
                 {
                     if (BankSelectedTariff.MaxSum != 0 && _num > BankSelectedTariff.MaxSum) { SetProperty(ref _tariffAmount, BankSelectedTariff.MaxSum.ToString()); }
                     else if (_num < BankSelectedTariff.MinSum) { SetProperty(ref _tariffAmount, BankSelectedTariff.MinSum.ToString()); }
@@ -277,9 +308,9 @@ namespace Computer_Era_X.ViewModels
                     {
                         if (BankSelectedService.TransactionType == 0) //Deposit
                         {
-                            TotalService = string.Format(Resources.TotalСhargesWillBe, ((double)_num * BankSelectedTariff.Coefficient / 100 * _tariff).ToString("N3"), BankSelectedTariff.BaseCurrency.Abbreviation);
+                            TotalService = string.Format(Resources.TotalСhargesWillBe, (_num * BankSelectedTariff.Coefficient / 100 * _tariff).ToString("N3"), BankSelectedTariff.BaseCurrency.Abbreviation);
                         } else if (BankSelectedService.TransactionType == 1) { //Credit
-                            TotalService = string.Format(Resources.TheTotalAmountOfPaymentsWillBe, ((double)_num + (_num * BankSelectedTariff.Coefficient / 100) * _tariff).ToString("N3"), BankSelectedTariff.BaseCurrency.Abbreviation);
+                            TotalService = string.Format(Resources.TheTotalAmountOfPaymentsWillBe, (_num + (_num * BankSelectedTariff.Coefficient / 100) * _tariff).ToString("N3"), BankSelectedTariff.BaseCurrency.Abbreviation);
                         }
                     }
                 } else { SetProperty(ref _tariffAmount, BankSelectedTariff.MinTerm.ToString()); }
@@ -311,25 +342,53 @@ namespace Computer_Era_X.ViewModels
             get => _exchangeRates;
             set => SetProperty(ref _exchangeRates, value);
         }
+        public string AmountOfExchangeableCurrency
+        {
+            get => _amountOfExchangeableCurrency;
+            set
+            {
+                SetProperty(ref _amountOfExchangeableCurrency, NumberValidator.DoubleFromText(value));
+            }
+        }
+        public bool ExchangeAvailability
+        {
+            get => _exchangeAvailability;
+            set => SetProperty(ref _exchangeAvailability, value);
+        }
+        public ExchangeRates SelectedExchangeRates
+        {
+            get => _selectedExchangeRates;
+            set
+            {
+                SetProperty(ref _selectedExchangeRates, value);
+                SelectionExchangeRates();
+            }
+        }
+
 
         public DelegateCommand AddService { get; private set; }
         public DelegateCommand AcceptTerms { get; private set; }
         public DelegateCommand RejectСonditions { get; set; }
+        public DelegateCommand Exchange { get; set; }
     }
 
     public class ExchangeRates
     {
-        public ImageSource FirstСurrencyIcon { get; set; }
-        public ImageSource SecondСurrencyIcon { get; set; }
-        public string FirstСurrencyCourse { get; set; }
-        public string SecondСurrencyCourse { get; set; }
+        public BaseCurrencies FirstCurrency { get; set; }
+        public BaseCurrencies SecondCurrency { get; set; }
+        public double FirstСurrencyCourse { get; set; }
+        public double SecondСurrencyCourse { get; set; }
+        public string FirstСurrencyCourseToString { get; set; }
+        public string SecondСurrencyCourseToString { get; set; }
 
-        public ExchangeRates(ImageSource firstСurrencyIcon, ImageSource secondСurrencyIcon, string firstСurrencyCourse, string secondСurrencyCourse)
+        public ExchangeRates(BaseCurrencies firstCurrency, BaseCurrencies secondCurrency, double firstСurrencyCourse, double secondСurrencyCourse)
         {
-            FirstСurrencyIcon = firstСurrencyIcon;
-            SecondСurrencyIcon = secondСurrencyIcon;
+            FirstCurrency = firstCurrency;
+            SecondCurrency = secondCurrency;
             FirstСurrencyCourse = firstСurrencyCourse;
             SecondСurrencyCourse = secondСurrencyCourse;
+            FirstСurrencyCourseToString = firstСurrencyCourse.ToString("N3") + " " + firstCurrency.Abbreviation;
+            SecondСurrencyCourseToString = secondСurrencyCourse.ToString("N3") + " " + secondCurrency.Abbreviation;
         }
     }
 }

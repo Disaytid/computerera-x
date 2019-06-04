@@ -819,4 +819,10 @@
   <data name="RecoveryByService" xml:space="preserve">
     <value>Recovery by service</value>
   </data>
+  <data name="Exchange" xml:space="preserve">
+    <value>Exchange</value>
+  </data>
+  <data name="CurrencyExchange" xml:space="preserve">
+    <value>Currency exchange</value>
+  </data>
 </root>

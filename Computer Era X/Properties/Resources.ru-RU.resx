@@ -816,4 +816,10 @@
   <data name="RecoveryByService" xml:space="preserve">
     <value>Взыскание по услуге</value>
   </data>
+  <data name="Exchange" xml:space="preserve">
+    <value>Обменять</value>
+  </data>
+  <data name="CurrencyExchange" xml:space="preserve">
+    <value>Обмен валют</value>
+  </data>
 </root>

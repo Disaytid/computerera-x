@@ -137,6 +137,7 @@
     <Compile Include="DataTypes\Objects\Computer\Monitor.cs" />
     <Compile Include="DataTypes\Objects\Computer\Motherboard.cs" />
     <Compile Include="DataTypes\Objects\Computer\Mouse.cs" />
+    <Compile Include="DataTypes\Objects\ObservableCollectionExtended.cs" />
     <Compile Include="DataTypes\Objects\Computer\OperatingSystem.cs" />
     <Compile Include="DataTypes\Objects\Computer\OpticalDrive.cs" />
     <Compile Include="DataTypes\Objects\Computer\Program.cs" />
@@ -165,6 +166,7 @@
     </Compile>
     <Compile Include="Scenarios\Creative.cs" />
     <Compile Include="Scenarios\Main.cs" />
+    <Compile Include="Validators\NumberValidator.cs" />
     <Compile Include="ViewModels\DesktopVM.cs" />
     <Compile Include="ViewModels\Forms\Buildings\BankVM.cs" />
     <Compile Include="ViewModels\Forms\Buildings\ComponentStoreVM.cs" />

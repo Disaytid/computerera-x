@@ -124,19 +124,25 @@
                                 <ColumnDefinition Width="1*"/>
                                 <ColumnDefinition Width="3*"/>
                             </Grid.ColumnDefinitions>
-                            <ListBox Background="{x:Null}" ItemsSource="{Binding ExchangeRates}">
+                            <ListBox Grid.Column="0" Background="{x:Null}" ItemsSource="{Binding ExchangeRates}" SelectedItem="{Binding SelectedExchangeRates}">
                                 <ListBox.ItemTemplate>
                                     <DataTemplate>
                                         <DockPanel>
-                                            <Image Source="{Binding FirstСurrencyIcon}" Width="32" />
-                                            <Label Content="{Binding FirstСurrencyCourse}"/>
+                                            <Image Source="{Binding FirstCurrency.Icon}" Width="32" />
+                                            <Label Content="{Binding FirstСurrencyCourseToString}"/>
                                             <Label Content="=>"/>
-                                            <Image Source="{Binding SecondСurrencyIcon}" Width="32"/>
-                                            <Label Content="{Binding SecondСurrencyCourse}"/>
+                                            <Image Source="{Binding SecondСurrency.Icon}" Width="32"/>
+                                            <Label Content="{Binding SecondСurrencyCourseToString}"/>
                                         </DockPanel>
                                     </DataTemplate>
                                 </ListBox.ItemTemplate>
                             </ListBox>
+                            <StackPanel Grid.Column="1" Margin="10">
+                                <Label Content="{x:Static res:Resources.Amount}"/>
+                                <TextBox Text="{Binding AmountOfExchangeableCurrency}" IsEnabled="{Binding ExchangeAvailability}"/>
+                                <Label/>
+                                <Button Content="{x:Static res:Resources.Exchange}" Command="{Binding Exchange}" IsEnabled="{Binding ExchangeAvailability}"/>
+                            </StackPanel>
                         </Grid>
                     </TabItem>
                 </TabControl>
