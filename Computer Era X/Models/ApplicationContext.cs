@@ -13,5 +13,6 @@ namespace Computer_Era_X.Models
         public DbSet<BaseCurrency> BaseCurrencies { get; set; }
         public DbSet<Tariff> Tariffs { get; set; }
         public DbSet<Service> Services { get; set; }
+        public DbSet<GameValue> Values { get; set; }
     }
 }

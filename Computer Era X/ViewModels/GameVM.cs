@@ -42,6 +42,7 @@ namespace Computer_Era_X.ViewModels
             ComponentStoreInit();
             PantryInit();
             BankInit();
+            LaborExchangeInit();
         }
 
         partial void DesktopInit();
@@ -50,6 +51,7 @@ namespace Computer_Era_X.ViewModels
         partial void ComponentStoreInit();
         partial void PantryInit();
         partial void BankInit();
+        partial void LaborExchangeInit();
 
         private void CreateNewGame()
         {
@@ -76,6 +78,7 @@ namespace Computer_Era_X.ViewModels
             db.BaseCurrencies.Load();
             db.Tariffs.Load();
             db.Services.Load();
+            db.Values.Load();
             GameEnvironment.Items.LoadingItems(db.Items.Local);
             GameEnvironment.Currencies = db.BaseCurrencies.Local;
             GameEnvironment.Services = db.Services.Local;

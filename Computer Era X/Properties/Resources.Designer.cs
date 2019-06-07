@@ -700,6 +700,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Hello, how can I help you?.
+        /// </summary>
+        public static string GameMessage15 {
+            get {
+                return ResourceManager.GetString("GameMessage15", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Sorry buddy, no money, no goods..
         /// </summary>
         public static string GameMessage2 {

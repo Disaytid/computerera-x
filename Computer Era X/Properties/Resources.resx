@@ -825,4 +825,7 @@
   <data name="CurrencyExchange" xml:space="preserve">
     <value>Currency exchange</value>
   </data>
+  <data name="GameMessage15" xml:space="preserve">
+    <value>Hello, how can I help you?</value>
+  </data>
 </root>

@@ -129,6 +129,7 @@
     <Compile Include="DataTypes\Interfaces\IItem.cs" />
     <Compile Include="DataTypes\Interfaces\IScenario.cs" />
     <Compile Include="DataTypes\Objects\Auxiliary.cs" />
+    <Compile Include="DataTypes\Objects\Company.cs" />
     <Compile Include="DataTypes\Objects\Computer\Case.cs" />
     <Compile Include="DataTypes\Objects\Computer\CPU.cs" />
     <Compile Include="DataTypes\Objects\Computer\CPUCooler.cs" />
@@ -137,6 +138,7 @@
     <Compile Include="DataTypes\Objects\Computer\Monitor.cs" />
     <Compile Include="DataTypes\Objects\Computer\Motherboard.cs" />
     <Compile Include="DataTypes\Objects\Computer\Mouse.cs" />
+    <Compile Include="Models\GameValue.cs" />
     <Compile Include="DataTypes\Objects\ObservableCollectionExtended.cs" />
     <Compile Include="DataTypes\Objects\Computer\OperatingSystem.cs" />
     <Compile Include="DataTypes\Objects\Computer\OpticalDrive.cs" />
@@ -147,8 +149,9 @@
     <Compile Include="DataTypes\Objects\Money.cs" />
     <Compile Include="DataTypes\Objects\OpticalDisc.cs" />
     <Compile Include="DataTypes\Objects\Realty.cs" />
-    <Compile Include="DataTypes\Objects\Services.cs" />
+    <Compile Include="DataTypes\Objects\Service.cs" />
     <Compile Include="Models\DataReader.cs" />
+    <Compile Include="Models\LaborExchangeModel.cs" />
     <Compile Include="Models\Systems\Events.cs" />
     <Compile Include="Models\Items.cs" />
     <Compile Include="Models\ItemsModel.cs" />
@@ -170,6 +173,7 @@
     <Compile Include="ViewModels\DesktopVM.cs" />
     <Compile Include="ViewModels\Forms\Buildings\BankVM.cs" />
     <Compile Include="ViewModels\Forms\Buildings\ComponentStoreVM.cs" />
+    <Compile Include="ViewModels\Forms\Buildings\LaborExchangeVM.cs" />
     <Compile Include="ViewModels\Forms\MapVM.cs" />
     <Compile Include="ViewModels\Forms\PantryVM.cs" />
     <Compile Include="ViewModels\Forms\PurseVM.cs" />
@@ -179,6 +183,9 @@
     </Compile>
     <Compile Include="Views\Forms\Buildings\ComponentStore.xaml.cs">
       <DependentUpon>ComponentStore.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Forms\Buildings\LaborExchange.xaml.cs">
+      <DependentUpon>LaborExchange.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Forms\Form.xaml.cs">
       <DependentUpon>Form.xaml</DependentUpon>
@@ -270,6 +277,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Forms\Buildings\ComponentStore.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Forms\Buildings\LaborExchange.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -476,6 +487,7 @@
     <Resource Include="Assets\Icons\processor.png" />
     <Resource Include="Assets\Icons\tv.png" />
     <Resource Include="Assets\Backgrounds\bank.jpg" />
+    <Resource Include="Assets\Backgrounds\backdrop.jpg" />
     <Content Include="Map\index.css" />
     <Content Include="Map\index.html" />
     <Content Include="Map\index.js" />
