@@ -828,4 +828,22 @@
   <data name="GameMessage15" xml:space="preserve">
     <value>Hello, how can I help you?</value>
   </data>
+  <data name="AtTheDevilOnTheHorns" xml:space="preserve">
+    <value>At the devil on the horns</value>
+  </data>
+  <data name="IWantToQuitTheJob" xml:space="preserve">
+    <value>I want to quit the job!</value>
+  </data>
+  <data name="Dismissal" xml:space="preserve">
+    <value>Dismissal</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Company</value>
+  </data>
+  <data name="CompanyX" xml:space="preserve">
+    <value>Company "{0}"</value>
+  </data>
+  <data name="GameMessage16" xml:space="preserve">
+    <value>Congratulations, you quit, you paid {0} {1}</value>
+  </data>
 </root>

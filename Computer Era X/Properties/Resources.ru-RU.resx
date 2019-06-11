@@ -825,4 +825,22 @@
   <data name="GameMessage15" xml:space="preserve">
     <value>Здравствуйте, чем могу вам помочь?</value>
   </data>
+  <data name="AtTheDevilOnTheHorns" xml:space="preserve">
+    <value>У черта на рогах</value>
+  </data>
+  <data name="IWantToQuitTheJob" xml:space="preserve">
+    <value>Я хочу уволиться!</value>
+  </data>
+  <data name="Company" xml:space="preserve">
+    <value>Компания</value>
+  </data>
+  <data name="CompanyX" xml:space="preserve">
+    <value>Компания "{0}"</value>
+  </data>
+  <data name="Dismissal" xml:space="preserve">
+    <value>Увольнение</value>
+  </data>
+  <data name="GameMessage16" xml:space="preserve">
+    <value>Поздравляем вы уволились, вам выплачено {0} {1}</value>
+  </data>
 </root>

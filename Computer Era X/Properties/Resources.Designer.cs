@@ -169,6 +169,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на At the devil on the horns.
+        /// </summary>
+        public static string AtTheDevilOnTheHorns {
+            get {
+                return ResourceManager.GetString("AtTheDevilOnTheHorns", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Author.
         /// </summary>
         public static string Author {
@@ -309,6 +318,24 @@ namespace Computer_Era_X.Properties {
         public static string Chipset {
             get {
                 return ResourceManager.GetString("Chipset", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Company.
+        /// </summary>
+        public static string Company {
+            get {
+                return ResourceManager.GetString("Company", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Company &quot;{0}&quot;.
+        /// </summary>
+        public static string CompanyX {
+            get {
+                return ResourceManager.GetString("CompanyX", resourceCulture);
             }
         }
         
@@ -480,6 +507,15 @@ namespace Computer_Era_X.Properties {
         public static string DeleteAllNotifications {
             get {
                 return ResourceManager.GetString("DeleteAllNotifications", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Dismissal.
+        /// </summary>
+        public static string Dismissal {
+            get {
+                return ResourceManager.GetString("Dismissal", resourceCulture);
             }
         }
         
@@ -709,6 +745,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Congratulations, you quit, you paid {0} {1}.
+        /// </summary>
+        public static string GameMessage16 {
+            get {
+                return ResourceManager.GetString("GameMessage16", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Sorry buddy, no money, no goods..
         /// </summary>
         public static string GameMessage2 {
@@ -894,6 +939,15 @@ namespace Computer_Era_X.Properties {
         public static string InYourPocket {
             get {
                 return ResourceManager.GetString("InYourPocket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на I want to quit the job!.
+        /// </summary>
+        public static string IWantToQuitTheJob {
+            get {
+                return ResourceManager.GetString("IWantToQuitTheJob", resourceCulture);
             }
         }
         

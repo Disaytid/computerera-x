@@ -44,7 +44,7 @@ namespace Computer_Era_X.ViewModels
             BankInit();
             LaborExchangeInit();
         }
-
+        
         partial void DesktopInit();
         partial void PurseInit();
         partial void MapInit();
@@ -79,9 +79,12 @@ namespace Computer_Era_X.ViewModels
             db.Tariffs.Load();
             db.Services.Load();
             db.Values.Load();
+            db.Professions.Load();
             GameEnvironment.Items.LoadingItems(db.Items.Local);
             GameEnvironment.Currencies = db.BaseCurrencies.Local;
             GameEnvironment.Services = db.Services.Local;
+            GameEnvironment.GameValues.LoadingValues(db.Values.Local);
+            GameEnvironment.Professions = db.Professions.Local;
 
             //START GAME
             GameEnvironment.Player.Name = PlayerName;

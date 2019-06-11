@@ -1,4 +1,5 @@
 ﻿using System.Collections.ObjectModel;
+using Newtonsoft.Json;
 
 namespace Computer_Era_X.DataTypes.Objects
 {
@@ -10,8 +11,20 @@ namespace Computer_Era_X.DataTypes.Objects
 
     public class GameValues
     {
-        public GameValue[] gameValues;
 
-        public ObservableCollection<Company> Companies = new ObservableCollection<Company>();
+        public Collection<Company> Companies = new Collection<Company>();
+
+        public void LoadingValues(Collection<GameValue> gameValueList)
+        {
+            foreach (GameValue value in gameValueList)
+            {
+                switch(value.ID)
+                {
+                    case 1:
+                        Companies.Add(JsonConvert.DeserializeObject<Company>(value.Values));
+                        break;
+                }
+            }
+        }
     }
 }

@@ -11,5 +11,6 @@ namespace Computer_Era_X.DataTypes.Objects
         public PlayerHouse House { get; set; }
         public Items Items { get; } = new Items();
         public ObservableCollection<PlayerTariff> Tariffs { get; set; } = new ObservableCollection<PlayerTariff>();
+        public JobCard Job;
     }
 }

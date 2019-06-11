@@ -138,6 +138,7 @@
     <Compile Include="DataTypes\Objects\Computer\Monitor.cs" />
     <Compile Include="DataTypes\Objects\Computer\Motherboard.cs" />
     <Compile Include="DataTypes\Objects\Computer\Mouse.cs" />
+    <Compile Include="DataTypes\Objects\Profession.cs" />
     <Compile Include="Models\GameValue.cs" />
     <Compile Include="DataTypes\Objects\ObservableCollectionExtended.cs" />
     <Compile Include="DataTypes\Objects\Computer\OperatingSystem.cs" />
