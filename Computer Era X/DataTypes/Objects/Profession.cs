@@ -1,13 +1,15 @@
-﻿namespace Computer_Era_X.DataTypes.Objects
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Computer_Era_X.DataTypes.Objects
 {
     public class Profession
     {
-        public int Id { get; }
-        public string SystemName { get; }
-        public string Name { get; }
-        public double Salary { get; }
-        public double Complexity { get; }
-        public int WorkingHours { get; }
-        public int DayPeriod { get; }
+        public int ID { get; set; }
+        public string SystemName { get; set; }
+        public string Name { get; set; }
+        public double Salary { get; set; }
+        public double Complexity { get; set; }
+        public int WorkingHours { get; set; }
+        public int DayPeriod { get; set; }
     }
 }

@@ -156,6 +156,7 @@ namespace Computer_Era_X.ViewModels
             switch (_target)
             {
                 case "labor_exchange":
+                    Form = new LaborExchange();
                     break;
                 case "computer_parts_store":
                     Form = new ComponentStore();

@@ -21,7 +21,7 @@ namespace Computer_Era_X.DataTypes.Objects
                 switch(value.ID)
                 {
                     case 1:
-                        Companies.Add(JsonConvert.DeserializeObject<Company>(value.Values));
+                        Companies = JsonConvert.DeserializeObject<Collection<Company>>(value.Values);
                         break;
                 }
             }
