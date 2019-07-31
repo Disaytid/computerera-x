@@ -846,4 +846,13 @@
   <data name="GameMessage16" xml:space="preserve">
     <value>Congratulations, you quit, you paid {0} {1}</value>
   </data>
+  <data name="RequiresXInTheCompanyX" xml:space="preserve">
+    <value>Requires a {0} in the company "{1}"</value>
+  </data>
+  <data name="Salary" xml:space="preserve">
+    <value>Salary</value>
+  </data>
+  <data name="WorkingHours" xml:space="preserve">
+    <value>Working hours</value>
+  </data>
 </root>

@@ -1843,11 +1843,29 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Requires a {0} in the company &quot;{1}&quot;.
+        /// </summary>
+        public static string RequiresXInTheCompanyX {
+            get {
+                return ResourceManager.GetString("RequiresXInTheCompanyX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Resolution.
         /// </summary>
         public static string Resolution {
             get {
                 return ResourceManager.GetString("Resolution", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Salary.
+        /// </summary>
+        public static string Salary {
+            get {
+                return ResourceManager.GetString("Salary", resourceCulture);
             }
         }
         
@@ -2154,6 +2172,15 @@ namespace Computer_Era_X.Properties {
         public static string WhatAreWeGoingToGetTo {
             get {
                 return ResourceManager.GetString("WhatAreWeGoingToGetTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Working hours.
+        /// </summary>
+        public static string WorkingHours {
+            get {
+                return ResourceManager.GetString("WorkingHours", resourceCulture);
             }
         }
         

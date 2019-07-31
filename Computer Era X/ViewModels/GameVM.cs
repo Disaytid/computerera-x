@@ -86,12 +86,16 @@ namespace Computer_Era_X.ViewModels
             GameEnvironment.GameValues.LoadingValues(db.Values.Local);
             GameEnvironment.Professions = db.Professions.Local;
 
+            //We inform the beginning of the game to other components
+            LaborExchangeStartGame();
+
             //START GAME
             GameEnvironment.Player.Name = PlayerName;
             GameEnvironment.Scenario = SelectedScenario;
             SelectedScenario.Start(GameEnvironment);
             ShowDesktop();
         }
+
         private void ShowDesktop()
         {
             NewGameVisibility = Visibility.Collapsed;

@@ -843,4 +843,13 @@
   <data name="GameMessage16" xml:space="preserve">
     <value>Поздравляем вы уволились, вам выплачено {0} {1}</value>
   </data>
+  <data name="RequiresXInTheCompanyX" xml:space="preserve">
+    <value>Требуется {0} в компанию "{1}"</value>
+  </data>
+  <data name="Salary" xml:space="preserve">
+    <value>Оклад</value>
+  </data>
+  <data name="WorkingHours" xml:space="preserve">
+    <value>Время работы</value>
+  </data>
 </root>
