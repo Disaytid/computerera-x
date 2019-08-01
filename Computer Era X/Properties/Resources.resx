@@ -855,4 +855,22 @@
   <data name="WorkingHours" xml:space="preserve">
     <value>Working hours</value>
   </data>
+  <data name="GameMessage17" xml:space="preserve">
+    <value>Congratulations, you settled on the job "{0}" with a salary of {1} {2}</value>
+  </data>
+  <data name="GameMessage18" xml:space="preserve">
+    <value>You already have a job, first get lost!</value>
+  </data>
+  <data name="GameMessage19" xml:space="preserve">
+    <value>Dance! Your salary has come to you, if you have not forgotten you are working as a "{0}".</value>
+  </data>
+  <data name="InADay" xml:space="preserve">
+    <value>In a day</value>
+  </data>
+  <data name="PaymentsMadeX" xml:space="preserve">
+    <value>Payments made {0} {1}</value>
+  </data>
+  <data name="Payroll" xml:space="preserve">
+    <value>Payroll</value>
+  </data>
 </root>

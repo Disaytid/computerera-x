@@ -852,4 +852,22 @@
   <data name="WorkingHours" xml:space="preserve">
     <value>Время работы</value>
   </data>
+  <data name="GameMessage17" xml:space="preserve">
+    <value>Поздравляем вы устроились на вакансию "{0}" с окладом {1} {2}</value>
+  </data>
+  <data name="GameMessage18" xml:space="preserve">
+    <value>У вас уже есть работа, сначала увольтесь!</value>
+  </data>
+  <data name="GameMessage19" xml:space="preserve">
+    <value>Танцуйте! Вам пришла зарплата, если вы еще не забыли вы работаете на должности "{0}".</value>
+  </data>
+  <data name="InADay" xml:space="preserve">
+    <value>В день</value>
+  </data>
+  <data name="PaymentsMadeX" xml:space="preserve">
+    <value>Выплаты составили {0} {1}</value>
+  </data>
+  <data name="Payroll" xml:space="preserve">
+    <value>Выплата зарплаты</value>
+  </data>
 </root>

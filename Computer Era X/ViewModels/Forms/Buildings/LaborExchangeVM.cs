@@ -1,4 +1,5 @@
-﻿using Computer_Era_X.DataTypes.Objects;
+﻿using Computer_Era_X.DataTypes.Enums;
+using Computer_Era_X.DataTypes.Objects;
 using Computer_Era_X.Models;
 using Computer_Era_X.Properties;
 using Computer_Era_X.Views;
@@ -12,6 +13,8 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using MessageBox = Computer_Era_X.Views.MessageBox;
+using Computer_Era_X.Converters;
+using Computer_Era_X.Models.Systems;
 
 namespace Computer_Era_X.ViewModels
 {
@@ -146,7 +149,7 @@ namespace Computer_Era_X.ViewModels
 
             TextBlock professionSalary = new TextBlock
             {
-                Text = Resources.Salary + ": " + JobCards[index].Salary * GameEnvironment.Player.Money[0].Course + " " + GameEnvironment.Player.Money[0].Abbreviation,
+                Text = Resources.Salary + ": " + JobCards[index].Salary * GameEnvironment.Player.Money[0].Course + " " + GameEnvironment.Player.Money[0].Abbreviation + " " + Resources.InADay.ToLower(),
                 FontSize = 18,
                 Foreground = new SolidColorBrush(Colors.Blue),
                 Margin = new Thickness(10, 5, 10, 5)
@@ -172,7 +175,7 @@ namespace Computer_Era_X.ViewModels
                 Cursor = Cursors.Hand,
             };
 
-            //stackPanel.MouseDown += new MouseButtonEventHandler(StackPanel_MouseDown); ВЕРНУТЬ!!!!!!!!!!!!!!
+            stackPanel.MouseDown += new MouseButtonEventHandler(StackPanel_MouseDown);
 
             stackPanel.Children.Add(professionName);
             stackPanel.Children.Add(professionSalary);
@@ -181,7 +184,50 @@ namespace Computer_Era_X.ViewModels
             return stackPanel;
         }
 
-        private void ResizeBoard(object sender, System.EventArgs e)
+        private void StackPanel_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount == 1)
+            {
+                if (GameEnvironment.Player.Job == null)
+                {
+                    if (sender is StackPanel)
+                    {
+                        GameEnvironment.Player.Job = JobCards[Convert.ToInt32((sender as StackPanel).Tag)];
+                        GameEnvironment.Player.Job.DateEmployment = GameEnvironment.Events.Timer.DateTime.AddDays(1);
+                        DateTime nextPaymentDate = GameEnvironment.Events.Timer.DateTime.AddMonths(1);
+                        if (nextPaymentDate.Day < 10)
+                        {
+                            nextPaymentDate = nextPaymentDate.AddDays(10 - nextPaymentDate.Day);
+                        } else if (nextPaymentDate.Day > 10) {
+                            nextPaymentDate = nextPaymentDate.AddDays(-(nextPaymentDate.Day - 10));
+                        }
+                        GameEvent CurrentGameEvent = new GameEvent("job", nextPaymentDate, Periodicity.Month, 1, Payroll, true);
+                        GameEnvironment.Events.Events.Add(CurrentGameEvent);
+                        MessageBox.Show(string.Format(Resources.GameMessage17, GameEnvironment.Player.Job.Name, GameEnvironment.Player.Job.Salary * GameEnvironment.Player.Money[0].Course, GameEnvironment.Player.Money[0].Abbreviation));
+                    }
+                } else {
+                    MessageBox.Show(Resources.GameMessage18); //Warning of work
+                }
+            }
+        }
+
+        public void Payroll(GameEvent @event)
+        {
+            double amount;
+            if (GameEnvironment.Player.Job.DateEmployment.Year == GameEnvironment.Events.Timer.DateTime.Year && GameEnvironment.Player.Job.DateEmployment.Month == GameEnvironment.Events.Timer.DateTime.Month - 1)
+            {
+                amount = DateTime.DaysInMonth(@event.ResponseTime.AddMonths(-1).Year, @event.ResponseTime.AddMonths(-1).Month) - GameEnvironment.Player.Job.DateEmployment.Day;
+            } else {
+                amount = DateTime.DaysInMonth(@event.ResponseTime.AddMonths(-1).Year, @event.ResponseTime.AddMonths(-1).Month);
+            }
+            amount *= (GameEnvironment.Player.Job.Salary * GameEnvironment.Player.Money[0].Course);
+
+            GameEnvironment.Player.Money[0].TopUp(Resources.Payroll, string.Format(Resources.CompanyX, GameEnvironment.Player.Job.CompanyName), GameEnvironment.Events.Timer.DateTime, amount);
+            //Display a salary report
+            GameEnvironment.Messages.Add(new Message(Resources.ReceiptOfFunds, string.Format(Resources.GameMessage19, GameEnvironment.Player.Job.Name) + string.Format(Resources.PaymentsMadeX, amount, GameEnvironment.Player.Money[0].Abbreviation), Icon.Money));
+        }
+
+        private void ResizeBoard(object sender, EventArgs e)
         {
             BoardWeight = (sender as ContentControl).ActualWidth;
             CreateJobsGrid();

@@ -754,6 +754,33 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Congratulations, you settled on the job &quot;{0}&quot; with a salary of {1} {2}.
+        /// </summary>
+        public static string GameMessage17 {
+            get {
+                return ResourceManager.GetString("GameMessage17", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You already have a job, first get lost!.
+        /// </summary>
+        public static string GameMessage18 {
+            get {
+                return ResourceManager.GetString("GameMessage18", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Dance! Your salary has come to you, if you have not forgotten you are working as a &quot;{0}&quot;..
+        /// </summary>
+        public static string GameMessage19 {
+            get {
+                return ResourceManager.GetString("GameMessage19", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Sorry buddy, no money, no goods..
         /// </summary>
         public static string GameMessage2 {
@@ -867,6 +894,15 @@ namespace Computer_Era_X.Properties {
         public static string Hz {
             get {
                 return ResourceManager.GetString("Hz", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на In a day.
+        /// </summary>
+        public static string InADay {
+            get {
+                return ResourceManager.GetString("InADay", resourceCulture);
             }
         }
         
@@ -1632,6 +1668,24 @@ namespace Computer_Era_X.Properties {
         public static string PaymentOnPayment {
             get {
                 return ResourceManager.GetString("PaymentOnPayment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Payments made {0} {1}.
+        /// </summary>
+        public static string PaymentsMadeX {
+            get {
+                return ResourceManager.GetString("PaymentsMadeX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Payroll.
+        /// </summary>
+        public static string Payroll {
+            get {
+                return ResourceManager.GetString("Payroll", resourceCulture);
             }
         }
         
