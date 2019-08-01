@@ -117,7 +117,10 @@
     <Compile Include="Converters\DateConverter.cs" />
     <Compile Include="Converters\IconsConverter.cs" />
     <Compile Include="Converters\MoneyConverter.cs" />
+    <Compile Include="Converters\PathConverter.cs" />
     <Compile Include="Converters\PeriodicityConverter.cs" />
+    <Compile Include="Converters\PurchaseStateConverter.cs" />
+    <Compile Include="Converters\StringConverter.cs" />
     <Compile Include="DataTypes\Enums\EMessages.cs" />
     <Compile Include="DataTypes\Enums\ETransition.cs" />
     <Compile Include="DataTypes\Dictionarys\DItems.cs" />
@@ -175,6 +178,10 @@
     <Compile Include="ViewModels\Forms\Buildings\BankVM.cs" />
     <Compile Include="ViewModels\Forms\Buildings\ComponentStoreVM.cs" />
     <Compile Include="ViewModels\Forms\Buildings\LaborExchangeVM.cs" />
+    <Compile Include="ViewModels\Forms\Buildings\RealEstateAgencyVM.cs" />
+    <Compile Include="Views\Forms\Buildings\RealEstateAgency.xaml.cs">
+      <DependentUpon>RealEstateAgency.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\Forms\MapVM.cs" />
     <Compile Include="ViewModels\Forms\PantryVM.cs" />
     <Compile Include="ViewModels\Forms\PurseVM.cs" />
@@ -272,6 +279,10 @@
     <Page Include="Dictionarys\Menu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Forms\Buildings\RealEstateAgency.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Forms\Buildings\Bank.xaml">
       <SubType>Designer</SubType>
@@ -489,6 +500,19 @@
     <Resource Include="Assets\Icons\tv.png" />
     <Resource Include="Assets\Backgrounds\bank.jpg" />
     <Resource Include="Assets\Backgrounds\backdrop.jpg" />
+    <Resource Include="Assets\Backgrounds\brick-wall.jpg" />
+    <Resource Include="Assets\Realty\apartment1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Realty\country-house1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Realty\house.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Realty\room1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Map\index.css" />
     <Content Include="Map\index.html" />
     <Content Include="Map\index.js" />

@@ -873,4 +873,10 @@
   <data name="Payroll" xml:space="preserve">
     <value>Payroll</value>
   </data>
+  <data name="GameMessage20" xml:space="preserve">
+    <value>Welcome to the real estate agency "Roof over your head", we satisfy any, even the most exquisite needs of our clients.</value>
+  </data>
+  <data name="CutMeters" xml:space="preserve">
+    <value>m</value>
+  </data>
 </root>

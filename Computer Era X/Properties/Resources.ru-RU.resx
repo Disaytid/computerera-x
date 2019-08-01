@@ -870,4 +870,10 @@
   <data name="Payroll" xml:space="preserve">
     <value>Выплата зарплаты</value>
   </data>
+  <data name="GameMessage20" xml:space="preserve">
+    <value>Добро пожаловать в агенство недвижимости "Крыша над головой", мы удовлетваряем любые, даже самые изысканные нужды наших клиентов.</value>
+  </data>
+  <data name="CutMeters" xml:space="preserve">
+    <value>м</value>
+  </data>
 </root>

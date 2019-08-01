@@ -18,5 +18,6 @@ namespace Computer_Era_X.Models
         public ObservableCollection<Service> Services { get; set; } = new ObservableCollection<Service>();
         public GameValues GameValues = new GameValues();
         public Collection<Profession> Professions = new Collection<Profession>();
+        public Collection<House> Houses = new Collection<House>();
     }
 }

@@ -167,6 +167,7 @@ namespace Computer_Era_X.ViewModels
                 case "disc_stand":
                     break;
                 case "estate_agency":
+                    Form = new RealEstateAgency();
                     break;
                 default:
                     MessageBox.Show(_target);

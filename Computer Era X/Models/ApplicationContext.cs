@@ -15,5 +15,6 @@ namespace Computer_Era_X.Models
         public DbSet<Service> Services { get; set; }
         public DbSet<GameValue> Values { get; set; }
         public DbSet<Profession> Professions { get; set; }
+        public DbSet<House> Houses { get; set; }
     }
 }

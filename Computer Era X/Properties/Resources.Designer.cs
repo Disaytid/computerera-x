@@ -475,6 +475,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на m.
+        /// </summary>
+        public static string CutMeters {
+            get {
+                return ResourceManager.GetString("CutMeters", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Date of conclusion of the service.
         /// </summary>
         public static string DateOfConclusionOfTheService {
@@ -786,6 +795,15 @@ namespace Computer_Era_X.Properties {
         public static string GameMessage2 {
             get {
                 return ResourceManager.GetString("GameMessage2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Welcome to the real estate agency &quot;Roof over your head&quot;, we satisfy any, even the most exquisite needs of our clients..
+        /// </summary>
+        public static string GameMessage20 {
+            get {
+                return ResourceManager.GetString("GameMessage20", resourceCulture);
             }
         }
         

@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Computer_Era_X.Properties;
+using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Computer_Era_X.DataTypes.Objects
 {
     public class House
     {
-        public int UId { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public int Area { get; set; }
         public int StorageSize { get; set; }
@@ -13,38 +15,22 @@ namespace Computer_Era_X.DataTypes.Objects
         public double CommunalPayments { get; set; }
         public string Location { get; set; }
         public int Distance { get; set; } //In meters
-        public bool IsPurchase { get; set; }
-        public bool IsRent { get; set; }
-        public bool IsCreditPurchase { get; set; }
+        public int IsPurchase { get; set; }
+        public int IsRent { get; set; }
+        public int IsCreditPurchase { get; set; }
         public string Image { get; set; }
-
-        public House(int id, string name, int area, int storage_size, double rent, double price, double communal_payments, string location, int distance, bool is_purchase, bool is_rent, bool is_credit_purchase, string image_name)
-        {
-            UId = id;
-            Name = name;
-            Area = area;
-            StorageSize = storage_size;
-            Rent = rent;
-            Price = price;
-            CommunalPayments = communal_payments;
-            Location = location;
-            Distance = distance;
-            IsPurchase = is_purchase;
-            IsRent = is_rent;
-            IsCreditPurchase = is_credit_purchase;
-            Image = image_name;
-        }
 
         public override string ToString()
         {
-            string str = Properties.Resources.Area + " " + Area + " м²" + Environment.NewLine +
-                          Properties.Resources.PantrySize + ": " + StorageSize + " " + Properties.Resources.Cells.ToLower() + Environment.NewLine +
-                          Properties.Resources.Location + ": " + Location + Environment.NewLine +
-                          Properties.Resources.DistanceToCityCenter + ": " + Distance + "м";
+            string str = Resources.Area + " " + Area + " " + Resources.CutMeters + "²" + Environment.NewLine +
+                         Resources.PantrySize + ": " + StorageSize + " " + Resources.Cells.ToLower() + Environment.NewLine +
+                         Resources.Location + ": " + Location + Environment.NewLine +
+                         Resources.DistanceToCityCenter + ": " + Distance + Resources.CutMeters;
             return str;
         }
     }
 
+    [NotMapped]
     public class PlayerHouse : House
     {
         public bool IsRentedOut { get; set; }
@@ -53,15 +39,27 @@ namespace Computer_Era_X.DataTypes.Objects
         public PlayerTariff PlayerRent { get; set; }
         public PlayerTariff PlayerCredit { get; set; }
         public PlayerTariff PlayerCommunalPayments { get; set; }
-        public PlayerHouse(int id, string name, int area, int storage_size, double rent, double price, double communal_payments, string location, int distance, bool is_purchase, bool is_rent, bool is_credit_purchase, string image_name, PlayerTariff player_communal_payments, bool isRentedOut = false, bool isPurchased = false, bool isPurchasedOnCredit = false, PlayerTariff tariff = null)
-                          : base(id, name, area, storage_size, rent, price, communal_payments, location, distance, is_purchase, is_rent, is_credit_purchase, image_name)
+        public PlayerHouse(House house, PlayerTariff player_communal_payments, bool isRentedOut = false, bool isPurchased = false, bool isPurchasedOnCredit = false, PlayerTariff tariff = null)
         {
+            Id = house.Id;
+            Name = house.Name;
+            Area = house.Area;
+            StorageSize = house.StorageSize;
+            Rent = house.Rent;
+            Price = house.Price;
+            CommunalPayments = house.CommunalPayments;
+            Location = house.Location;
+            Distance = house.Distance;
+            IsPurchase = house.IsPurchase;
+            IsRent = house.IsRent;
+            IsCreditPurchase = house.IsCreditPurchase;
+            Image = house.Image;
             PlayerCommunalPayments = player_communal_payments;
             IsRentedOut = isRentedOut;
-            IsPurchase = isPurchased;
+            IsPurchased = isPurchased;
             IsPurchasedOnCredit = isPurchasedOnCredit;
             if (IsRentedOut) { PlayerRent = tariff; }
-            else if (IsCreditPurchase) { PlayerCredit = tariff; }
+            else if (IsCreditPurchase == 1) { PlayerCredit = tariff; }
         }
     }
 }

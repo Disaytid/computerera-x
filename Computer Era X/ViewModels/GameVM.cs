@@ -43,6 +43,7 @@ namespace Computer_Era_X.ViewModels
             PantryInit();
             BankInit();
             LaborExchangeInit();
+            RealEstateAgencyInit();
         }
         
         partial void DesktopInit();
@@ -52,6 +53,7 @@ namespace Computer_Era_X.ViewModels
         partial void PantryInit();
         partial void BankInit();
         partial void LaborExchangeInit();
+        partial void RealEstateAgencyInit();
 
         private void CreateNewGame()
         {
@@ -80,11 +82,13 @@ namespace Computer_Era_X.ViewModels
             db.Services.Load();
             db.Values.Load();
             db.Professions.Load();
+            db.Houses.Load();
             GameEnvironment.Items.LoadingItems(db.Items.Local);
             GameEnvironment.Currencies = db.BaseCurrencies.Local;
             GameEnvironment.Services = db.Services.Local;
             GameEnvironment.GameValues.LoadingValues(db.Values.Local);
             GameEnvironment.Professions = db.Professions.Local;
+            GameEnvironment.Houses = db.Houses.Local;
 
             //We inform the beginning of the game to other components
             LaborExchangeStartGame();
