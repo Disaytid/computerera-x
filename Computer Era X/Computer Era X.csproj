@@ -156,6 +156,7 @@
     <Compile Include="DataTypes\Objects\Service.cs" />
     <Compile Include="Models\DataReader.cs" />
     <Compile Include="Models\LaborExchangeModel.cs" />
+    <Compile Include="Models\RealEstateAgencyModel.cs" />
     <Compile Include="Models\Systems\Events.cs" />
     <Compile Include="Models\Items.cs" />
     <Compile Include="Models\ItemsModel.cs" />
