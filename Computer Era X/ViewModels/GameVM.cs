@@ -90,14 +90,15 @@ namespace Computer_Era_X.ViewModels
             GameEnvironment.Professions = db.Professions.Local;
             GameEnvironment.Houses = db.Houses.Local;
 
-            //We inform the beginning of the game to other components
-            LaborExchangeStartGame();
-
             //START GAME
             GameEnvironment.Player.Name = PlayerName;
             GameEnvironment.Scenario = SelectedScenario;
             SelectedScenario.Start(GameEnvironment);
             ShowDesktop();
+
+            //We inform the beginning of the game to other components
+            LaborExchangeStartGame();
+            RealEstateAgencyStartGame();
         }
 
         private void ShowDesktop()

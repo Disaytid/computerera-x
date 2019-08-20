@@ -879,4 +879,13 @@
   <data name="CutMeters" xml:space="preserve">
     <value>m</value>
   </data>
+  <data name="PurchasePrice" xml:space="preserve">
+    <value>Purchase price</value>
+  </data>
+  <data name="BuyInCredit" xml:space="preserve">
+    <value>Buy in credit</value>
+  </data>
+  <data name="Rent" xml:space="preserve">
+    <value>Rent</value>
+  </data>
 </root>

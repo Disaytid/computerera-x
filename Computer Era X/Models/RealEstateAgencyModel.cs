@@ -7,7 +7,9 @@ namespace Computer_Era_X.Models
     public class HousingSale : House
     {
         public BaseCurrencies Currency { get; set; }
-        public HousingSale(House house)
+        public double ConvertedValue { get; set; }
+        public double ConvertedRentalValue { get; set; }
+        public HousingSale(House house, BaseCurrencies currencies, double convertedValue, double convertedRentalValue)
         {
             Id = house.Id;
             Name = house.Name;
@@ -22,6 +24,9 @@ namespace Computer_Era_X.Models
             IsRent = house.IsRent;
             IsCreditPurchase = house.IsCreditPurchase;
             Image = house.Image;
+            Currency = currencies;
+            ConvertedValue = convertedValue;
+            ConvertedRentalValue = convertedRentalValue;
         }
     }
 }

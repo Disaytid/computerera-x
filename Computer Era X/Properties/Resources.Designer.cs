@@ -259,6 +259,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Buy in credit.
+        /// </summary>
+        public static string BuyInCredit {
+            get {
+                return ResourceManager.GetString("BuyInCredit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Buying a {0}.
         /// </summary>
         public static string BuyingAX {
@@ -1843,6 +1852,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Purchase price.
+        /// </summary>
+        public static string PurchasePrice {
+            get {
+                return ResourceManager.GetString("PurchasePrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Purse.
         /// </summary>
         public static string Purse {
@@ -1902,6 +1920,15 @@ namespace Computer_Era_X.Properties {
         public static string Reject {
             get {
                 return ResourceManager.GetString("Reject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Rent.
+        /// </summary>
+        public static string Rent {
+            get {
+                return ResourceManager.GetString("Rent", resourceCulture);
             }
         }
         

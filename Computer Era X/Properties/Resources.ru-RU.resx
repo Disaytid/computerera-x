@@ -876,4 +876,13 @@
   <data name="CutMeters" xml:space="preserve">
     <value>м</value>
   </data>
+  <data name="PurchasePrice" xml:space="preserve">
+    <value>Стоимость покупки</value>
+  </data>
+  <data name="BuyInCredit" xml:space="preserve">
+    <value>Купить в кредит</value>
+  </data>
+  <data name="Rent" xml:space="preserve">
+    <value>Арендовать</value>
+  </data>
 </root>

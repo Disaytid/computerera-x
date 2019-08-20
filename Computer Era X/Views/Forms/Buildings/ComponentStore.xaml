@@ -90,7 +90,7 @@
                                             </DockPanel>
                                         </StackPanel>
                                         <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center">
-                                            <Button Content="{x:Static res:Resources.Buy}" Margin="10" Padding="5" Background="Blue" Foreground="White" BorderThickness="0" Command="{Binding DataContext.Buy, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}"/>
+                                            <Button Content="{x:Static res:Resources.Buy}" Margin="10" Padding="5" Background="Blue" Foreground="White" BorderThickness="0" Command="{Binding DataContext.CSBuy, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}"/>
                                         </StackPanel>
                                         <StackPanel DockPanel.Dock="Left">
                                             <TextBlock Text="{Binding LocalizedType}" VerticalAlignment="Center" Margin="5,5,5,0" FontSize="14" />

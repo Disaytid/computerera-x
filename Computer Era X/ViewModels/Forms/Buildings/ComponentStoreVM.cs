@@ -19,7 +19,7 @@ namespace Computer_Era_X.ViewModels
 
         partial void ComponentStoreInit()
         {
-            Buy = new DelegateCommand<Product>(BuyItem);
+            CSBuy = new DelegateCommand<Product>(BuyItem);
         }
         private void SelectionCategory()
         {
@@ -214,7 +214,7 @@ namespace Computer_Era_X.ViewModels
                 SelectionCategory();
             }
         }
-        public DelegateCommand<Product> Buy { get; private set; }
+        public DelegateCommand<Product> CSBuy { get; private set; }
     }
 } 
 
