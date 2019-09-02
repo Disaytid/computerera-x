@@ -64,7 +64,7 @@
                     <TextBlock x:Name="SellerText" Text="{x:Static res:Resources.GameMessage20}" FontSize="18" TextWrapping="Wrap" Margin="10,5,10,5" />
                 </StackPanel>
             </DockPanel>
-            <Grid x:Name="RentPanel" Grid.Row="1" Visibility="Visible" Background="#CCFFFFFF">
+            <Grid x:Name="RentPanel" Grid.Row="1" Visibility="{Binding RentPanelVisability}" Background="#CCFFFFFF">
                 <ListBox x:Name="HousesList" Background="{x:Null}" ItemsSource="{Binding Houses}" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                     <ListBox.ItemTemplate>
                         <DataTemplate>
@@ -80,7 +80,7 @@
                                     <StackPanel DockPanel.Dock="Right" VerticalAlignment="Center" Margin="10">
                                         <Button Content="{x:Static res:Resources.Rent}" Margin="5" Padding="5" Background="Blue" Foreground="White" BorderThickness="0" IsEnabled="{Binding IsRent}" Command="{Binding DataContext.REARent, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}"/>
                                         <Button Content="{x:Static res:Resources.Buy}" Margin="5" Padding="5" Background="Green" Foreground="White" BorderThickness="0" IsEnabled="{Binding IsPurchase}" Command="{Binding DataContext.REABuy, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}"/>
-                                        <Button Content="{x:Static res:Resources.BuyInCredit}" Margin="5" Padding="5" Background="Orange" Foreground="White" BorderThickness="0" IsEnabled="{Binding IsCreditPurchase}"/>
+                                        <Button Content="{x:Static res:Resources.BuyInCredit}" Margin="5" Padding="5" Background="Orange" Foreground="White" BorderThickness="0" IsEnabled="{Binding IsCreditPurchase}" Command="{Binding DataContext.REABuyCredit, RelativeSource={RelativeSource AncestorType=ListBox}}" CommandParameter="{Binding}"/>
                                     </StackPanel>
                                     <StackPanel DockPanel.Dock="Left">
                                         <TextBlock VerticalAlignment="Center" Margin="5,0,5,5" Text="{Binding Name}" FontSize="24" />
@@ -102,6 +102,7 @@
                     </ListBox.ItemTemplate>
                 </ListBox>
             </Grid>
+            <local:PanelServices Grid.Row="1" Visibility="{Binding AdditionsPanelServices}" Background="#CCFFFFFF"/>
         </Grid>
     </Grid>
 </UserControl>

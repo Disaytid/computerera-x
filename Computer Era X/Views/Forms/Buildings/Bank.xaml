@@ -73,49 +73,7 @@
                             <StackPanel Grid.Column="2" Margin="10" Visibility="{Binding InformationPanelForTheService}">
                                 <TextBlock Text="{Binding TariffInformation}" TextWrapping="Wrap"/>
                             </StackPanel>
-                            <StackPanel Grid.Column="2" Margin="10" Visibility="{Binding AdditionsPanelServices}">
-                                <TextBlock Text="{Binding TariffDescription}" Margin="0, 0, 0, 10" TextWrapping="Wrap" Visibility="{Binding TariffDescriptionVisibility}"/>
-                                <DockPanel Margin="0, 0, 0, 10">
-                                    <Label Content="{x:Static res:Resources.TypeOfService}"/><Label Content=": "/>
-                                    <ComboBox ItemsSource="{Binding Services}" SelectedItem="{Binding BankSelectedService}">
-                                        <ComboBox.ItemTemplate>
-                                            <DataTemplate>
-                                                <Label Content="{Binding Name}"></Label>
-                                            </DataTemplate>
-                                        </ComboBox.ItemTemplate>
-                                    </ComboBox>
-                                </DockPanel>
-                                <DockPanel Margin="0, 0, 0, 10">
-                                    <Label Content="{x:Static res:Resources.TariffPlan}"/>
-                                    <Label Content=": "/>
-                                    <ComboBox ItemsSource="{Binding BankTariffs}" SelectedItem="{Binding BankSelectedTariff}">
-                                        <ComboBox.ItemTemplate>
-                                            <DataTemplate>
-                                                <Label Content="{Binding Name}"></Label>
-                                            </DataTemplate>
-                                        </ComboBox.ItemTemplate>
-                                    </ComboBox>
-                                </DockPanel>
-                                <DockPanel Margin="0, 0, 0, 10">
-                                    <Label Name="LabelPeriod" Content="{Binding LabelTariffPeriod}"/>
-                                    <Label Content=": "/>
-                                    <TextBox Text="{Binding TariffPeriods}" Width="Auto" BorderBrush="#FFABADB3"/>
-                                </DockPanel>
-                                <DockPanel Margin="0, 0, 0, 10">
-                                    <Label Content="{x:Static res:Resources.Amount}"/>
-                                    <TextBox Text="{Binding TariffAmount}"/>
-                                </DockPanel>
-                                <Label Content="{Binding TotalService}" Margin="0, 0, 0, 10"/>
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <Button Name="Accept" Grid.Column="0" Content="{x:Static res:Resources.ToAccept}" Margin="10,0,5,0" Background="Green" Foreground="White" BorderThickness="0" Command="{Binding AcceptTerms}"/>
-                                    <Button Name="CloseServiceForm" Grid.Column="1" Content="{x:Static res:Resources.Reject}" Margin="5,0,10,0" Background="Red" Foreground="White" BorderThickness="0" Command="{Binding RejectСonditions}"/>
-                                </Grid>
-                            </StackPanel>
-
+                            <local:PanelServices Grid.Column="2"/>
                         </Grid>
                     </TabItem>
                     <TabItem Header="{x:Static res:Resources.Currencies}" FontSize="16" Background="{x:Null}">

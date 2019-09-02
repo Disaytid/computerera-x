@@ -888,4 +888,85 @@
   <data name="Rent" xml:space="preserve">
     <value>Rent</value>
   </data>
+  <data name="ErroreCodeNoRentalServiceFound" xml:space="preserve">
+    <value>Rental service not found, make sure database integrity!</value>
+  </data>
+  <data name="ErroreCodeCommunalPaymentServiceNotFound" xml:space="preserve">
+    <value>Utility payment service not found, make sure database integrity!</value>
+  </data>
+  <data name="GameMessage21" xml:space="preserve">
+    <value>You have bought a house, do you really want to sell it?</value>
+  </data>
+  <data name="GameMessage22" xml:space="preserve">
+    <value>You have already rented this property!</value>
+  </data>
+  <data name="GameMessage23" xml:space="preserve">
+    <value>You can not rent if there is a home bought on credit!</value>
+  </data>
+  <data name="RealEstateAgencyFullName" xml:space="preserve">
+    <value>Real estate agency "Roof over the head"</value>
+  </data>
+  <data name="RentN" xml:space="preserve">
+    <value>Rent</value>
+  </data>
+  <data name="YouRentedX" xml:space="preserve">
+    <value>You rented "{0}". Congratulations!</value>
+  </data>
+  <data name="Buying" xml:space="preserve">
+    <value>Buying</value>
+  </data>
+  <data name="CreditPurchase" xml:space="preserve">
+    <value>Credit purchase</value>
+  </data>
+  <data name="DepartmentHousingAndUtilities" xml:space="preserve">
+    <value>Department of Housing and Utilities</value>
+  </data>
+  <data name="ErroreCodeCreditServiceNotFound" xml:space="preserve">
+    <value>Credit service not found, make sure database integrity!</value>
+  </data>
+  <data name="GameMessage24" xml:space="preserve">
+    <value>This housing is rented by you, do you really want to terminate the rental?</value>
+  </data>
+  <data name="GameMessage25" xml:space="preserve">
+    <value>You have already purchased this property!</value>
+  </data>
+  <data name="GameMessage26" xml:space="preserve">
+    <value>You can’t buy new housing until you repay your current loan.</value>
+  </data>
+  <data name="GameMessage27" xml:space="preserve">
+    <value>Do you have any other housing you bought, do you really want to sell it?</value>
+  </data>
+  <data name="GameMessage28" xml:space="preserve">
+    <value>Thank you for your purchase, it's nice to deal with you!</value>
+  </data>
+  <data name="GameMessage29" xml:space="preserve">
+    <value>Unfortunately, there are not enough funds in your account!</value>
+  </data>
+  <data name="GameMessage30" xml:space="preserve">
+    <value>You don’t have enough money to pay the current lease debt!</value>
+  </data>
+  <data name="GameMessage31" xml:space="preserve">
+    <value>You do not have enough funds to pay the debt for utility bills!</value>
+  </data>
+  <data name="GameMessage32" xml:space="preserve">
+    <value>You were evicted for non-payment of rent!</value>
+  </data>
+  <data name="GameMessage33" xml:space="preserve">
+    <value>You did not pay utility bills!</value>
+  </data>
+  <data name="PaymentAndCollectionProcessing" xml:space="preserve">
+    <value>Payment and collection processing</value>
+  </data>
+  <data name="PaymentUtilityBills" xml:space="preserve">
+    <value>Payment of utility bills</value>
+  </data>
+  <data name="PropertyForSale" xml:space="preserve">
+    <value>Property for sale</value>
+  </data>
+  <data name="RentPayment" xml:space="preserve">
+    <value>Rent payment</value>
+  </data>
+  <data name="YouBoughtX" xml:space="preserve">
+    <value>You bought "{0}". Congratulations on your purchase!</value>
+  </data>
 </root>

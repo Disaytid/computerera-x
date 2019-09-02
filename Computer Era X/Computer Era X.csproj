@@ -180,6 +180,9 @@
     <Compile Include="ViewModels\Forms\Buildings\ComponentStoreVM.cs" />
     <Compile Include="ViewModels\Forms\Buildings\LaborExchangeVM.cs" />
     <Compile Include="ViewModels\Forms\Buildings\RealEstateAgencyVM.cs" />
+    <Compile Include="Views\Forms\Buildings\PanelServices.xaml.cs">
+      <DependentUpon>PanelServices.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Forms\Buildings\RealEstateAgency.xaml.cs">
       <DependentUpon>RealEstateAgency.xaml</DependentUpon>
     </Compile>
@@ -280,6 +283,10 @@
     <Page Include="Dictionarys\Menu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Forms\Buildings\PanelServices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Forms\Buildings\RealEstateAgency.xaml">
       <SubType>Designer</SubType>

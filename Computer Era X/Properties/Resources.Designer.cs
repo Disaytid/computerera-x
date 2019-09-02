@@ -268,6 +268,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Buying.
+        /// </summary>
+        public static string Buying {
+            get {
+                return ResourceManager.GetString("Buying", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Buying a {0}.
         /// </summary>
         public static string BuyingAX {
@@ -457,6 +466,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Credit purchase.
+        /// </summary>
+        public static string CreditPurchase {
+            get {
+                return ResourceManager.GetString("CreditPurchase", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Currencies.
         /// </summary>
         public static string Currencies {
@@ -529,6 +547,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Department of Housing and Utilities.
+        /// </summary>
+        public static string DepartmentHousingAndUtilities {
+            get {
+                return ResourceManager.GetString("DepartmentHousingAndUtilities", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Dismissal.
         /// </summary>
         public static string Dismissal {
@@ -552,6 +579,33 @@ namespace Computer_Era_X.Properties {
         public static string EFISupport {
             get {
                 return ResourceManager.GetString("EFISupport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Utility payment service not found, make sure database integrity!.
+        /// </summary>
+        public static string ErroreCodeCommunalPaymentServiceNotFound {
+            get {
+                return ResourceManager.GetString("ErroreCodeCommunalPaymentServiceNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Credit service not found, make sure database integrity!.
+        /// </summary>
+        public static string ErroreCodeCreditServiceNotFound {
+            get {
+                return ResourceManager.GetString("ErroreCodeCreditServiceNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Rental service not found, make sure database integrity!.
+        /// </summary>
+        public static string ErroreCodeNoRentalServiceFound {
+            get {
+                return ResourceManager.GetString("ErroreCodeNoRentalServiceFound", resourceCulture);
             }
         }
         
@@ -817,11 +871,128 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на You have bought a house, do you really want to sell it?.
+        /// </summary>
+        public static string GameMessage21 {
+            get {
+                return ResourceManager.GetString("GameMessage21", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You have already rented this property!.
+        /// </summary>
+        public static string GameMessage22 {
+            get {
+                return ResourceManager.GetString("GameMessage22", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You can not rent if there is a home bought on credit!.
+        /// </summary>
+        public static string GameMessage23 {
+            get {
+                return ResourceManager.GetString("GameMessage23", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на This housing is rented by you, do you really want to terminate the rental?.
+        /// </summary>
+        public static string GameMessage24 {
+            get {
+                return ResourceManager.GetString("GameMessage24", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You have already purchased this property!.
+        /// </summary>
+        public static string GameMessage25 {
+            get {
+                return ResourceManager.GetString("GameMessage25", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You can’t buy new housing until you repay your current loan..
+        /// </summary>
+        public static string GameMessage26 {
+            get {
+                return ResourceManager.GetString("GameMessage26", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Do you have any other housing you bought, do you really want to sell it?.
+        /// </summary>
+        public static string GameMessage27 {
+            get {
+                return ResourceManager.GetString("GameMessage27", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Thank you for your purchase, it&apos;s nice to deal with you!.
+        /// </summary>
+        public static string GameMessage28 {
+            get {
+                return ResourceManager.GetString("GameMessage28", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Unfortunately, there are not enough funds in your account!.
+        /// </summary>
+        public static string GameMessage29 {
+            get {
+                return ResourceManager.GetString("GameMessage29", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Thank you for buying {0}, a good choice!.
         /// </summary>
         public static string GameMessage3 {
             get {
                 return ResourceManager.GetString("GameMessage3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You don’t have enough money to pay the current lease debt!.
+        /// </summary>
+        public static string GameMessage30 {
+            get {
+                return ResourceManager.GetString("GameMessage30", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You do not have enough funds to pay the debt for utility bills!.
+        /// </summary>
+        public static string GameMessage31 {
+            get {
+                return ResourceManager.GetString("GameMessage31", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You were evicted for non-payment of rent!.
+        /// </summary>
+        public static string GameMessage32 {
+            get {
+                return ResourceManager.GetString("GameMessage32", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You did not pay utility bills!.
+        /// </summary>
+        public static string GameMessage33 {
+            get {
+                return ResourceManager.GetString("GameMessage33", resourceCulture);
             }
         }
         
@@ -1681,6 +1852,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Payment and collection processing.
+        /// </summary>
+        public static string PaymentAndCollectionProcessing {
+            get {
+                return ResourceManager.GetString("PaymentAndCollectionProcessing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Payment for public transport.
         /// </summary>
         public static string PaymentForPublicTransport {
@@ -1704,6 +1884,15 @@ namespace Computer_Era_X.Properties {
         public static string PaymentsMadeX {
             get {
                 return ResourceManager.GetString("PaymentsMadeX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Payment of utility bills.
+        /// </summary>
+        public static string PaymentUtilityBills {
+            get {
+                return ResourceManager.GetString("PaymentUtilityBills", resourceCulture);
             }
         }
         
@@ -1816,6 +2005,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Property for sale.
+        /// </summary>
+        public static string PropertyForSale {
+            get {
+                return ResourceManager.GetString("PropertyForSale", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на PS/2 for keyboard.
         /// </summary>
         public static string PS2ForKeyboard {
@@ -1888,6 +2086,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Real estate agency &quot;Roof over the head&quot;.
+        /// </summary>
+        public static string RealEstateAgencyFullName {
+            get {
+                return ResourceManager.GetString("RealEstateAgencyFullName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Receipt of funds.
         /// </summary>
         public static string ReceiptOfFunds {
@@ -1929,6 +2136,24 @@ namespace Computer_Era_X.Properties {
         public static string Rent {
             get {
                 return ResourceManager.GetString("Rent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Rent.
+        /// </summary>
+        public static string RentN {
+            get {
+                return ResourceManager.GetString("RentN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Rent payment.
+        /// </summary>
+        public static string RentPayment {
+            get {
+                return ResourceManager.GetString("RentPayment", resourceCulture);
             }
         }
         
@@ -2320,6 +2545,15 @@ namespace Computer_Era_X.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на You bought &quot;{0}&quot;. Congratulations on your purchase!.
+        /// </summary>
+        public static string YouBoughtX {
+            get {
+                return ResourceManager.GetString("YouBoughtX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на You could not pay a fine for an unpaid fare..
         /// </summary>
         public static string YouCouldNotPayAFineForAnUnpaidFare {
@@ -2343,6 +2577,15 @@ namespace Computer_Era_X.Properties {
         public static string YouDoNotHaveEnoughMoney {
             get {
                 return ResourceManager.GetString("YouDoNotHaveEnoughMoney", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на You rented &quot;{0}&quot;. Congratulations!.
+        /// </summary>
+        public static string YouRentedX {
+            get {
+                return ResourceManager.GetString("YouRentedX", resourceCulture);
             }
         }
         

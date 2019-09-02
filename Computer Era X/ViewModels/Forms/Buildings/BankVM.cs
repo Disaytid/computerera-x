@@ -82,9 +82,11 @@ namespace Computer_Era_X.ViewModels
                     if (currency.TopUp(BankSelectedService.Name, Resources.BankName,
                                               GameEnvironment.Events.Timer.DateTime, sum) == false) { MessageBox.Show(Resources.GameMessage8); return; }
                 }
-                GameEnvironment.Player.Tariffs.Add(new PlayerTariff(BankSelectedTariff, BankSelectedService, sum,
+                PlayerTariff playerTariff = new PlayerTariff(BankSelectedTariff, BankSelectedService, sum,
                                                             Convert.ToInt32(TariffPeriods),
-                                                            GameEnvironment.Events.Timer.DateTime, BankSelectedTariff.SpecialOffer));
+                                                            GameEnvironment.Events.Timer.DateTime, BankSelectedTariff.SpecialOffer);
+                if (BankSelectedService.TransactionType == 1) LoanIssued(playerTariff); //We transfer the user rate to another window (used for a real estate agency)
+                GameEnvironment.Player.Tariffs.Add(playerTariff);
 
                 GameEnvironment.Events.Events.Add(new GameEvent(BankSelectedService.ID + ":" + BankSelectedTariff.ID + ":" + sum,
                                                     PeriodicityConverter.GetDateTimeFromPeriodicity(GameEnvironment.Events.Timer.DateTime, BankSelectedTariff.Periodicity, BankSelectedTariff.PeriodicityValue),
@@ -152,7 +154,11 @@ namespace Computer_Era_X.ViewModels
             }
         }
 
-        private void BankRejectСonditions() => AdditionsPanelServices = Visibility.Collapsed;
+        private void BankRejectСonditions()
+        {
+            AdditionsPanelServices = Visibility.Collapsed;
+            CancellationLoan();
+        }
         private void PlayerTariffSelection()
         {
             if (SelectedPlayerTarif == null || AdditionsPanelServices == Visibility.Visible) { return; }
@@ -205,6 +211,7 @@ namespace Computer_Era_X.ViewModels
         private Visibility _additionsPanelServices = Visibility.Collapsed;
         private Visibility _informationPanelForTheService = Visibility.Visible;
         private Service _selectedService;
+        private Visibility _servicesVisability = Visibility.Visible;
         public ObservableCollection<Tariff> _bankTariffs;
         private Tariff _selectedTariff;
         private Visibility _tariffDescriptionVisibility = Visibility.Collapsed;
@@ -212,6 +219,7 @@ namespace Computer_Era_X.ViewModels
         private string _labelTariffPeriod = Resources.Periods;
         private string _tariffPeriods;
         private string _tariffAmount;
+        private bool _tariffAmountEnabled = true;
         private string _totalService;
         public ObservableCollection<PlayerTariff> PlayerTariffs => GameEnvironment.Player.Tariffs;
         private PlayerTariff _selectedPlayerTarif;
@@ -240,6 +248,12 @@ namespace Computer_Era_X.ViewModels
                 SetProperty(ref _selectedService, value);
                 ServiceSelection();
             }
+        }
+
+        public Visibility ServicesVisability
+        {
+            get => _servicesVisability;
+            set => SetProperty(ref _servicesVisability, value);
         }
 
         public ObservableCollection<Tariff> BankTariffs
@@ -300,9 +314,7 @@ namespace Computer_Era_X.ViewModels
                 if (BankSelectedTariff == null) { return; }
                 if (double.TryParse(value, out double _num))
                 {
-                    if (BankSelectedTariff.MaxSum != 0 && _num > BankSelectedTariff.MaxSum) { SetProperty(ref _tariffAmount, BankSelectedTariff.MaxSum.ToString()); }
-                    else if (_num < BankSelectedTariff.MinSum) { SetProperty(ref _tariffAmount, BankSelectedTariff.MinSum.ToString()); }
-                    else { SetProperty(ref _tariffAmount, value); }
+                    SetProperty(ref _tariffAmount, value);
 
                     if (int.TryParse(TariffPeriods, out int _tariff))
                     {
@@ -315,6 +327,12 @@ namespace Computer_Era_X.ViewModels
                     }
                 } else { SetProperty(ref _tariffAmount, BankSelectedTariff.MinTerm.ToString()); }
             }
+        }
+
+        public bool TariffAmountEnabled
+        {
+            get => _tariffAmountEnabled;
+            set => SetProperty(ref _tariffAmountEnabled, value);
         }
 
         public string TotalService

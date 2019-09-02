@@ -885,4 +885,85 @@
   <data name="Rent" xml:space="preserve">
     <value>Арендовать</value>
   </data>
+  <data name="Buying" xml:space="preserve">
+    <value>Покупка</value>
+  </data>
+  <data name="CreditPurchase" xml:space="preserve">
+    <value>Покупка в кредит</value>
+  </data>
+  <data name="DepartmentHousingAndUtilities" xml:space="preserve">
+    <value>Жилищно-коммунальное хозяйство</value>
+  </data>
+  <data name="ErroreCodeCommunalPaymentServiceNotFound" xml:space="preserve">
+    <value>Не найдена услуга коммунальных платежей, убедитесь в целостности базы данных!</value>
+  </data>
+  <data name="ErroreCodeCreditServiceNotFound" xml:space="preserve">
+    <value>Не найдена услуга кредит, убедитесь в целостности базы данных!</value>
+  </data>
+  <data name="ErroreCodeNoRentalServiceFound" xml:space="preserve">
+    <value>Не найдена услуга аренды, убедитесь в целостности базы данных!</value>
+  </data>
+  <data name="GameMessage21" xml:space="preserve">
+    <value>У вас куплено жилье, вы действительно хотите его продать?</value>
+  </data>
+  <data name="GameMessage22" xml:space="preserve">
+    <value>Вы уже арендовали данное жилье!</value>
+  </data>
+  <data name="GameMessage23" xml:space="preserve">
+    <value>Нельзя арендовать если есть купленное в кредит жилье!</value>
+  </data>
+  <data name="GameMessage24" xml:space="preserve">
+    <value>Данное жилье арендовано вами, вы действительно хотите расторгнуть аренду?</value>
+  </data>
+  <data name="GameMessage25" xml:space="preserve">
+    <value>У вас уже куплено данное жилье!</value>
+  </data>
+  <data name="GameMessage26" xml:space="preserve">
+    <value>Нельзя купить новое жилье пока не погасите кредит за текущее.</value>
+  </data>
+  <data name="GameMessage27" xml:space="preserve">
+    <value>У вас есть другое купленное жилье, вы действительно хотите его продать?</value>
+  </data>
+  <data name="GameMessage28" xml:space="preserve">
+    <value>Благодарим за покупку, с Вами приятно иметь дело!</value>
+  </data>
+  <data name="GameMessage29" xml:space="preserve">
+    <value>К сожалению на вашем счету недостаточно средств!</value>
+  </data>
+  <data name="GameMessage30" xml:space="preserve">
+    <value>Вам не хватает средств на выплату задолженности по текущей аренде!</value>
+  </data>
+  <data name="GameMessage31" xml:space="preserve">
+    <value>Вам не хватает средств на выплату задолженности по коммунальным платежам!</value>
+  </data>
+  <data name="GameMessage32" xml:space="preserve">
+    <value>Вы были выселены за неуплату аренды!</value>
+  </data>
+  <data name="GameMessage33" xml:space="preserve">
+    <value>Вы не оплатили коммунальные платежи!</value>
+  </data>
+  <data name="PaymentAndCollectionProcessing" xml:space="preserve">
+    <value>Обработка выплат и взысканий</value>
+  </data>
+  <data name="PaymentUtilityBills" xml:space="preserve">
+    <value>Оплата коммунальных платежей</value>
+  </data>
+  <data name="PropertyForSale" xml:space="preserve">
+    <value>Продажа недвижимости</value>
+  </data>
+  <data name="RealEstateAgencyFullName" xml:space="preserve">
+    <value>Агентство недвижимости "Крыша над головой"</value>
+  </data>
+  <data name="RentN" xml:space="preserve">
+    <value>Аренда</value>
+  </data>
+  <data name="RentPayment" xml:space="preserve">
+    <value>Оплата аренды</value>
+  </data>
+  <data name="YouBoughtX" xml:space="preserve">
+    <value>Вы купили "{0}". Поздравляем Вас с покупкой!</value>
+  </data>
+  <data name="YouRentedX" xml:space="preserve">
+    <value>Вы арендовали "{0}". Поздравляем Вас!</value>
+  </data>
 </root>
